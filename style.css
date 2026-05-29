@@ -1,0 +1,526 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #07112f;
+    --card-bg: #ffffff;
+    --text-dark: #111827;
+    --text-soft: #4b5563;
+    --neon-cyan: #22d3ee;
+    --neon-pink: #ff2bd6;
+    --neon-blue: #2563eb;
+    --border-red: #ff2e38;
+    --safe-green: #16a34a;
+    --warning-orange: #f97316;
+    --danger-red: #dc2626;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-dark);
+    min-height: 100vh;
+    background:
+            linear-gradient(90deg, rgba(34, 211, 238, 0.09) 1px, transparent 1px),
+            linear-gradient(rgba(255, 43, 214, 0.07) 1px, transparent 1px),
+            radial-gradient(circle at top, rgba(34, 211, 238, 0.35), transparent 28%),
+            radial-gradient(circle at bottom right, rgba(255, 43, 214, 0.25), transparent 26%),
+            #07112f;
+    background-size: 42px 42px, 42px 42px, auto, auto, auto;
+}
+
+.app {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 18px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 18px;
+    padding: 22px;
+    border: 6px solid var(--border-red);
+    box-shadow:
+            0 0 0 4px rgba(255, 255, 255, 0.18),
+            0 18px 40px rgba(0, 0, 0, 0.45),
+            0 0 28px rgba(255, 46, 56, 0.35);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border-radius: 999px;
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    box-shadow: 0 0 16px rgba(34, 211, 238, 0.45);
+}
+
+h1 {
+    margin: 16px 0 8px;
+    font-size: 30px;
+    line-height: 1.1;
+    text-align: center;
+    color: #111827;
+}
+
+h2 {
+    margin-top: 24px;
+    margin-bottom: 10px;
+    font-size: 19px;
+    color: #0f172a;
+    border-left: 6px solid var(--neon-cyan);
+    padding-left: 10px;
+}
+
+p {
+    line-height: 1.55;
+}
+
+.card > p:first-of-type {
+    text-align: center;
+    color: var(--text-soft);
+}
+
+.question-box {
+    background: #ecfeff;
+    border: 2px solid #67e8f9;
+    border-left: 8px solid var(--neon-cyan);
+    padding: 14px;
+    border-radius: 14px;
+    margin: 18px 0;
+}
+
+.question-box p {
+    margin: 6px 0;
+}
+
+.answer {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    padding: 15px 16px;
+    border: 3px solid #d1d5db;
+    border-radius: 16px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.answer:hover {
+    border-color: var(--neon-cyan);
+    background: #f0fdff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(34, 211, 238, 0.18);
+}
+
+.answer.disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.result {
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 18px;
+    background: #f8fafc;
+    border: 3px solid #cbd5e1;
+}
+
+.result h2 {
+    margin-top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#solution-details {
+    margin-top: 20px;
+    background: #f9fafb;
+    border-radius: 18px;
+    padding: 18px;
+    border: 3px dashed #94a3b8;
+}
+
+#solution-details ul {
+    padding-left: 22px;
+}
+
+#solution-details li {
+    margin-bottom: 8px;
+    line-height: 1.45;
+}
+
+.help-source {
+    margin-top: 20px;
+    font-size: 14px;
+    background: #fff7ed;
+    border: 3px solid #fb923c;
+    border-radius: 16px;
+    padding: 14px;
+}
+
+.help-source ul {
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.help-source li {
+    margin-bottom: 6px;
+}
+
+.help-source a {
+    color: #9a3412;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.help-source a:hover {
+    text-decoration: underline;
+}
+
+/* Bezirksfarben */
+.card[data-district="Betrugs-Basar"] {
+    border-color: #fb923c;
+    box-shadow:
+            0 0 0 4px rgba(255, 255, 255, 0.18),
+            0 18px 40px rgba(0, 0, 0, 0.45),
+            0 0 28px rgba(251, 146, 60, 0.45);
+}
+
+.card[data-district="Malware-Labor"] {
+    border-color: #ff2e38;
+    box-shadow:
+            0 0 0 4px rgba(255, 255, 255, 0.18),
+            0 18px 40px rgba(0, 0, 0, 0.45),
+            0 0 28px rgba(255, 46, 56, 0.45);
+}
+
+.card[data-district="Passwort-Park"] {
+    border-color: #22c55e;
+}
+
+.card[data-district="Chat-Café"] {
+    border-color: #d946ef;
+}
+
+.card[data-district="Social-Media-Platz"] {
+    border-color: #facc15;
+}
+
+.card[data-district="App-Allee"] {
+    border-color: #22d3ee;
+}
+
+@media (max-width: 600px) {
+    .app {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 18px;
+        border-radius: 16px;
+        border-width: 5px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .answer {
+        font-size: 15px;
+        padding: 14px;
+    }
+}
+
+.card[data-district="Betrugs-Basar"] .badge {
+    background: #fb923c;
+    color: white;
+}
+
+.card[data-district="Malware-Labor"] .badge {
+    background: #ff2e38;
+    color: white;
+}
+
+.card[data-district="Passwort-Park"] .badge {
+    background: #22c55e;
+    color: white;
+}
+
+.card[data-district="Chat-Café"] .badge {
+    background: #d946ef;
+    color: white;
+}
+
+.card[data-district="Social-Media-Platz"] .badge {
+    background: #facc15;
+    color: #111827;
+}
+
+.card[data-district="App-Allee"] .badge {
+    background: #22d3ee;
+    color: #111827;
+}
+
+.card[data-district="Betrugs-Basar"] h2 {
+    border-left-color: #fb923c;
+}
+
+.card[data-district="Malware-Labor"] h2 {
+    border-left-color: #ff2e38;
+}
+
+.card[data-district="Passwort-Park"] h2 {
+    border-left-color: #22c55e;
+}
+
+.card[data-district="Chat-Café"] h2 {
+    border-left-color: #d946ef;
+}
+
+.card[data-district="Social-Media-Platz"] h2 {
+    border-left-color: #facc15;
+}
+
+.card[data-district="App-Allee"] h2 {
+    border-left-color: #22d3ee;
+}
+
+.board-error-card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 24px;
+    padding: 28px 22px;
+    color: white;
+    border: 4px solid #22d3ee;
+    background:
+            linear-gradient(90deg, rgba(34, 211, 238, 0.18) 1px, transparent 1px),
+            linear-gradient(rgba(255, 43, 214, 0.14) 1px, transparent 1px),
+            radial-gradient(circle at center, rgba(34, 211, 238, 0.22), transparent 36%),
+            radial-gradient(circle at bottom right, rgba(255, 43, 214, 0.22), transparent 34%),
+            #07112f;
+    background-size: 34px 34px, 34px 34px, auto, auto, auto;
+    box-shadow:
+            0 0 0 4px rgba(255, 255, 255, 0.16),
+            0 0 28px rgba(34, 211, 238, 0.45),
+            0 18px 42px rgba(0, 0, 0, 0.55);
+}
+
+.board-error-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+            linear-gradient(115deg, transparent 0%, rgba(34, 211, 238, 0.14) 45%, transparent 70%);
+}
+
+.board-corner-label {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 18px;
+    background: #07112f;
+    color: #ffffff;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+    border: 3px solid white;
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.65);
+}
+
+.board-error-title {
+    margin: 12px 0 8px;
+    font-size: 34px;
+    line-height: 1.05;
+    letter-spacing: 3px;
+    color: white;
+    text-shadow:
+            3px 3px 0 #ff2bd6,
+            -3px -3px 0 #22d3ee;
+}
+
+.board-error-subtitle {
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.board-error-box {
+    position: relative;
+    z-index: 1;
+    margin: 22px auto;
+    max-width: 560px;
+    text-align: left;
+    background: rgba(15, 23, 42, 0.82);
+    border: 2px solid #22d3ee;
+    border-radius: 18px;
+    padding: 16px;
+    box-shadow: 0 0 18px rgba(34, 211, 238, 0.25);
+}
+
+.board-error-box ul {
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.board-error-box li {
+    margin-bottom: 8px;
+    line-height: 1.45;
+}
+
+.board-error-card code {
+    background: rgba(255, 255, 255, 0.14);
+    color: #fde68a;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-family: monospace;
+}
+
+
+.home-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 24px rgba(255, 46, 56, 0.5);
+}
+
+
+.overview-card {
+    background: white;
+    border-radius: 24px;
+    padding: 22px;
+    border: 5px solid #22d3ee;
+    box-shadow:
+            0 0 0 4px rgba(255, 255, 255, 0.18),
+            0 18px 40px rgba(0, 0, 0, 0.45),
+            0 0 28px rgba(34, 211, 238, 0.35);
+}
+
+.overview-card h1 {
+    text-align: center;
+}
+
+.overview-district {
+    margin-top: 26px;
+    border-radius: 18px;
+    padding: 14px;
+    border: 3px solid #d1d5db;
+    background: #f8fafc;
+}
+
+.overview-district h2 {
+    margin-top: 0;
+}
+
+.overview-district[data-district="Betrugs-Basar"] {
+    border-color: #fb923c;
+}
+
+.overview-district[data-district="Malware-Labor"] {
+    border-color: #ff2e38;
+}
+
+.overview-district[data-district="Passwort-Park"] {
+    border-color: #22c55e;
+}
+
+.overview-district[data-district="Chat-Café"] {
+    border-color: #d946ef;
+}
+
+.overview-district[data-district="Social-Media-Platz"] {
+    border-color: #facc15;
+}
+
+.overview-district[data-district="App-Allee"] {
+    border-color: #22d3ee;
+}
+
+.overview-list {
+    display: grid;
+    gap: 10px;
+}
+
+.overview-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: center;
+    background: white;
+    border-radius: 14px;
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+}
+
+.overview-id {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #64748b;
+    font-family: monospace;
+}
+
+.overview-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.overview-actions a,
+.overview-actions button {
+    border: none;
+    border-radius: 999px;
+    padding: 9px 12px;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.overview-actions a {
+    background: #07112f;
+    color: white;
+}
+
+.overview-actions button {
+    background: #22d3ee;
+    color: #07112f;
+}
+
+.overview-actions a:hover,
+.overview-actions button:hover {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 650px) {
+    .overview-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .overview-actions {
+        width: 100%;
+    }
+
+    .overview-actions a,
+    .overview-actions button {
+        flex: 1;
+        text-align: center;
+    }
+}
