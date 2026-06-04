@@ -28,98 +28,312 @@ cards["peinliches-klassenfoto"] = {
         {
             text: "D) Wir machen einen Screenshot und posten ihn anonym, damit niemand weiß, dass wir es waren.",
             evaluation: "Sehr riskant. Anonym posten schützt nicht vor Schaden und kann das Mobbing verstärken.",
-            consequence: "Risiko +2 und Blocker-Chip auf Social-Media-Platz."
+            consequence: "Risiko +2."
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Cybermobbing",
-            url: "https://www.klicksafe.de/cybermobbing"
-        }
+    {
+      name: "klicksafe – Cybermobbing",
+      url: "https://www.klicksafe.de/cybermobbing"
+    },
+    {
+      name: "klicksafe – Recht am eigenen Bild",
+      url: "https://www.klicksafe.de/news/vorsicht-beim-posten-von-bildern-und-videos"
+    },
+    {
+      name: "SCHAU HIN! – Cybermobbing erkennen und handeln",
+      url: "https://www.schau-hin.info/cybermobbing"
+    },
+    {
+      name: "Nummer gegen Kummer – Kinder- und Jugendberatung",
+      url: "https://www.nummergegenkummer.de/kinder-und-jugendberatung/"
+    }
+  ]
+};
+
+
+cards["geruecht-im-chat"] = {
+  district: "Social-Media-Platz",
+  title: "Das Gerücht im Chat",
+  checklist: [
+    "Nachricht nicht weiterleiten",
+    "nicht über Cindy lachen oder sie bloßstellen",
+    "private Gefühle anderer respektieren",
+    "nicht prüfen wollen, ob das Gerücht stimmt, indem man andere fragt",
+    "bei Druck ruhig sagen: „Das geht uns nichts an“",
+    "Cindy unterstützen, falls das Gerücht schon herumgeht"
+  ],
+  answers: [
+    {
+      text: "A) Josie leitet die Nachricht nicht weiter und schreibt zurück, dass Cindy nicht bloßgestellt werden soll.",
+      evaluation: "Sehr sicher und fair. Josie stoppt das Gerücht und schützt Cindys Privatsphäre.",
+      consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
+    },
+    {
+      text: "B) Josie fragt Brian heimlich, ob Cindy wirklich in ihn verliebt ist.",
+      evaluation: "Riskant. Dadurch wird das Gerücht weitergetragen und Cindy könnte bloßgestellt werden.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "C) Josie schickt die Nachricht nur an ihre beste Freundin, damit sie gemeinsam überlegen können.",
+      evaluation: "Teilweise riskant. Auch „nur an eine Person“ verbreitet das Gerücht weiter.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "D) Josie postet im Gruppenchat: „Cindy mag Brian!“ und schreibt dazu, dass es nur Spaß ist.",
+      evaluation: "Sehr riskant. Das stellt Cindy öffentlich bloß und kann Mobbing auslösen.",
+      consequence: "Risiko +2."
+    }
+  ],
+  helpSources: [
+    {
+      name: "klicksafe – Regeln für ein respektvolles Miteinander im Klassenchat",
+      url: "https://www.klicksafe.de/news/regeln-fuer-ein-respektvolles-miteinander-im-klassenchat"
+    },
+    {
+      name: "SCHAU HIN! – WhatsApp-Gruppenchats für Kinder",
+      url: "https://www.schau-hin.info/grundlagen/whatsapp-gruppenchats-fuer-kinder"
+    },
+    {
+      name: "SCHAU HIN! – Messenger-Apps erobern den Klassenraum",
+      url: "https://www.schau-hin.info/grundlagen/messenger-apps-erobern-den-klassenraum"
+    }
+  ]
+};
+
+cards["angriff-im-online-spiel"] = {
+  district: "Social-Media-Platz",
+  title: "Der Angriff im Online-Spiel",
+  checklist: [
+    "nicht zurückbeleidigen",
+    "Jo unterstützen, ohne den Streit anzuheizen",
+    "ruhig sagen, dass Beleidigungen im Team nicht okay sind",
+    "Teamregeln oder Spielregeln nutzen",
+    "beleidigende Person stummschalten, blockieren oder melden, wenn nötig",
+    "Erwachsene oder Moderation einbeziehen, wenn es weitergeht"
+  ],
+  answers: [
+    {
+      text: "A) Josie schreibt ruhig: „Stopp, Beleidigungen sind nicht okay. Wir spielen fair.“ und nutzt Melden oder Stummschalten, wenn es weitergeht.",
+      evaluation: "Sehr sicher und fair. Josie setzt eine klare Grenze, unterstützt Jo und heizt den Streit nicht weiter an.",
+      consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip."
+    },
+    {
+      text: "B) Josie beleidigt die andere Person zurück, damit sie merkt, wie sich das anfühlt.",
+      evaluation: "Riskant. Zurückbeleidigen macht die Situation schlimmer und kann Josie selbst Ärger bringen.",
+      consequence: "Risiko +2."
+    },
+    {
+      text: "C) Josie schreibt Jo privat, dass er die Beleidigung einfach ignorieren soll.",
+      evaluation: "Teilweise sicher. Private Unterstützung kann helfen, aber bei Beleidigungen sollte auch die Grenze im Spiel klar werden.",
+      consequence: "+1 Zeit-Chip."
+    },
+    {
+      text: "D) Josie macht einen Screenshot und postet ihn öffentlich, damit alle sehen, wer angefangen hat.",
+      evaluation: "Riskant. Öffentliches Bloßstellen kann den Streit vergrößern und weitere Angriffe auslösen.",
+      consequence: "Risiko +1."
+    }
+  ],
+  helpSources: [
+    {
+      name: "SCHAU HIN! – In-Game-Chats: Chatten im Spiel birgt Risiken",
+      url: "https://www.schau-hin.info/grundlagen/in-game-chats-chatten-im-spiel-birgt-risiken-fuer-kinder"
+    },
+    {
+      name: "klicksafe – Digitale Spiele: Risiken und Tipps",
+      url: "https://www.klicksafe.de/digitale-spiele"
+    }
+  ]
+};
+
+
+cards["teamchat-nach-dem-spiel"] = {
+  district: "Social-Media-Platz",
+  title: "Der Teamchat nach dem Spiel",
+  checklist: [
+    "nicht mitbeleidigen oder mitlachen",
+    "Matt nicht öffentlich bloßstellen",
+    "ruhig und fair widersprechen, wenn es sicher möglich ist",
+    "Matt privat unterstützen",
+    "Screenshots nur als Beweis sichern und nicht weiterverbreiten",
+    "Trainerin, Trainer oder eine erwachsene Vertrauensperson informieren, wenn es persönlich oder verletzend wird"
+  ],
+  answers: [
+    {
+      text: "A) Joel schreibt in den Chat: „Hört auf, Matt fertigzumachen. Das ist unfair.“ und holt Hilfe, wenn es weitergeht.",
+      evaluation: "Sehr sicher und fair. Joel widerspricht ruhig, macht nicht mit und kann Hilfe holen, wenn die Gruppe weiter angreift.",
+      consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und möglicher Fair-online Badge."
+    },
+    {
+      text: "B) Joel schreibt Matt privat, dass er das auch schlimm findet, sagt aber im Gruppenchat nichts.",
+      evaluation: "Teilweise sicher. Private Unterstützung hilft Matt, aber wenn die Angriffe weitergehen, sollte zusätzlich eine erwachsene Person einbezogen werden.",
+      consequence: "+1 Zeit-Chip."
+    },
+    {
+      text: "C) Joel schreibt einen Witz über Matt, damit die anderen ihn nicht selbst angreifen.",
+      evaluation: "Riskant. Auch ein Witz kann Mobbing verstärken und Matt weiter verletzen.",
+      consequence: "Risiko +2."
+    },
+    {
+      text: "D) Joel postet Screenshots öffentlich, damit alle sehen, wie gemein die anderen sind.",
+      evaluation: "Riskant. Öffentliche Screenshots können den Streit vergrößern und Matt noch mehr bloßstellen.",
+      consequence: "Risiko +2."
+    }
+  ],
+  helpSources: [
+    {
+      name: "klicksafe – Cybermobbing",
+      url: "https://www.klicksafe.de/cybermobbing"
+    },
+    {
+      name: "SCHAU HIN! – WhatsApp-Gruppenchats für Kinder",
+      url: "https://www.schau-hin.info/grundlagen/whatsapp-gruppenchats-fuer-kinder"
     ]
 };
 
-cards["gemeiner-kommentar"] = {
-    district: "Social-Media-Platz",
-    title: "Der gemeine Kommentar",
-    checklist: [
-        "nicht mitlachen",
-        "keine verletzenden Kommentare schreiben",
-        "betroffene Person unterstützen",
-        "freundlich widersprechen, wenn es sicher möglich ist",
-        "Hilfe holen, wenn es weitergeht",
-        "melden, wenn Kommentare beleidigend oder bedrohlich sind"
-    ],
-    answers: [
-        {
-            text: "A) Wir lachen mit, weil es nur ein Kommentar ist.",
-            evaluation: "Riskant. Auch ein kurzer Kommentar kann verletzen und andere zum Mitmachen bringen.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "B) Wir machen nicht mit und unterstützen die betroffene Person.",
-            evaluation: "Sehr sicher und fair. Nicht mitmachen und unterstützen hilft gegen Cybermobbing.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
-        {
-            text: "C) Wir schreiben einen noch lustigeren Kommentar.",
-            evaluation: "Sehr riskant. Das verstärkt die Verletzung und macht die Situation schlimmer.",
-            consequence: "Risiko +2."
-        },
-        {
-            text: "D) Wir senden nur ein Emoji.",
-            evaluation: "Teilweise riskant. Auch Emojis können als Mitlachen oder Zustimmung verstanden werden.",
-            consequence: "Risiko +1."
-        }
-    ],
-    helpSources: [
-        {
-            name: "klicksafe – Cybermobbing",
-            url: "https://www.klicksafe.de/cybermobbing"
-        }
-    ]
+cards["bilder-fuer-praesentation"] = {
+  district: "Social-Media-Platz",
+  title: "Die Bilder für die Präsentation",
+  checklist: [
+    "Nutzungsrechte prüfen",
+    "nicht automatisch jedes Bild kopieren",
+    "freie Bildquellen oder Creative-Commons-Bilder nutzen",
+    "Quelle korrekt angeben, wenn erlaubt",
+    "bei Unsicherheit Lehrkraft oder Erwachsene fragen",
+    "respektieren, dass Bilder jemandem gehören können"
+  ],
+  answers: [
+    {
+      text: "A) Jo und Matt dürfen die Bilder verwenden, wenn sie die Quelle unter jedes Bild schreiben.",
+      evaluation: "Teilweise riskant. Eine Quellenangabe ist wichtig, bedeutet aber nicht automatisch, dass die Nutzung erlaubt ist.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "B) Jo und Matt dürfen die Bilder verwenden, weil die Präsentation nur für die Schule ist.",
+      evaluation: "Teilweise riskant. Für Schule kann es besondere Regeln geben, aber man sollte trotzdem prüfen, ob und wie Bilder genutzt werden dürfen.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "C) Jo und Matt sollten prüfen, ob sie die Bilder verwenden dürfen, oder frei nutzbare Bilder suchen.",
+      evaluation: "Sehr sicher. Sie respektieren Urheberrechte und wählen eine sichere Lösung für ihr Schulprojekt.",
+      consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
+    },
+    {
+      text: "D) Jo und Matt dürfen die Bilder verwenden, wenn sie sie zuschneiden oder mit Filtern verändern.",
+      evaluation: "Riskant. Ein Bild zu verändern macht es nicht automatisch frei nutzbar.",
+      consequence: "Risiko +1."
+    }
+  ],
+  helpSources: [
+    {
+      name: "Internet-ABC – Text und Bild: kopieren und weitergeben",
+      url: "https://www.internet-abc.de/lernmodul-text-bild-urheberrecht/"
+    },
+    {
+      name: "Internet-ABC – Urheberrecht in der Schule",
+      url: "https://www.internet-abc.de/lehrkraefte/praxishilfen/urheberrecht-in-der-schule/"
+    }
+  ]
 };
 
-cards["gruppenchat-rauswerfen"] = {
-    district: "Social-Media-Platz",
-    title: "Das Gruppenchat-Rauswerfen",
-    checklist: [
-        "Ausgrenzung ernst nehmen",
-        "nicht mitmachen",
-        "betroffene Person unterstützen",
-        "nicht noch einen neuen Ausschluss-Chat starten",
-        "Erwachsene oder Lehrkraft informieren, wenn es unfair oder wiederholt passiert",
-        "fair und respektvoll bleiben"
-    ],
-    answers: [
-        {
-            text: "A) Wir tun nichts, weil es nicht unser Problem ist.",
-            evaluation: "Teilweise riskant. Nicht mitmachen ist besser als mitmachen, aber die betroffene Person braucht vielleicht Unterstützung.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "B) Wir bleiben fair und holen Hilfe bei Erwachsenen oder einer Lehrkraft.",
-            evaluation: "Sehr sicher. Ausgrenzung wird ernst genommen und nicht weiter verstärkt.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
-        {
-            text: "C) Wir erstellen einen neuen Chat ohne das Kind.",
-            evaluation: "Sehr riskant. Das verstärkt die Ausgrenzung.",
-            consequence: "Risiko +2."
-        },
-        {
-            text: "D) Wir schicken dem Kind heimlich Screenshots.",
-            evaluation: "Teilweise riskant. Das kann verletzen oder die Situation weiter verbreiten; besser ist Unterstützung mit Hilfe Erwachsener.",
-            consequence: "Risiko +1."
-        }
-    ],
-    helpSources: [
-        {
-            name: "klicksafe – Cybermobbing",
-            url: "https://www.klicksafe.de/cybermobbing"
-        }
-    ]
+cards["digitaler-fussabdruck"] = {
+  district: "Social-Media-Platz",
+  title: "Der digitale Fußabdruck",
+  checklist: [
+    "überlegen, welchen Eindruck das eigene Profil macht",
+    "alte Posts, Kommentare und Fotos prüfen",
+    "peinliche, verletzende oder zu private Inhalte entfernen oder verbergen",
+    "Privatsphäre-Einstellungen kontrollieren",
+    "keine falschen oder übertriebenen Informationen posten",
+    "sich fragen: Würde ich wollen, dass Lehrkräfte, Vereine oder spätere Arbeitgeber das sehen?"
+  ],
+  answers: [
+    {
+      text: "A) Mia prüft ihre Profile, entfernt zu private oder peinliche Inhalte und stellt ein, wer was sehen darf.",
+      evaluation: "Sehr sicher. Mia gestaltet ihren digitalen Fußabdruck bewusst und schützt ihre Privatsphäre.",
+      consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und möglicher Datenschutz-Badge."
+    },
+    {
+      text: "B) Mia löscht sofort alle Konten, damit niemand etwas über sie findet.",
+      evaluation: "Teilweise sicher, aber nicht immer nötig. Löschen kann helfen, aber oft reichen gute Einstellungen und bewusstes Aufräumen.",
+      consequence: "+1 Zeit-Chip."
+    },
+    {
+      text: "C) Mia postet extra viele perfekte Bilder, damit sie online besonders gut wirkt.",
+      evaluation: "Riskant. Ein guter Eindruck entsteht nicht durch Druck oder falsche Selbstdarstellung, sondern durch bewusste und ehrliche Inhalte.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "D) Mia ignoriert das Thema, weil Universitäten oder Arbeitgeber Kinderprofile sowieso nie sehen.",
+      evaluation: "Riskant. Online-Inhalte können lange sichtbar bleiben oder weitergegeben werden.",
+      consequence: "Risiko +2."
+    }
+  ],
+  helpSources: [
+    {
+      name: "SCHAU HIN! – Diese Chancen bieten soziale Medien",
+      url: "https://www.schau-hin.info/grundlagen/diese-chancen-bieten-soziale-medien"
+    },
+    {
+      name: "SCHAU HIN! – Soziale Netzwerke: Sicherheit für Kinder",
+      url: "https://www.schau-hin.info/soziale-netzwerke"
+    },
+    {
+      name: "Internet-ABC – Datenschutz: Das bleibt privat",
+      url: "https://www.internet-abc.de/kinder/lernen-schule/lernmodule/datenschutz-das-bleibt-privat/"
+    },
+    {
+    name: "klicksafe – Datenschutz und Privatsphäre",
+    url: "https://www.klicksafe.de/privatsphaere-und-big-data"
+    }]
 };
+
+
+cards["foto-soll-weg"] = {
+  district: "Social-Media-Platz",
+  title: "Das Foto soll weg",
+  checklist: [
+    "ruhig bleiben und nicht selbst beleidigend reagieren",
+    "die Person bitten, das Foto zu löschen",
+    "Foto nicht weiterverbreiten oder selbst erneut posten",
+    "Screenshot nur als Beweis sichern, wenn nötig",
+    "Privatsphäre- oder Meldefunktion der Plattform nutzen",
+    "eine erwachsene Vertrauensperson um Hilfe bitten"
+  ],
+  answers: [
+    {
+      text: "A) Romy bittet die Person ruhig, das Foto zu löschen, und holt Hilfe, wenn es nicht entfernt wird.",
+      evaluation: "Sehr sicher. Romy schützt sich, ohne die Situation größer zu machen.",
+      consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip."
+    },
+    {
+      text: "B) Romy schreibt einen wütenden Kommentar unter das Foto.",
+      evaluation: "Riskant. Das kann den Streit vergrößern und noch mehr Aufmerksamkeit auf das Foto lenken.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "C) Romy speichert das Foto und schickt es ihren Freunden, damit sie sehen, wie gemein das ist.",
+      evaluation: "Sehr riskant. Dadurch wird das Foto weiterverbreitet, obwohl Romy eigentlich möchte, dass es verschwindet.",
+      consequence: "Risiko +2."
+    },
+    {
+      text: "D) Romy ignoriert es, obwohl sie sich sehr unwohl fühlt.",
+      evaluation: "Teilweise riskant. Ignorieren kann manchmal okay sein, aber wenn sie sich verletzt fühlt, sollte sie Hilfe holen oder das Foto melden.",
+      consequence: "Nichts."
+    }
+  ],
+  helpSources: [
+      {
+      name: "Internet-ABC – Kind und Bild im Internet",
+      url: "https://www.internet-abc.de/eltern/kind-und-bild-im-internet/"
+    },
+    {
+      name: "klicksafe – Vorsicht beim Posten von Bildern und Videos",
+      url: "https://www.klicksafe.de/news/vorsicht-beim-posten-von-bildern-und-videos"
+    }
+  ]
+};
+
 
 cards["bild-ohne-erlaubnis"] = {
     district: "Social-Media-Platz",
@@ -155,97 +369,304 @@ cards["bild-ohne-erlaubnis"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Recht am eigenen Bild",
-            url: "https://www.klicksafe.de/news/recht-am-eigenen-bild"
-        }
-    ]
+    {
+      name: "klicksafe – Vorsicht beim Posten von Bildern und Videos",
+      url: "https://www.klicksafe.de/news/vorsicht-beim-posten-von-bildern-und-videos"
+    },
+    {
+      name: "Internet-ABC – Kind und Bild im Internet",
+      url: "https://www.internet-abc.de/eltern/kind-und-bild-im-internet/"
+    }
+  ]
 };
 
-cards["kettenbrief"] = {
-    district: "Social-Media-Platz",
-    title: "Der Kettenbrief",
-    checklist: [
-        "Kettenbrief nicht weiterleiten",
-        "Angstgefühl ernst nehmen",
-        "mit einer erwachsenen Vertrauensperson sprechen",
-        "Nachricht löschen oder melden",
-        "anderen erklären, dass solche Nachrichten Druck machen sollen",
-        "nicht aus Angst handeln"
-    ],
-    answers: [
-        {
-            text: "A) Wir leiten ihn weiter, sicher ist sicher.",
-            evaluation: "Riskant. Dadurch bekommen noch mehr Menschen Angst.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "B) Wir leiten ihn nicht weiter und sprechen mit jemandem darüber.",
-            evaluation: "Sehr sicher. Die Kette wird gestoppt und das Angstgefühl wird ernst genommen.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
-        {
-            text: "C) Wir schicken ihn nur an eine Person.",
-            evaluation: "Riskant. Auch einmal weiterleiten hält den Kettenbrief am Leben.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "D) Wir schreiben einen Gegen-Kettenbrief.",
-            evaluation: "Teilweise riskant. Auch das kann neue Nachrichten und Druck auslösen.",
-            consequence: "Risiko +1."
-        }
-    ],
-    helpSources: [
-        {
-            name: "klicksafe – Kettenbriefe",
-            url: "https://www.klicksafe.de/news/kettenbriefe"
-        }
-    ]
+cards["unglaubliches-skateboard-video"] = {
+  district: "Social-Media-Platz",
+  title: "Das unglaubliche Skateboard-Video",
+  checklist: [
+    "nicht sofort glauben oder weiterleiten",
+    "prüfen, wer das Video veröffentlicht hat",
+    "nach dem Originalvideo oder weiteren Quellen suchen",
+    "auf Schnitte, ungewöhnliche Bewegungen oder Bearbeitung achten",
+    "Kommentare, Likes und viele Aufrufe nicht als Beweis sehen",
+    "bei Unsicherheit sagen: „Ich weiß nicht, ob das echt ist.“"
+  ],
+  answers: [
+    {
+      text: "A) Bob leitet das Video sofort weiter, weil es so unglaublich aussieht.",
+      evaluation: "Riskant. Gerade sehr unglaubliche Videos sollte man erst prüfen, bevor man sie weiterverbreitet.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "B) Bob prüft, woher das Video kommt, sucht nach dem Original und vergleicht mit anderen Quellen.",
+      evaluation: "Sehr sicher. Bob prüft das Video, bevor er entscheidet, ob er es glaubt oder teilt.",
+      consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
+    },
+    {
+      text: "C) Bob glaubt dem Video, wenn es viele Likes und Kommentare hat.",
+      evaluation: "Riskant. Viele Likes oder Kommentare beweisen nicht, dass ein Video echt ist.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "D) Bob schreibt dazu: „Keine Ahnung, ob das echt ist“ und teilt es trotzdem.",
+      evaluation: "Teilweise riskant. Der Hinweis ist ehrlich, aber das Video wird trotzdem weiterverbreitet.",
+      consequence: "Risiko +1."
+    }
+  ],
+  helpSources: [
+    {
+      name: "SCHAU HIN! – Fake News",
+      url: "https://www.schau-hin.info/sicherheit-risiken/fake-news-umgang-mit-falschmeldungen"
+    },
+    {
+      name: "klicksafe – Desinformation und Meinung",
+      url: "https://www.klicksafe.de/desinformation-und-meinung"
+    },
+    {
+      name: "Internet-ABC – Fake News erkennen",
+      url: "https://www.internet-abc.de/kinder/mitreden-mitmachen/forum/wie-erkennt-ihr-fake-news-falschmeldungen/"
+    }
+  ]
 };
 
-cards["streit-im-chat"] = {
-    district: "Social-Media-Platz",
-    title: "Der Streit im Chat",
-    checklist: [
-        "nicht im Ärger sofort zurückschreiben",
-        "Pause machen",
-        "keine Beleidigungen senden",
-        "Missverständnisse erkennen",
-        "Hilfe holen, wenn es verletzend wird",
-        "Gespräch später ruhiger klären"
-    ],
-    answers: [
-        {
-            text: "A) Wir schreiben sofort zurück.",
-            evaluation: "Teilweise riskant. In Wut schreibt man schneller Dinge, die verletzen oder die Lage verschlimmern.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "B) Wir machen Pause, bleiben ruhig und holen Hilfe, wenn es verletzend wird.",
-            evaluation: "Sehr sicher. Eine Pause kann Eskalation verhindern.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
-        {
-            text: "C) Wir posten Screenshots, damit alle sehen, wer angefangen hat.",
-            evaluation: "Riskant. Screenshots können den Streit weiter verbreiten und andere bloßstellen.",
-            consequence: "Risiko +2."
-        },
-        {
-            text: "D) Wir beleidigen alle, damit endlich Ruhe ist.",
-            evaluation: "Sehr riskant. Beleidigungen machen den Streit schlimmer und verletzen andere.",
-            consequence: "Risiko +2."
-        }
-    ],
-    helpSources: [
-        {
-            name: "SCHAU HIN! – Klassenchats",
-            url: "https://www.schau-hin.info/grundlagen/whatsapp-klassenchat-regeln-fuer-schueler-und-eltern"
-        },
-        {
-            name: "klicksafe – Cybermobbing",
-            url: "https://www.klicksafe.de/cybermobbing"
-        }
-    ]
+
+cards["ehrlicher-blog"] = {
+  district: "Social-Media-Platz",
+  title: "Der ehrliche Blog?",
+  checklist: [
+    "prüfen, ob der Beitrag Werbung oder gesponsert ist",
+    "auf Affiliate-Links, Rabattcodes oder Produktverkauf achten",
+    "dramatische Vorher-Nachher-Bilder kritisch betrachten",
+    "nach unabhängigen Quellen oder fachlichen Informationen suchen",
+    "nicht nur auf persönliche Erfahrungsberichte vertrauen",
+    "bei Gesundheits- oder Körperthemen Erwachsene oder Fachpersonen fragen"
+  ],
+  answers: [
+    {
+      text: "A) Pua glaubt dem Blog, wenn die Vorher-Nachher-Bilder überzeugend aussehen.",
+      evaluation: "Riskant. Bilder können bearbeitet, gestellt oder einseitig ausgewählt sein.",
+      consequence: "Risiko +2."
+    },
+    {
+      text: "B) Pua prüft, ob der Beitrag Werbung ist, ob Produkte verkauft werden und ob unabhängige Quellen die Aussagen bestätigen.",
+      evaluation: "Sehr sicher. Pua erkennt mögliche kommerzielle Interessen und prüft die Empfehlung kritisch.",
+      consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
+    },
+    {
+      text: "C) Pua vertraut dem Blog, wenn viele positive Kommentare darunterstehen.",
+      evaluation: "Teilweise riskant. Kommentare können gefälscht, einseitig oder von Fans geschrieben sein.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "D) Pua bestellt das Produkt nicht, teilt den Link aber mit Freundinnen, damit sie selbst entscheiden können.",
+      evaluation: "Teilweise riskant. Auch das Weiterleiten kann problematische Werbung verbreiten.",
+      consequence: "Risiko +1."
+    }
+  ],
+  helpSources: [
+    {
+      name: "Verbraucherzentrale – Wann ein Social-Media-Beitrag Werbung ist",
+      url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/soziale-netzwerke/influencerin-oder-nicht-wann-ein-beitrag-in-social-media-werbung-ist-39954"
+    },
+    {
+      name: "SCHAU HIN! – Online-Challenges und Produktwerbung kritisch hinterfragen",
+      url: "https://www.schau-hin.info/grundlagen/online-challenges-wie-eltern-ihre-kinder-schuetzen-koennen"
+    },
+    {
+      name: "Verbraucherzentrale – Was Werbung verspricht und was wirklich stimmt",
+      url: "https://www.verbraucherzentrale.de/wissen/lebensmittel/nahrungsergaenzungsmittel/nahrungsergaenzungsmittel-was-werbung-verspricht-und-was-wirklich-stimmt-107602"
+    }
+  ]
+};
+
+cards["einseitige-webseite"] = {
+  district: "Social-Media-Platz",
+  title: "Die einseitige Webseite",
+  checklist: [
+    "auf übertriebene oder sehr emotionale Wörter achten",
+    "prüfen, ob verschiedene Seiten des Themas gezeigt werden",
+    "zwischen Meinung, Werbung und Information unterscheiden",
+    "nach Autor, Herausgeber und Ziel der Webseite schauen",
+    "Informationen mit anderen zuverlässigen Quellen vergleichen",
+    "bei Schulaufgaben neutrale oder fachliche Quellen bevorzugen"
+  ],
+  answers: [
+    {
+      text: "A) Nina nutzt die Webseite, wenn sie viele starke Wörter und klare Meinungen enthält.",
+      evaluation: "Riskant. Starke Sprache kann zeigen, dass eine Quelle einseitig oder manipulativ ist.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "B) Nina prüft, wer die Seite geschrieben hat, ob mehrere Sichtweisen vorkommen und vergleicht mit anderen Quellen.",
+      evaluation: "Sehr sicher. Nina erkennt mögliche Einseitigkeit und prüft die Information sorgfältig.",
+      consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
+    },
+    {
+      text: "C) Nina nimmt die Webseite, wenn sie genau ihre eigene Meinung bestätigt.",
+      evaluation: "Riskant. Quellen nur zu nutzen, weil sie die eigene Meinung bestätigen, kann zu einseitigen Ergebnissen führen.",
+      consequence: "Risiko +2."
+    },
+    {
+      text: "D) Nina verwendet nur die Überschriften, weil man daran schnell erkennt, worum es geht.",
+      evaluation: "Teilweise riskant. Überschriften können zugespitzt sein; wichtig ist, den Inhalt und die Quellen genauer zu prüfen.",
+      consequence: "Risiko +1."
+    }
+  ],
+  helpSources: [
+    {
+      name: "klicksafe – Desinformation und Meinung",
+      url: "https://www.klicksafe.de/desinformation-und-meinung"
+    },
+    {
+      name: "Internet-ABC – Fake News einfach erklärt",
+      url: "https://www.internet-abc.de/kinder/lexikon/f/fake-news/"
+    },
+    {
+      name: "Internet-ABC – Desinformation erkennen und erklären",
+      url: "https://www.internet-abc.de/eltern/familie-medien/gefahren-und-schutz-viren-mobbing-werbung/desinformation-erkennen-und-erklaeren/"
+    }
+  ]
+};
+
+
+cards["komischer-wiki-artikel"] = {
+  district: "Social-Media-Platz",
+  title: "Der komische Wiki-Artikel",
+  checklist: [
+    "nicht alles sofort glauben, nur weil es online steht",
+    "prüfen, ob Quellen oder Belege angegeben sind",
+    "Information mit anderen zuverlässigen Quellen vergleichen",
+    "auf Änderungsverlauf, Aktualität und Diskussionen achten, wenn möglich",
+    "bei wichtigen Informationen offizielle oder fachliche Quellen nutzen",
+    "bei Unsicherheit Lehrkraft oder Erwachsene fragen"
+  ],
+  answers: [
+    {
+      text: "A) Johann nutzt den Artikel sofort, weil Online-Lexika meistens stimmen.",
+      evaluation: "Teilweise riskant. Viele Artikel können hilfreich sein, aber man sollte Quellen und Belege trotzdem prüfen.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "B) Johann prüft Quellen, Aktualität und vergleicht die Information mit anderen zuverlässigen Seiten.",
+      evaluation: "Sehr sicher. Johann verlässt sich nicht nur auf eine Seite, sondern bewertet die Information sorgfältig.",
+      consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
+    },
+    {
+      text: "C) Johann verwirft den Artikel sofort, weil jeder solche Seiten bearbeiten kann.",
+      evaluation: "Teilweise sicher, aber zu schnell. Bearbeitbare Seiten können trotzdem nützlich sein, wenn man Quellen und Belege prüft.",
+      consequence: "+1 Zeit-Chip."
+    },
+    {
+      text: "D) Johann nimmt nur die Stellen, die lustig klingen, weil sie für die Präsentation spannender sind.",
+      evaluation: "Riskant. Lustige oder auffällige Aussagen sind nicht automatisch wahr.",
+      consequence: "Risiko +2."
+    }
+  ],
+  helpSources: [
+    {
+      name: "Internet-ABC – Lexikon",
+      url: "https://www.internet-abc.de/kinder/lexikon/w/wiki/"
+    },
+    {
+      name: "klicksafe – Desinformation und Meinung",
+      url: "https://www.klicksafe.de/desinformation-und-meinung"
+    }
+  ]
+};
+
+cards["schule-wirklich-zu"] = {
+  district: "Social-Media-Platz",
+  title: "Ist die Schule wirklich zu?",
+  checklist: [
+    "Nachricht nicht sofort weiterleiten",
+    "prüfen, von wem die Information stammt",
+    "offizielle Quellen anschauen, zum Beispiel Schule, Stadt oder Wetterdienst",
+    "nicht nur auf Kommentare oder Likes vertrauen",
+    "bei Unsicherheit Eltern oder Schule fragen",
+    "erst teilen, wenn die Information bestätigt ist"
+  ],
+  answers: [
+    {
+      text: "A) Lara teilt die Nachricht sofort, damit alle rechtzeitig Bescheid wissen.",
+      evaluation: "Riskant. Wenn die Information falsch ist, verbreitet Lara ein Gerücht und sorgt für Verwirrung.",
+      consequence: "Risiko +2."
+    },
+    {
+      text: "B) Lara prüft zuerst offizielle Quellen, zum Beispiel die Schulwebseite, eine Nachricht der Schule oder eine Info der Stadt.",
+      evaluation: "Sehr sicher. Lara verlässt sich nicht nur auf Social Media, sondern prüft die Information zuverlässig.",
+      consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
+    },
+    {
+      text: "C) Lara fragt in den Kommentaren, ob andere auch gehört haben, dass die Schule ausfällt.",
+      evaluation: "Teilweise riskant. Kommentare können Hinweise geben, ersetzen aber keine offizielle Bestätigung.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "D) Lara wartet ab und sagt niemandem etwas.",
+      evaluation: "Teilweise sicher. Nicht weiterleiten ist gut, aber bei wichtigen Informationen sollte man aktiv zuverlässige Quellen prüfen.",
+      consequence: "+1 Zeit-Chip."
+    }
+  ],
+  helpSources: [
+    {
+      name: "klicksafe – Fake News",
+      url: "https://www.klicksafe.de/desinformation-und-meinung/fake-news"
+    },
+    {
+      name: "Internet-ABC – Fake News einfach erklärt",
+      url: "https://www.internet-abc.de/kinder/lexikon/f/fake-news/"
+    }
+  ]
+};
+
+
+cards["trauriger-blog"] = {
+  district: "Social-Media-Platz",
+  title: "Der traurige Blog",
+  checklist: [
+    "Bens Blog nicht herumzeigen oder weiterleiten",
+    "Ben nicht bloßstellen oder auslachen",
+    "Ben freundlich und privat ansprechen, wenn es passend ist",
+    "Sorgen ernst nehmen",
+    "eine erwachsene Vertrauensperson einbeziehen, wenn Mo sich wirklich Sorgen macht",
+    "bei akuter Gefahr sofort Hilfe holen"
+  ],
+  answers: [
+    {
+      text: "A) Mo zeigt den Blog im Klassenchat, damit alle Ben aufmuntern können.",
+      evaluation: "Riskant. Dadurch werden Bens private Gefühle öffentlich gemacht und Ben könnte sich bloßgestellt fühlen.",
+      consequence: "Risiko +2."
+    },
+    {
+      text: "B) Mo spricht Ben ruhig und privat an oder holt eine erwachsene Vertrauensperson dazu, wenn er sich ernsthaft Sorgen macht.",
+      evaluation: "Sehr sicher und fürsorglich. Mo respektiert Bens Privatsphäre und nimmt seine Sorge ernst.",
+      consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und möglicher Hilfe-holen Badge."
+    },
+    {
+      text: "C) Mo macht einen Screenshot und schickt ihn nur an seine beste Freundin, um Rat zu fragen.",
+      evaluation: "Teilweise riskant. Auch gut gemeintes Weiterleiten kann private Inhalte verbreiten. Besser ist eine erwachsene Vertrauensperson.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "D) Mo ignoriert den Blog, weil es ihn nichts angeht.",
+      evaluation: "Teilweise riskant. Privatsphäre ist wichtig, aber wenn Mo sich ernsthaft Sorgen macht, sollte er Hilfe holen.",
+      consequence: "+1 Zeit-Chip."
+    }
+  ],
+  helpSources: [
+    {
+      name: "Nummer gegen Kummer – Kinder- und Jugendberatung",
+      url: "https://www.nummergegenkummer.de/kinder-und-jugendberatung/"
+    },
+    {
+      name: "Nummer gegen Kummer – Elternberatung",
+      url: "https://www.nummergegenkummer.de/elternberatung/"
+    },
+    {
+      name: "Internet-ABC – Cybermobbing",
+      url: "https://www.internet-abc.de/lernmodul-cybermobbing/"
+    }
+  ]
 };
 
 cards["oeffentliches-profil"] = {
@@ -271,8 +692,8 @@ cards["oeffentliches-profil"] = {
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Wir entfernen nur die Schule.",
-            evaluation: "Teilweise sicher. Das ist ein guter Anfang, aber auch Wohnort, Fotos und weitere Daten sollten geprüft werden.",
+            text: "C) Wir entfernen nur den Wohnort.",
+            evaluation: "Teilweise sicher. Das ist ein guter Anfang, aber auch Schule, Fotos und weitere Daten sollten geprüft werden.",
             consequence: "+1 Zeit-Chip."
         },
         {
@@ -282,15 +703,23 @@ cards["oeffentliches-profil"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Datenschutz und Privatsphäre",
-            url: "https://www.klicksafe.de/privatsphaere-und-big-data"
-        },
-        {
-            name: "BSI – Soziale Netzwerke sicher nutzen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Soziale-Netzwerke/soziale-netzwerke_node.html"
-        }
-    ]
+    {
+      name: "SCHAU HIN! – Soziale Netzwerke: Sicherheit für Kinder",
+      url: "https://www.schau-hin.info/soziale-netzwerke"
+    },
+    {
+      name: "klicksafe – Social-Media-Apps einstellen: so geht’s",
+      url: "https://www.klicksafe.de/materialien/teil-5-mobil-safe-social-media-apps-einstellen-so-gehts"
+    },
+    {
+      name: "Internet-ABC – Persönliche Daten im Internet",
+      url: "https://www.internet-abc.de/kinder/film-ab/persoenliche-daten-im-internet-eine-heikle-sache/"
+    },
+    {
+      name: "SCHAU HIN! – Instagram sicher einrichten",
+      url: "https://www.schau-hin.info/sicherheit-risiken/instagram-sicher-einrichten"
+    }
+  ]
 };
 
 cards["mutprobe"] = {
@@ -327,11 +756,19 @@ cards["mutprobe"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – TikTok Challenges",
-            url: "https://www.klicksafe.de/news/tiktok-challenges"
-        }
-    ]
+      {
+        name: "SCHAU HIN! – Online-Challenges: Wie Eltern ihre Kinder schützen können",
+        url: "https://www.schau-hin.info/grundlagen/online-challenges-wie-eltern-ihre-kinder-schuetzen-koennen"
+      },
+      {
+        name: "klicksafe – Gefährliche TikTok-Challenges",
+        url: "https://www.klicksafe.de/news/gefaehrliche-tiktok-challenges-das-muessen-eltern-und-lehrkraefte-jetzt-wissen"
+      },
+      {
+        name: "Internet-ABC – Challenge einfach erklärt",
+        url: "https://www.internet-abc.de/kinder/lexikon/c/challenge/"
+      }
+  ]
 };
 
 cards["fake-account"] = {
@@ -368,15 +805,15 @@ cards["fake-account"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Cybermobbing",
-            url: "https://www.klicksafe.de/cybermobbing"
-        },
-        {
-            name: "klicksafe – Hassrede melden",
-            url: "https://www.klicksafe.de/hassrede/melden"
-        }
-    ]
+    {
+      name: "klicksafe – Fake-Profile auf Instagram melden",
+      url: "https://www.klicksafe.de/instagram/risiken-und-tipps-fuer-eltern"
+    },
+    {
+      name: "SCHAU HIN! – Cybergrooming und Fake-Profile",
+      url: "https://www.schau-hin.info/cybergrooming"
+    }
+  ]
 };
 
 cards["verstoerendes-video"] = {
@@ -413,55 +850,18 @@ cards["verstoerendes-video"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Problematische Inhalte melden",
-            url: "https://www.klicksafe.de/service/aktuelles/news/detail/problematische-inhalte-melden"
-        },
-        {
-            name: "Nummer gegen Kummer – Kinder- und Jugendberatung",
-            url: "https://www.nummergegenkummer.de/kinder-und-jugendberatung/"
-        }
-    ]
-};
-
-cards["bild-fuer-schulprojekt"] = {
-    district: "Social-Media-Platz",
-    title: "Das Bild für das Schulprojekt",
-    checklist: [
-        "Nutzungsrechte prüfen",
-        "nicht automatisch jedes Bild kopieren",
-        "freie Bildquellen oder Creative-Commons-Bilder nutzen",
-        "Quelle korrekt angeben, wenn erlaubt",
-        "bei Unsicherheit Lehrkraft oder Erwachsene fragen",
-        "respektieren, dass Bilder jemandem gehören können"
-    ],
-    answers: [
-        {
-            text: "A) Er darf es verwenden, wenn er die Quelle unter das Bild schreibt.",
-            evaluation: "Teilweise riskant. Quellenangabe allein bedeutet nicht automatisch, dass die Nutzung erlaubt ist.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "B) Er darf es verwenden, weil es nur für die Schule ist.",
-            evaluation: "Teilweise riskant. Schule kann Sonderregeln haben, aber man sollte trotzdem Rechte prüfen.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "C) Er sollte prüfen, ob er das Bild verwenden darf, oder ein frei nutzbares Bild suchen.",
-            evaluation: "Sehr sicher. Emil respektiert Rechte und sucht eine sichere Lösung.",
-            consequence: "+1 Zeit-Chip und +1 Sicherheits-Chip."
-        },
-        {
-            text: "D) Er darf es verwenden, wenn er das Bild verändert oder zuschneidet.",
-            evaluation: "Riskant. Verändern macht ein fremdes Bild nicht automatisch frei nutzbar.",
-            consequence: "Risiko +1."
-        }
-    ],
-    helpSources: [
-        {
-            name: "klicksafe – Urheberrecht",
-            url: "https://www.klicksafe.de/urheberrecht"
-        }
+      {
+        name: "jugendschutz.net – Verstoß melden",
+        url: "https://www.jugendschutz.net/verstoss-melden"
+      },
+      {
+        name: "klicksafe – Illegale Inhalte schnell und anonym melden",
+        url: "https://www.klicksafe.de/news/illegale-inhalte-schnell-und-anonym-melden"
+      },
+      {
+        name: "Nummer gegen Kummer – Kinder- und Jugendberatung",
+        url: "https://www.nummergegenkummer.de/kinder-und-jugendberatung/"
+      }
     ]
 };
 
@@ -480,7 +880,7 @@ cards["verletzendes-video-klassengruppe"] = {
         {
             text: "A) Das Video nicht weiterverbreiten und einem Erwachsenen oder der Plattform melden.",
             evaluation: "Sehr sicher. Nicht verbreiten, Hilfe holen und melden ist die beste Reaktion.",
-            consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und möglicher Melde-Mut Badge."
+            consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip."
         },
         {
             text: "B) Das Video nur an eine vertraute Person schicken, um Rat zu bekommen.",
@@ -498,16 +898,24 @@ cards["verletzendes-video-klassengruppe"] = {
             consequence: "Risiko +1."
         }
     ],
-    helpSources: [
-        {
-            name: "klicksafe – Problematische Inhalte melden",
-            url: "https://www.klicksafe.de/service/aktuelles/news/detail/problematische-inhalte-melden"
-        },
-        {
-            name: "klicksafe – Cybermobbing",
-            url: "https://www.klicksafe.de/cybermobbing"
-        }
-    ]
+  helpSources: [
+    {
+      name: "klicksafe – Cybermobbing",
+      url: "https://www.klicksafe.de/cybermobbing"
+    },
+    {
+      name: "SCHAU HIN! – Klassenchats: Regeln für Schüler und Eltern",
+      url: "https://www.schau-hin.info/grundlagen/whatsapp-gruppenchats-fuer-kinder"
+    },
+    {
+      name: "jugendschutz.net – Verstoß melden",
+      url: "https://www.jugendschutz.net/verstoss-melden"
+    },
+    {
+      name: "Nummer gegen Kummer – Kinder- und Jugendberatung",
+      url: "https://www.nummergegenkummer.de/kinder-und-jugendberatung/"
+    }
+  ]
 };
 
 cards["urlaubsstandort"] = {
@@ -530,7 +938,7 @@ cards["urlaubsstandort"] = {
         {
             text: "B) Sie sollte keine genauen aktuellen Standortdaten öffentlich teilen oder erst später posten.",
             evaluation: "Sehr sicher. Maja schützt ihre Privatsphäre und die ihrer Familie.",
-            consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und möglicher Datenschutz-Badge."
+            consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip."
         },
         {
             text: "C) Sie kann den Standort teilen, wenn sie keine Adresse dazuschreibt.",
@@ -540,17 +948,17 @@ cards["urlaubsstandort"] = {
         {
             text: "D) Sie sollte nur den Ort markieren, aber nicht schreiben, wie lange sie dort bleibt.",
             evaluation: "Teilweise sicher, aber nicht ideal. Der aktuelle Standort bleibt sichtbar.",
-            consequence: "+1 Zeit-Chip."
+            consequence: "Risiko +1."
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Soziale Netzwerke sicher nutzen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Soziale-Netzwerke/soziale-netzwerke_node.html"
-        },
-        {
-            name: "klicksafe – Datenschutz und Privatsphäre",
-            url: "https://www.klicksafe.de/privatsphaere-und-big-data"
-        }
+      {
+        name: "klicksafe – 10 Tipps zum digitalen Schutz im Sommerurlaub",
+        url: "https://www.klicksafe.de/news/10-tipps-zum-schutz-ihrer-familie-waehrend-des-sommerurlaubs"
+      },
+      {
+        name: "Polizeiliche Kriminalprävention – Auch Einbrecher nutzen Facebook, Instagram & Co.",
+        url: "https://www.polizei-beratung.de/aktuelles/detailansicht/auch-einbrecher-nutzen-facebook-instagram-und-co/"
+      }
     ]
 };

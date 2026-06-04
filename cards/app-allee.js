@@ -33,57 +33,66 @@ cards["taschenlampen-app"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Apps sicher nutzen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Apps/apps_node.html"
-        }
+      {
+        name: "BSI – Sicherer Umgang mit Apps auf mobilen Geräten",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Basisschutz-fuer-Computer-Mobilgeraete/Schutz-fuer-Mobilgeraete/Sicherheit-bei-Apps/sicherheit-bei-apps.html"
+      },
+      {
+        name: "Verbraucherzentrale – Apps und Datenschutz",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/mobilfunk-und-festnetz/apps-und-datenschutz-so-schuetzen-sie-ihre-persoenlichen-daten-6431"
+      },
+      {
+        name: "BSI – Smartphone- und App-Sicherheit für Eltern",
+        url: "https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Medienpaket_KuJ/1_Thema_Smartphone-App-Sicherheit_Eltern.pdf?__blob=publicationFile&v=3"
+      }
     ]
 };
 
-cards["kostenloses-spiel"] = {
-    district: "App-Allee",
-    title: "Das kostenlose Spiel",
-    checklist: [
-        "verstehen, dass kostenlose Apps oft mit Daten oder Werbung arbeiten",
-        "Datenschutzeinstellungen prüfen",
-        "personalisierte Werbung kritisch betrachten",
-        "bei Unsicherheit Erwachsene fragen",
-        "nicht einfach alles akzeptieren",
-        "altersgerechte Apps bevorzugen"
-    ],
-    answers: [
-        {
-            text: "A) Wir stimmen zu, weil das Spiel nichts kostet.",
-            evaluation: "Teilweise riskant. Kostenlos bedeutet nicht automatisch ohne Gegenleistung; oft werden Daten oder Aufmerksamkeit genutzt.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "B) Wir prüfen die Datenschutz-Einstellungen und entscheiden gemeinsam mit Eltern.",
-            evaluation: "Sehr sicher. Die Familie schaut bewusst auf Daten, Werbung und Einstellungen.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
-        {
-            text: "C) Wir ignorieren Werbung einfach.",
-            evaluation: "Teilweise riskant. Werbung zu ignorieren hilft etwas, aber die Daten- und Tracking-Einstellungen bleiben wichtig.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "D) Wir geben ein falsches Alter an.",
-            evaluation: "Riskant. Falsche Angaben lösen das Problem nicht und können ungeeignete Inhalte oder Funktionen freischalten.",
-            consequence: "Risiko +1."
-        }
-    ],
+cards["online-quiz"] = {
+  district: "App-Allee",
+  title: "Das Online-Quiz",
+  checklist: [
+    "überlegen, welche Daten das Quiz abfragt",
+    "keine privaten Informationen eingeben",
+    "keine Kontakte oder Profilzugriffe erlauben",
+    "nicht alles anklicken, nur weil es lustig wirkt",
+    "Datenschutz- und Berechtigungshinweise prüfen",
+    "bei Unsicherheit Erwachsene fragen oder Quiz nicht machen"
+  ],
+  answers: [
+    {
+      text: "A) Jonny macht das Quiz nur, wenn er keine privaten Informationen eingeben und keine zusätzlichen Zugriffe erlauben muss.",
+      evaluation: "Sehr sicher. Jonny achtet darauf, dass das Quiz nicht unnötig Daten sammelt.",
+      consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
+    },
+    {
+      text: "B) Jonny macht das Quiz und gibt falsche Antworten ein, damit seine echten Daten geschützt sind.",
+      evaluation: "Teilweise sicher, aber nicht ideal. Falsche Antworten können helfen, aber das Quiz kann trotzdem Daten über Gerät, Profil oder Verhalten sammeln.",
+      consequence: "+1 Zeit-Chip."
+    },
+    {
+      text: "C) Jonny erlaubt dem Quiz Zugriff auf sein Profil, weil es dann genauere Ergebnisse liefert.",
+      evaluation: "Riskant. Dadurch kann das Quiz mehr persönliche Daten sammeln, als Jonny vielleicht merkt.",
+      consequence: "Risiko +2."
+    },
+    {
+      text: "D) Jonny teilt das Quiz mit Freunden, bevor er weiß, ob es sicher ist.",
+      evaluation: "Riskant. So könnten auch andere ihre Daten preisgeben.",
+      consequence: "Risiko +1."
+    }
+  ],
     helpSources: [
-        {
-            name: "SCHAU HIN! – Apps und Datenschutz",
-            url: "https://www.schau-hin.info/grundlagen/apps-kindersicher-machen"
-        },
-        {
-            name: "BSI – Apps sicher nutzen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Apps/apps_node.html"
-        }
+      {
+        name: "klicksafe – Datenschutz im Internet",
+        url: "https://www.klicksafe.de/privatsphaere-und-big-data"
+      },
+      {
+        name: "Verbraucherzentrale – Apps und Datenschutz",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/mobilfunk-und-festnetz/apps-und-datenschutz-so-schuetzen-sie-ihre-persoenlichen-daten-6431"
+      }
     ]
 };
+
 
 cards["in-app-kauf"] = {
     district: "App-Allee",
@@ -92,7 +101,7 @@ cards["in-app-kauf"] = {
         "nicht heimlich kaufen",
         "vorher mit Eltern sprechen",
         "verstehen, dass kleine Beträge sich summieren können",
-        "Familienregeln für Käufe beachten",
+        "Familienregeln für Käufe erstellen und beachten",
         "Kaufbestätigungen oder Sperren nutzen",
         "überlegen, ob der Kauf wirklich nötig ist"
     ],
@@ -119,10 +128,14 @@ cards["in-app-kauf"] = {
         }
     ],
     helpSources: [
-        {
-            name: "SCHAU HIN! – In-App-Käufe",
-            url: "https://www.schau-hin.info/sicherheit-risiken/kostenfallen-in-app-kaeufe-und-abos"
-        }
+      {
+        name: "Verbraucherzentrale – In-Game- und In-App-Käufe",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/apps-und-software/ingame-und-inappkaeufe-wenn-virtueller-spielspass-teuer-wird-12941"
+      },
+      {
+        name: "BSI – Jugendschutzeinstellungen bei Apps, Spielen & Co.",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Kinderschutz-im-Internet/Jugendschutz-Schritt-fuer-Schritt/jugendschutzeinstellungen-schritt-fuer-schritt.html"
+      }
     ]
 };
 
@@ -154,20 +167,20 @@ cards["standortfreigabe"] = {
             consequence: "Risiko +1."
         },
         {
-            text: "D) Wir lassen den Standort an und denken später nicht mehr daran.",
+            text: "D) Wir lassen den Standort an und versuchen später daran zu denken.",
             evaluation: "Riskant. Vergessene Berechtigungen können dauerhaft private Daten preisgeben.",
             consequence: "Risiko +1."
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Apps sicher nutzen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Apps/apps_node.html"
-        },
-        {
-            name: "klicksafe – Datenschutz und Privatsphäre",
-            url: "https://www.klicksafe.de/privatsphaere-und-big-data"
-        }
+      {
+        name: "Verbraucherzentrale – Apps und Datenschutz",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/mobilfunk-und-festnetz/apps-und-datenschutz-so-schuetzen-sie-ihre-persoenlichen-daten-6431"
+      },
+      {
+        name: "BSI – Sicherer Umgang mit Apps auf mobilen Geräten",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Basisschutz-fuer-Computer-Mobilgeraete/Schutz-fuer-Mobilgeraete/Sicherheit-bei-Apps/sicherheit-bei-apps_node.html"
+      }
     ]
 };
 
@@ -205,10 +218,10 @@ cards["mikrofonzugriff"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Apps sicher nutzen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Apps/apps_node.html"
-        }
+      {
+        name: "Elternguide.online – App-Berechtigungen: Kamera, Mikrofon und Co.",
+        url: "https://www.elternguide.online/app-berechtigungen-kamera-mikrofon-und-co/"
+      }
     ]
 };
 
@@ -242,14 +255,18 @@ cards["altersabfrage"] = {
         {
             text: "D) Wir installieren die App trotzdem.",
             evaluation: "Riskant. Altersgrenzen und Hinweise werden ignoriert.",
-            consequence: "Risiko +1."
+            consequence: "Risiko +2."
         }
     ],
     helpSources: [
-        {
-            name: "SCHAU HIN! – Altersgerechte Apps",
-            url: "https://www.schau-hin.info/grundlagen/apps-kindersicher-machen"
-        }
+      {
+        name: "BSI – Jugendschutzeinstellungen bei Apps, Spielen & Co.",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Kinderschutz-im-Internet/Jugendschutz-Schritt-fuer-Schritt/jugendschutzeinstellungen-schritt-fuer-schritt.html"
+      },
+      {
+        name: "SCHAU HIN! – USK: Altersfreigaben für Spiele und Apps",
+        url: "https://www.schau-hin.info/grundlagen/usk-die-altersfreigaben-fuer-spiele-und-apps"
+      }
     ]
 };
 
@@ -287,106 +304,112 @@ cards["app-aus-dem-internet"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Apps sicher nutzen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Apps/apps_node.html"
-        },
-        {
-            name: "BSI – sichere Downloads",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Downloads/downloads_node.html"
-        }
+      {
+        name: "BSI – Sicherer Umgang mit Apps auf mobilen Geräten",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Basisschutz-fuer-Computer-Mobilgeraete/Schutz-fuer-Mobilgeraete/Sicherheit-bei-Apps/sicherheit-bei-apps.html"
+      },
+      {
+        name: "BSI – Schutz für Mobilgeräte",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Basisschutz-fuer-Computer-Mobilgeraete/Schutz-fuer-Mobilgeraete/schutz-fuer-mobilgeraete_node.html"
+      }
     ]
 };
 
-cards["datenschutz-einstellungen"] = {
-    district: "App-Allee",
-    title: "Die Datenschutz-Einstellungen",
-    checklist: [
-        "Einstellungen gemeinsam prüfen",
-        "private Optionen wählen",
-        "Sichtbarkeit begrenzen",
-        "Tracking und personalisierte Werbung kritisch betrachten",
-        "Benachrichtigungen bewusst einstellen",
-        "bei Unsicherheit Hilfe holen"
-    ],
-    answers: [
-        {
-            text: "A) Wir lassen alles so, wie es ist.",
-            evaluation: "Teilweise riskant. Standardeinstellungen sind nicht immer die privateste oder sicherste Wahl.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "B) Wir prüfen gemeinsam die Einstellungen und wählen private Optionen.",
-            evaluation: "Sehr sicher. Die Familie nimmt sich Zeit, um Datenschutz und Sichtbarkeit bewusst einzustellen.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
-        {
-            text: "C) Wir schalten nur Benachrichtigungen aus.",
-            evaluation: "Teilweise sicher. Das kann helfen, aber Datenschutz, Tracking und Sichtbarkeit bleiben trotzdem wichtig.",
-            consequence: "+1 Zeit-Chip."
-        },
-        {
-            text: "D) Wir nutzen die App einfach weiter, weil sie Spaß macht.",
-            evaluation: "Teilweise riskant. Spaß ist wichtig, aber Einstellungen sollten trotzdem geprüft werden.",
-            consequence: "Risiko +1."
-        }
-    ],
+cards["peinliche-werbung"] = {
+  district: "App-Allee",
+  title: "Die peinliche Werbung",
+  checklist: [
+    "verstehen, dass Suchverlauf und Cookies Werbung beeinflussen können",
+    "auf gemeinsam genutzten Geräten private Sucheinstellungen beachten",
+    "Browser-Verlauf, Cookies oder Werbeeinstellungen gemeinsam prüfen",
+    "sich nicht über peinliche Werbung lustig machen",
+    "bei privaten Themen ein eigenes Profil oder einen privaten Modus nutzen",
+    "mit Erwachsenen über Datenschutz- und Werbeeinstellungen sprechen"
+  ],
+  answers: [
+    {
+      text: "A) Lea löscht oder prüft den Verlauf, Cookies und Werbeeinstellungen und nutzt bei privaten Themen ein eigenes Profil oder den privaten Modus.",
+      evaluation: "Sehr sicher. Lea schützt ihre Privatsphäre und versteht, warum Werbung durch Such- und Nutzungsdaten beeinflusst werden kann.",
+      consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
+    },
+    {
+      text: "B) Lea löscht nur die Werbung, wenn sie angezeigt wird.",
+      evaluation: "Teilweise sicher. Einzelne Werbung zu schließen hilft kurz, aber die Ursache können Verlauf, Cookies oder Werbeeinstellungen sein.",
+      consequence: "+1 Zeit-Chip."
+    },
+    {
+      text: "C) Lea gibt Daniel die Schuld, weil er die Werbung gesehen hat.",
+      evaluation: "Riskant. Das löst das Datenschutzproblem nicht und kann peinlich oder verletzend sein.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "D) Lea benutzt ab jetzt heimlich fremde Geräte, damit niemand ihre Suche sieht.",
+      evaluation: "Riskant. Heimlich fremde Geräte zu nutzen ist keine gute Lösung und kann neue Datenschutzprobleme verursachen.",
+      consequence: "Risiko +2."
+    }
+  ],
     helpSources: [
-        {
-            name: "SCHAU HIN! – Apps kindersicher machen",
-            url: "https://www.schau-hin.info/grundlagen/apps-kindersicher-machen"
-        },
-        {
-            name: "BSI – Apps sicher nutzen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Apps/apps_node.html"
-        }
+      {
+        name: "Verbraucherzentrale – Cookies kontrollieren und verwalten",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/datenschutz/cookies-kontrollieren-und-verwalten-so-gehts-11996"
+      },
+      {
+        name: "BSI – Cookies und Fingerprints verhindern",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Updates-Browser-Open-Source-Software/Der-Browser/JavaScript-Cookies-Fingerprints/javascript-cookies-fingerprints.html"
+      },
+      {
+        name: "BSI – Ad-Blocker & Tracking",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Updates-Browser-Open-Source-Software/Der-Browser/Adblocker-Tracking/adblocker-tracking_node.html"
+      }
     ]
 };
 
-cards["freundesliste"] = {
-    district: "App-Allee",
-    title: "Die Freundesliste",
-    checklist: [
-        "Kontakte nicht leichtfertig freigeben",
-        "verstehen, dass Kontakte Daten anderer Menschen enthalten",
-        "Zugriff ablehnen oder gemeinsam prüfen",
-        "alternative Suchfunktionen nutzen",
-        "Erwachsene fragen",
-        "Berechtigungen später wieder kontrollieren"
-    ],
-    answers: [
-        {
-            text: "A) Wir erlauben den Zugriff, weil es praktisch ist.",
-            evaluation: "Riskant. Praktisch bedeutet nicht automatisch datenschutzfreundlich.",
-            consequence: "Risiko +2."
-        },
-        {
-            text: "B) Wir schützen die Kontakte und lehnen den Zugriff ab oder prüfen gemeinsam.",
-            evaluation: "Sehr sicher. Auch die Daten anderer Personen werden respektiert.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
-        {
-            text: "C) Wir erlauben den Zugriff nur kurz.",
-            evaluation: "Teilweise riskant. Auch kurzer Zugriff kann reichen, damit Daten übertragen werden.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "D) Wir löschen danach einzelne Kontakte wieder.",
-            evaluation: "Riskant. Wenn Daten bereits übertragen wurden, hilft nachträgliches Löschen nur begrenzt.",
-            consequence: "Risiko +1."
-        }
-    ],
+
+cards["altes-kinderkonto"] = {
+  district: "App-Allee",
+  title: "Das alte Kinderkonto",
+  checklist: [
+    "nicht einfach ignorieren, wenn ein altes Konto noch persönliche Daten enthält",
+    "in den Konto-Einstellungen nach „Konto löschen“ oder „Daten löschen“ suchen",
+    "vorher prüfen, ob wichtige Inhalte gesichert werden sollen",
+    "mit einer erwachsenen Person gemeinsam vorgehen",
+    "Bestätigungs-E-Mail oder Löschbestätigung beachten",
+    "wenn Löschen nicht klappt, Hilfe- oder Datenschutzkontakt der Webseite nutzen"
+  ],
+  answers: [
+    {
+      text: "A) Louis löscht nur die App oder entfernt das Lesezeichen, damit er die Seite nicht mehr sieht.",
+      evaluation: "Riskant. Die App oder das Lesezeichen zu löschen entfernt meistens nicht das Konto oder die gespeicherten Daten.",
+      consequence: "Risiko +1."
+    },
+    {
+      text: "B) Louis sucht gemeinsam mit einem Erwachsenen in den Einstellungen nach „Konto löschen“ oder „Daten löschen“ und prüft die Bestätigung.",
+      evaluation: "Sehr sicher. Louis geht Schritt für Schritt vor und achtet darauf, dass das Konto wirklich geschlossen wird.",
+      consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
+    },
+    {
+      text: "C) Louis ändert einfach seinen Namen im Profil auf einen Fantasienamen.",
+      evaluation: "Teilweise sicher, aber nicht genug. Einige Daten sind dann vielleicht weniger sichtbar, aber das Konto und gespeicherte Informationen bleiben bestehen.",
+      consequence: "Nichts passiert."
+    },
+    {
+      text: "D) Louis gibt sein Passwort an einen Freund, damit dieser das Konto für ihn löscht.",
+      evaluation: "Sehr riskant. Passwörter sollten nicht weitergegeben werden, auch nicht zum Löschen eines Kontos.",
+      consequence: "Risiko +2."
+    }
+  ],
     helpSources: [
-        {
-            name: "BSI – Apps sicher nutzen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Apps/apps_node.html"
-        },
-        {
-            name: "klicksafe – Datenschutz und Privatsphäre",
-            url: "https://www.klicksafe.de/privatsphaere-und-big-data"
-        }
+      {
+        name: "Verbraucherzentrale – Gespeicherte Daten erfragen, korrigieren oder löschen lassen",
+        url: "https://www.verbraucherzentrale.de/musterbriefe/digitale-welt/datenschutz-35853"
+      },
+      {
+        name: "Verbraucherzentrale – Datenleaks vorbeugen: Mit Daten geizen, eigene Infos schützen",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/datenschutz/datenleaks-vorbeugen-mit-daten-geizen-eigene-infos-schuetzen-33521"
+      }
     ]
 };
+
 
 cards["bildschirmzeit-check"] = {
     district: "App-Allee",
@@ -422,10 +445,18 @@ cards["bildschirmzeit-check"] = {
         }
     ],
     helpSources: [
-        {
-            name: "SCHAU HIN! – Bildschirmzeiten",
-            url: "https://www.schau-hin.info/grundlagen/bildschirmzeiten"
-        }
+      {
+        name: "SCHAU HIN! – Bildschirmzeiten für Kinder vereinbaren",
+        url: "https://www.schau-hin.info/bildschirmzeiten"
+      },
+      {
+        name: "klicksafe – Wie lange darf mein Kind an Handy und PC?",
+        url: "https://www.klicksafe.de/bildschirm-und-medienzeit-was-ist-fuer-kinder-in-ordnung"
+      },
+      {
+        name: "BSI – Digitaler Schutz für Kinder und Jugendliche",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Kinderschutz-im-Internet/Technischer-Schutz-fuer-Kinder-im-Internet/technischer-schutz-fuer-kinder-im-internet_node.html"
+      }
     ]
 };
 
@@ -449,7 +480,7 @@ cards["streit-um-bildschirmzeit"] = {
         {
             text: "B) Online-Sein ist wichtig, aber Pausen und gemeinsam besprochene Regeln können helfen, gesund und sicher zu bleiben.",
             evaluation: "Sehr sicher. Diese Antwort verbindet Freiheit, Sicherheit und Familienregeln.",
-            consequence: "+1 Zeit-Chip, +1 Sicherheits-Chip und möglicher Balance Badge."
+            consequence: "+1 Zeit-Chip, +1 Sicherheits-Chip."
         },
         {
             text: "C) Noah sollte seine Eltern bitten, ihm nur für soziale Netzwerke eine Ausnahme zu erlauben.",
@@ -463,14 +494,22 @@ cards["streit-um-bildschirmzeit"] = {
         }
     ],
     helpSources: [
-        {
-            name: "SCHAU HIN! – Bildschirmzeiten",
-            url: "https://www.schau-hin.info/grundlagen/bildschirmzeiten"
-        },
-        {
-            name: "SCHAU HIN! – Medienzeiten vereinbaren",
-            url: "https://www.schau-hin.info/grundlagen/medienzeiten-vereinbaren"
-        }
+      {
+        name: "SCHAU HIN! – Medienzeiten: feste Bildschirmzeiten vereinbaren",
+        url: "https://www.schau-hin.info/grundlagen/medienzeiten-feste-bildschirmzeiten-fuer-kinder-vereinbaren"
+      },
+      {
+        name: "SCHAU HIN! – Bildschirmzeiten für Kinder vereinbaren",
+        url: "https://www.schau-hin.info/bildschirmzeiten"
+      },
+      {
+        name: "klicksafe – Bildschirm- und Medienzeit",
+        url: "https://www.klicksafe.de/bildschirm-und-medienzeit-was-ist-fuer-kinder-in-ordnung"
+      },
+      {
+        name: "BSI – Digitaler Schutz für Kinder und Jugendliche",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Kinderschutz-im-Internet/Technischer-Schutz-fuer-Kinder-im-Internet/technischer-schutz-fuer-kinder-im-internet_node.html"
+      }
     ]
 };
 
@@ -508,9 +547,13 @@ cards["oeffentliches-wlan"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Sicher unterwegs",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Sicher-unterwegs/sicher-unterwegs_node.html"
-        }
+      {
+        name: "BSI – Sicherheitstipps für privates und öffentliches WLAN",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Router-WLAN-VPN/Sicherheitstipps-fuer-privates-und-oeffentliches-WLAN/sicherheitstipps-fuer-privates-und-oeffentliches-wlan_node.html"
+      },
+      {
+        name: "Verbraucherzentrale – Öffentliche WLAN-Netze sicher nutzen",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/datenschutz/oeffentliche-wlannetze-sicher-nutzen-darauf-sollten-sie-achten-19264"
+      }
     ]
 };

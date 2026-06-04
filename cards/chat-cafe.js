@@ -1,44 +1,3 @@
-cards["online-bekanntschaft"] = {
-    district: "Chat-Café",
-    title: "Die Online-Bekanntschaft",
-    checklist: [
-        "Treffen nicht allein vereinbaren",
-        "keine Adresse, Schule oder privaten Daten teilen",
-        "kein Foto schicken",
-        "mit einer erwachsenen Vertrauensperson sprechen",
-        "bei unangenehmem Gefühl Chat beenden oder blockieren",
-        "verdächtiges Verhalten ernst nehmen"
-    ],
-    answers: [
-        {
-            text: "A) Wir treffen uns an einem öffentlichen Ort, weil dort viele Menschen sind.",
-            evaluation: "Teilweise riskant. Ein öffentlicher Ort ist besser als ein privater Ort, aber Kinder sollten so etwas nicht allein entscheiden.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "B) Wir nehmen einen Freund oder eine Freundin mit, sagen aber den Eltern nichts.",
-            evaluation: "Riskant. Einen Freund mitzunehmen reicht nicht, wenn keine erwachsene Vertrauensperson Bescheid weiß.",
-            consequence: "Risiko +2."
-        },
-        {
-            text: "C) Wir erzählen es einer erwachsenen Vertrauensperson und entscheiden nicht allein.",
-            evaluation: "Sehr sicher. Hilfe holen ist hier die stärkste Entscheidung.",
-            consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und Risiko -1."
-        },
-        {
-            text: "D) Wir schicken erstmal ein Foto von uns, damit die Person uns erkennt.",
-            evaluation: "Sehr riskant. Fotos können weitergeschickt, gespeichert oder missbraucht werden.",
-            consequence: "Risiko +2."
-        }
-    ],
-    helpSources: [
-        {
-            name: "klicksafe – Cybergrooming",
-            url: "https://www.klicksafe.de/cybergrooming"
-        }
-    ]
-};
-
 cards["frage-nach-schule"] = {
     district: "Chat-Café",
     title: "Die Frage nach der Schule",
@@ -73,14 +32,18 @@ cards["frage-nach-schule"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Datenschutz und Privatsphäre",
-            url: "https://www.klicksafe.de/privatsphaere-und-big-data"
-        },
-        {
-            name: "klicksafe – Cybergrooming",
-            url: "https://www.klicksafe.de/cybergrooming"
-        }
+      {
+        name: "klicksafe – Cybergrooming",
+        url: "https://www.klicksafe.de/cybergrooming"
+      },
+      {
+        name: "klicksafe – Datenschutz und Privatsphäre",
+        url: "https://www.klicksafe.de/privatsphaere-und-big-data"
+      },
+      {
+        name: "SCHAU HIN! – Cybergrooming erkennen und Kinder schützen",
+        url: "https://www.schau-hin.info/cybergrooming"
+      }
     ]
 };
 
@@ -118,14 +81,18 @@ cards["profilfoto"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Datenschutz und Privatsphäre",
-            url: "https://www.klicksafe.de/privatsphaere-und-big-data"
-        },
-        {
-            name: "klicksafe – Cybergrooming",
-            url: "https://www.klicksafe.de/cybergrooming"
-        }
+      {
+        name: "klicksafe – Cybergrooming",
+        url: "https://www.klicksafe.de/cybergrooming"
+      },
+      {
+        name: "SCHAU HIN! – Cybergrooming erkennen und Kinder schützen",
+        url: "https://www.schau-hin.info/cybergrooming"
+      },
+      {
+        name: "Nummer gegen Kummer – Beratung für Kinder und Jugendliche",
+        url: "https://www.nummergegenkummer.de/kinder-und-jugendberatung/"
+      }
     ]
 };
 
@@ -163,14 +130,14 @@ cards["schlechtes-bauchgefuehl"] = {
         }
     ],
     helpSources: [
-        {
-            name: "Nummer gegen Kummer – Beratung für Kinder und Jugendliche",
-            url: "https://www.nummergegenkummer.de/kinder-und-jugendberatung/"
-        },
-        {
-            name: "Nummer gegen Kummer – Elternberatung",
-            url: "https://www.nummergegenkummer.de/elternberatung/"
-        }
+      {
+        name: "klicksafe – Tipps für Jugendliche bei Cybergrooming",
+        url: "https://www.klicksafe.de/fileadmin/cms/download/Material/KL_Broschuere_Cybergrooming.pdf"
+      },
+      {
+        name: "Nummer gegen Kummer – Kinder- und Jugendberatung",
+        url: "https://www.nummergegenkummer.de/kinder-und-jugendberatung/"
+      }
     ]
 };
 
@@ -208,14 +175,18 @@ cards["geheimer-chat"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Cybergrooming",
-            url: "https://www.klicksafe.de/cybergrooming"
-        },
-        {
-            name: "Nummer gegen Kummer – Beratung bei Web-Sorgen",
-            url: "https://www.nummergegenkummer.de/elternberatung/beratung-bei-web-sorgen/"
-        }
+      {
+        name: "klicksafe – Cybergrooming",
+        url: "https://www.klicksafe.de/cybergrooming"
+      },
+      {
+        name: "klicksafe – Warnsignale im Chat",
+        url: "https://www.klicksafe.de/fileadmin/cms/download/Material/Poster/Wehr_dich_gegen_sexualisierte_Gewalt_im_Netz_Plakat_klicksafe.pdf"
+      },
+      {
+        name: "Nummer gegen Kummer – Kinder- und Jugendberatung",
+        url: "https://www.nummergegenkummer.de/kinder-und-jugendberatung/"
+      }
     ]
 };
 
@@ -253,14 +224,14 @@ cards["altersluege"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Cybergrooming",
-            url: "https://www.klicksafe.de/cybergrooming"
-        },
-        {
-            name: "klicksafe – Datenschutz und Privatsphäre",
-            url: "https://www.klicksafe.de/privatsphaere-und-big-data"
-        }
+      {
+        name: "klicksafe – Cybergrooming",
+        url: "https://www.klicksafe.de/cybergrooming"
+      },
+      {
+        name: "SCHAU HIN! – Cybergrooming erkennen und Kinder schützen",
+        url: "https://www.schau-hin.info/cybergrooming"
+      }
     ]
 };
 
@@ -298,10 +269,14 @@ cards["sprachchat"] = {
         }
     ],
     helpSources: [
-        {
-            name: "SCHAU HIN! – In-Game-Chats",
-            url: "https://www.schau-hin.info/grundlagen/in-game-chats-chatten-im-spiel-birgt-risiken-fuer-kinder"
-        }
+      {
+        name: "SCHAU HIN! – In-Game-Chats: Chatten im Spiel birgt Risiken",
+        url: "https://www.schau-hin.info/grundlagen/in-game-chats-chatten-im-spiel-birgt-risiken-fuer-kinder"
+      },
+      {
+        name: "klicksafe – Digitale Spiele sicher nutzen",
+        url: "https://www.klicksafe.de/digitale-spiele"
+      }
     ]
 };
 
@@ -339,14 +314,14 @@ cards["telefonnummer"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Datenschutz und Privatsphäre",
-            url: "https://www.klicksafe.de/privatsphaere-und-big-data"
-        },
-        {
-            name: "SCHAU HIN! – Messenger-Apps für Kinder",
-            url: "https://www.schau-hin.info/sicherheit-risiken/messenger-apps-fuer-kinder"
-        }
+      {
+        name: "SCHAU HIN! – Messenger-Apps für Kinder",
+        url: "https://www.schau-hin.info/sicherheit-risiken/messenger-apps-fuer-kinder"
+      },
+      {
+        name: "klicksafe – Datenschutz und Privatsphäre",
+        url: "https://www.klicksafe.de/privatsphaere-und-big-data"
+      }
     ]
 };
 
@@ -374,7 +349,7 @@ cards["geschenk-im-spiel"] = {
         },
         {
             text: "C) Wir behalten das Geschenk und ignorieren die Person.",
-            evaluation: "Teilweise sicher. Keine Daten zu geben ist gut, aber bei Druck sollte man Hilfe holen.",
+            evaluation: "Teilweise sicher. Keine Daten zu geben ist gut und bei Druck sollte man Hilfe holen.",
             consequence: "+1 Zeit-Chip."
         },
         {
@@ -384,10 +359,14 @@ cards["geschenk-im-spiel"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Cybergrooming",
-            url: "https://www.klicksafe.de/cybergrooming"
-        }
+      {
+        name: "klicksafe – Tipps für Jugendliche bei Cybergrooming",
+        url: "https://www.klicksafe.de/fileadmin/cms/download/Material/KL_Broschuere_Cybergrooming.pdf"
+      },
+      {
+        name: "SCHAU HIN! – In-Game-Chats: Chatten im Spiel birgt Risiken",
+        url: "https://www.schau-hin.info/grundlagen/in-game-chats-chatten-im-spiel-birgt-risiken-fuer-kinder"
+      }
     ]
 };
 
@@ -425,14 +404,18 @@ cards["treffen-online-bekanntschaft"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Cybergrooming",
-            url: "https://www.klicksafe.de/cybergrooming"
-        },
-        {
-            name: "Nummer gegen Kummer – Beratung für Kinder und Jugendliche",
-            url: "https://www.nummergegenkummer.de/kinder-und-jugendberatung/"
-        }
+      {
+        name: "SCHAU HIN! – Cybergrooming erkennen und Kinder schützen",
+        url: "https://www.schau-hin.info/cybergrooming"
+      },
+      {
+        name: "klicksafe – Cybergrooming",
+        url: "https://www.klicksafe.de/cybergrooming"
+      },
+      {
+        name: "klicksafe – Tipps für Jugendliche bei Cybergrooming",
+        url: "https://www.klicksafe.de/fileadmin/cms/download/Material/KL_Broschuere_Cybergrooming.pdf"
+      }
     ]
 };
 
@@ -470,13 +453,13 @@ cards["unbekannte-freundschaftsanfrage"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Datenschutz und Privatsphäre",
-            url: "https://www.klicksafe.de/privatsphaere-und-big-data"
-        },
-        {
-            name: "klicksafe – Cybergrooming",
-            url: "https://www.klicksafe.de/cybergrooming"
-        }
+      {
+        name: "klicksafe – Fake-Profile auf Instagram",
+        url: "https://www.klicksafe.de/instagram/risiken-und-tipps-fuer-eltern"
+      },
+      {
+        name: "SCHAU HIN! – Cybergrooming erkennen und Kinder schützen",
+        url: "https://www.schau-hin.info/cybergrooming"
+      }
     ]
 };

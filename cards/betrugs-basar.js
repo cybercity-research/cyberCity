@@ -32,10 +32,14 @@ cards["gaming-gutschein"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Phishing erkennen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Passwortdiebstahl-durch-Phishing/Wie-erkenne-ich-Phishing-in-E-Mails-und-auf-Webseiten/wie-erkenne-ich-phishing-in-e-mails-und-auf-webseiten_node.html"
-        }
+      {
+        name: "BSI – Phishing-E-Mails und Webseiten erkennen",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Passwortdiebstahl-durch-Phishing/Wie-erkenne-ich-Phishing-in-E-Mails-und-auf-Webseiten/wie-erkenne-ich-phishing-in-e-mails-und-auf-webseiten_node.html"
+      },
+      {
+        name: "Verbraucherzentrale – Phishing-Radar",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/phishingradar/phishingradar-aktuelle-warnungen-6059"
+      }
     ]
 };
 
@@ -62,7 +66,7 @@ cards["falscher-paketdienst"] = {
             consequence: "Risiko +1."
         },
         {
-            text: "C) Wir klicken nicht und prüfen gemeinsam, ob wirklich ein Paket erwartet wird.",
+            text: "C) Wir klicken nicht und prüfen, ob wirklich ein Paket erwartet wird.",
             evaluation: "Sehr sicher. Erst prüfen und nicht vorschnell Zahlungsdaten eingeben.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
@@ -73,14 +77,14 @@ cards["falscher-paketdienst"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Spam, Phishing & Co.",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/spam-phishing-co_node.html"
-        },
-        {
-            name: "Verbraucherzentrale – Phishing-Radar",
-            url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/phishingradar/phishingradar-aktuelle-warnungen-6059"
-        }
+      {
+        name: "Verbraucherzentrale – Paketdienst-SMS: Vorsicht, Abzocke!",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/mobilfunk-und-festnetz/paketdienstsms-vorsicht-abzocke-58988"
+      },
+      {
+        name: "Bundesnetzagentur – SMS- und Messenger-Spam-Varianten",
+        url: "https://www.bundesnetzagentur.de/DE/Vportal/TK/Aerger/Faelle/SMSSpam/start.html"
+      }
     ]
 };
 
@@ -118,14 +122,14 @@ cards["angeblicher-support"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Phishing erkennen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Passwortdiebstahl-durch-Phishing/Wie-erkenne-ich-Phishing-in-E-Mails-und-auf-Webseiten/wie-erkenne-ich-phishing-in-e-mails-und-auf-webseiten_node.html"
-        },
-        {
-            name: "BSI – Schutz gegen Phishing",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Passwortdiebstahl-durch-Phishing/Schutz-gegen-Phishing/schutz-gegen-phishing_node.html"
-        }
+      {
+        name: "BSI – Phishing-E-Mails und Webseiten erkennen",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Passwortdiebstahl-durch-Phishing/Wie-erkenne-ich-Phishing-in-E-Mails-und-auf-Webseiten/wie-erkenne-ich-phishing-in-e-mails-und-auf-webseiten_node.html"
+      },
+      {
+        name: "Polizeiliche Kriminalprävention – Tech-Support-Scam erkennen",
+        url: "https://www.polizei-beratung.de/aktuelles/detailansicht/tech-support-scam-telefonbetrug-erkennen-und-vermeiden/"
+      }
     ]
 };
 
@@ -148,7 +152,7 @@ cards["fake-shop"] = {
             consequence: "Risiko +2."
         },
         {
-            text: "B) Wir prüfen Bewertungen, Impressum und Zahlungsmethoden gemeinsam.",
+            text: "B) Wir prüfen Bewertungen, Impressum und Zahlungsmethoden.",
             evaluation: "Sehr sicher. Der Shop wird erst geprüft, bevor Daten oder Geld eingegeben werden.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
@@ -164,10 +168,14 @@ cards["fake-shop"] = {
         }
     ],
     helpSources: [
-        {
-            name: "Verbraucherzentrale – Fakeshop-Finder",
-            url: "https://www.verbraucherzentrale.de/fakeshopfinder-71560"
-        }
+      {
+        name: "Verbraucherzentrale – Fakeshop-Finder",
+        url: "https://www.verbraucherzentrale.de/fakeshopfinder-71560"
+      },
+      {
+        name: "BSI – Woran erkenne ich sichere Online-Shops?",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Online-Banking-Online-Shopping-und-mobil-bezahlen/Online-Shopping/Worauf-beim-Online-Einkauf-zu-achten-ist/worauf-beim-online-einkauf-zu-achten-ist_node.html"
+      }
     ]
 };
 
@@ -205,14 +213,18 @@ cards["gewinnspiel-mail"] = {
         }
     ],
     helpSources: [
-        {
-            name: "Polizeiliche Kriminalprävention – falsche Gewinnversprechen",
-            url: "https://www.polizei-beratung.de/themen-und-tipps/betrug/gewinnversprechen/"
-        },
-        {
-            name: "BSI – Spam erkennen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Spam/Woran-erkennt-man-Spam/woran-erkennt-man-spam_node.html"
-        }
+      {
+        name: "Verbraucherzentrale – Fake-Gewinnspiele erkennen",
+        url: "https://www.verbraucherzentrale.nrw/wissen/digitale-welt/soziale-netzwerke/fakegewinnspiele-per-email-bei-facebook-und-instagram-erkennen-91061"
+      },
+      {
+        name: "Polizeiliche Kriminalprävention – Falsche Gewinnversprechen",
+        url: "https://www.polizei-beratung.de/themen-und-tipps/betrug/gewinnversprechen/"
+      },
+      {
+        name: "BSI – Woran erkennt man Spam?",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Spam/Woran-erkennt-man-Spam/woran-erkennt-man-spam_node.html"
+      }
     ]
 };
 
@@ -250,14 +262,14 @@ cards["freund-braucht-geld"] = {
         }
     ],
     helpSources: [
-        {
-            name: "Verbraucherzentrale – Phishing-Radar",
-            url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/phishingradar/phishingradar-aktuelle-warnungen-6059"
-        },
-        {
-            name: "BSI – Spam, Phishing & Co.",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/spam-phishing-co_node.html"
-        }
+      {
+        name: "Polizeiliche Kriminalprävention – Messenger-Betrug",
+        url: "https://www.polizei-beratung.de/themen-und-tipps/betrug/messenger/"
+      },
+      {
+        name: "Verbraucherzentrale – Betrugsversuche über WhatsApp und SMS",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/mobilfunk-und-festnetz/hallo-mama-hallo-papa-betrugsversuche-ueber-whatsapp-und-sms-72910"
+      }
     ]
 };
 
@@ -295,10 +307,18 @@ cards["verdaechtiger-qr-code"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Phishing erkennen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Passwortdiebstahl-durch-Phishing/Wie-erkenne-ich-Phishing-in-E-Mails-und-auf-Webseiten/wie-erkenne-ich-phishing-in-e-mails-und-auf-webseiten_node.html"
-        }
+      {
+        name: "BSI – Quishing: QR-Code-Betrug erkennen",
+        url: "https://www.bsi.bund.de/DE/Service-Navi/Abonnements/Newsletter/Buerger-CERT-Abos/Newsletter-Einfach-Cybersicher/Einfach_Cybersicher_260401/_documents/Basics_3_Quishing.html"
+      },
+      {
+        name: "Verbraucherzentrale – Quishing: Falsche QR-Codes",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/phishingradar/quishing-falsche-qrcodes-in-mails-briefen-oepnv-und-strassenverkehr-98612"
+      },
+      {
+        name: "Polizeiliche Kriminalprävention – Quishing: Wenn ein QR-Code zur Falle wird",
+        url: "https://www.polizei-beratung.de/aktuelles/detailansicht/was-ist-quishing/"
+      }
     ]
 };
 
@@ -336,10 +356,14 @@ cards["banknachricht"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Schutz gegen Phishing",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Passwortdiebstahl-durch-Phishing/Schutz-gegen-Phishing/schutz-gegen-phishing_node.html"
-        }
+      {
+        name: "BSI – Phishing: Bankbetrug im Posteingang",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Wie-geht-Internet/E-Mail-Phishing-Bankbetrug/email-phishing-bankbetrug_node.html"
+      },
+      {
+        name: "BSI – Gefahren und Sicherheitsrisiken beim Onlinebanking",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Online-Banking-Online-Shopping-und-mobil-bezahlen/Online-Banking/Gefahren-und-Sicherheitsrisiken/gefahren-und-sicherheitsrisiken.html"
+      }
     ]
 };
 
@@ -377,10 +401,14 @@ cards["influencer-code"] = {
         }
     ],
     helpSources: [
-        {
-            name: "klicksafe – Influencer-Marketing und Werbung",
-            url: "https://www.klicksafe.de/news/influencer-marketing-werbung-im-social-web"
-        }
+      {
+        name: "klicksafe – Influencer-Marketing: Werbung im Social Web",
+        url: "https://www.klicksafe.de/news/influencer-marketing-werbung-im-social-web"
+      },
+      {
+        name: "SCHAU HIN! – Online-Werbung: ein Risiko für Kinder?",
+        url: "https://www.schau-hin.info/sicherheit-risiken/online-werbung-ein-risiko-fuer-kinder"
+      }
     ]
 };
 
@@ -418,14 +446,18 @@ cards["konto-diebstahl-melden"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Phishing erkennen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Passwortdiebstahl-durch-Phishing/Wie-erkenne-ich-Phishing-in-E-Mails-und-auf-Webseiten/wie-erkenne-ich-phishing-in-e-mails-und-auf-webseiten_node.html"
-        },
-        {
-            name: "BSI – Schutz gegen Phishing",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Passwortdiebstahl-durch-Phishing/Schutz-gegen-Phishing/schutz-gegen-phishing_node.html"
-        }
+      {
+        name: "BSI – Erste Hilfe bei einem gehackten Konto",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Identitaetsdiebstahl/identitaetsdiebstahl_node.html"
+      },
+      {
+        name: "Polizeiliche Kriminalprävention – Identitätsdiebstahl",
+        url: "https://www.polizei-beratung.de/themen-und-tipps/gefahren-im-internet/identitaetsdiebstahl/"
+      },
+      {
+        name: "Verbraucherzentrale – Folgen Identitätsdiebstahl",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/datenschutz/welche-folgen-identitaetsdiebstahl-im-internet-haben-kann-17750"
+      }
     ]
 };
 
@@ -463,14 +495,18 @@ cards["komischer-online-shop"] = {
         }
     ],
     helpSources: [
-        {
-            name: "Verbraucherzentrale – Fakeshop-Finder",
-            url: "https://www.verbraucherzentrale.de/fakeshopfinder-71560"
-        },
-        {
-            name: "BSI – Phishing erkennen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Passwortdiebstahl-durch-Phishing/Wie-erkenne-ich-Phishing-in-E-Mails-und-auf-Webseiten/wie-erkenne-ich-phishing-in-e-mails-und-auf-webseiten_node.html"
-        }
+      {
+        name: "Verbraucherzentrale – Fakeshop-Finder",
+        url: "https://www.verbraucherzentrale.de/fakeshopfinder-71560"
+      },
+      {
+        name: "BSI – Woran erkenne ich sichere Online-Shops?",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Online-Banking-Online-Shopping-und-mobil-bezahlen/Online-Shopping/Worauf-beim-Online-Einkauf-zu-achten-ist/worauf-beim-online-einkauf-zu-achten-ist_node.html"
+      },
+      {
+        name: "Polizeiliche Kriminalprävention – Fake-Shops",
+        url: "https://www.polizei-beratung.de/themen-und-tipps/gefahren-im-internet/e-commerce/fake-shops/"
+      }
     ]
 };
 
@@ -508,14 +544,18 @@ cards["handy-gewinn"] = {
         }
     ],
     helpSources: [
-        {
-            name: "Polizeiliche Kriminalprävention – falsche Gewinnversprechen",
-            url: "https://www.polizei-beratung.de/themen-und-tipps/betrug/gewinnversprechen/"
-        },
-        {
-            name: "BSI – Phishing erkennen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Passwortdiebstahl-durch-Phishing/Wie-erkenne-ich-Phishing-in-E-Mails-und-auf-Webseiten/wie-erkenne-ich-phishing-in-e-mails-und-auf-webseiten_node.html"
-        }
+      {
+        name: "Verbraucherzentrale – Fake-Gewinnspiele erkennen",
+        url: "https://www.verbraucherzentrale.nrw/wissen/digitale-welt/soziale-netzwerke/fakegewinnspiele-per-email-bei-facebook-und-instagram-erkennen-91061"
+      },
+      {
+        name: "Polizeiliche Kriminalprävention – Falsche Gewinnversprechen",
+        url: "https://www.polizei-beratung.de/themen-und-tipps/betrug/gewinnversprechen/"
+      },
+      {
+        name: "BSI – Phishing-E-Mails und Webseiten erkennen",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Passwortdiebstahl-durch-Phishing/Wie-erkenne-ich-Phishing-in-E-Mails-und-auf-Webseiten/wie-erkenne-ich-phishing-in-e-mails-und-auf-webseiten_node.html"
+      }
     ]
 };
 
@@ -553,13 +593,17 @@ cards["komischer-link-vom-freund"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Phishing erkennen",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/Passwortdiebstahl-durch-Phishing/Wie-erkenne-ich-Phishing-in-E-Mails-und-auf-Webseiten/wie-erkenne-ich-phishing-in-e-mails-und-auf-webseiten_node.html"
-        },
-        {
-            name: "BSI – Spam, Phishing & Co.",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Spam-Phishing-Co/spam-phishing-co_node.html"
-        }
+      {
+        name: "Verbraucherzentrale – Facebook-Profil gehackt? Freundschaftsanfragen von Freunden",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/soziale-netzwerke/facebookprofil-gehackt-freundschaftsanfragen-von-freunden-13748"
+      },
+      {
+        name: "BSI – Notfallplan gehacktes E-Mail-Konto",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Identitaetsdiebstahl/Hilfe-fuer-Betroffene/hilfe-fuer-betroffene_node.html"
+      },
+      {
+        name: "BSI – Phishing über gehackte Accounts von Bekannten",
+        url: "https://www.bsi.bund.de/DE/Service-Navi/Abonnements/Newsletter/Buerger-CERT-Abos/Newsletter-Einfach-Cybersicher/Einfach_Cybersicher_260114/_documents/News-Update_2_Phishing_WhatsApp_Kopplungsfunktion.html"
+      }
     ]
 };

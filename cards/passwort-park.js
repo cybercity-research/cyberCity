@@ -1,84 +1,3 @@
-cards["geteiltes-passwort"] = {
-    district: "Passwort-Park",
-    title: "Das geteilte Passwort",
-    checklist: [
-        "Passwort nicht weitergeben",
-        "freundlich erklären, dass Passwörter privat sind",
-        "Hilfe anbieten, ohne Accountdaten zu teilen",
-        "Passwort ändern, falls es schon weitergegeben wurde",
-        "starke Passwörter nutzen",
-        "wenn möglich Zwei-Faktor-Schutz aktivieren"
-    ],
-    answers: [
-        {
-            text: "A) Wir geben das Passwort nicht weiter und erklären, dass Passwörter geheim bleiben müssen.",
-            evaluation: "Sehr sicher. Passwörter bleiben geheim, auch bei Freunden.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
-        {
-            text: "B) Wir geben das Passwort nur kurz und ändern es danach.",
-            evaluation: "Teilweise riskant. Auch kurz weitergeben kann reichen, damit etwas schiefgeht.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "C) Wir geben das Passwort, weil es ein guter Freund ist.",
-            evaluation: "Riskant. Freundschaft schützt nicht davor, dass ein Account missbraucht oder das Passwort weitergegeben wird.",
-            consequence: "Risiko +2."
-        },
-        {
-            text: "D) Wir schreiben das Passwort auf einen Zettel und verstecken ihn im Zimmer.",
-            evaluation: "Teilweise riskant. Ein Passwort sollte nicht offen herumliegen. Besser ist eine sichere Familienlösung.",
-            consequence: "Risiko +1."
-        }
-    ],
-    helpSources: [
-        {
-            name: "BSI – Sichere Passwörter",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Passwoerter/passwoerter_node.html"
-        }
-    ]
-};
-
-cards["ein-passwort-fuer-alles"] = {
-    district: "Passwort-Park",
-    title: "Ein Passwort für alles",
-    checklist: [
-        "für wichtige Konten unterschiedliche Passwörter nutzen",
-        "E-Mail-Konto besonders gut schützen",
-        "verstehen, dass ein Datenleck mehrere Konten gefährden kann",
-        "Passwort-Manager oder Familienlösung besprechen",
-        "Zwei-Faktor-Schutz nutzen, wenn möglich"
-    ],
-    answers: [
-        {
-            text: "A) Wir nutzen es weiter, weil man es sich gut merken kann.",
-            evaluation: "Riskant. Wenn ein Passwort bekannt wird, sind mehrere Konten gleichzeitig gefährdet.",
-            consequence: "Risiko +2."
-        },
-        {
-            text: "B) Wir nutzen für wichtige Konten unterschiedliche Passwörter.",
-            evaluation: "Sehr sicher. Unterschiedliche Passwörter schützen andere Konten, falls eines betroffen ist.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
-        {
-            text: "C) Wir ändern nur das E-Mail-Passwort.",
-            evaluation: "Teilweise sicher. Das E-Mail-Konto ist besonders wichtig, aber auch andere Konten brauchen Schutz.",
-            consequence: "+1 Zeit-Chip."
-        },
-        {
-            text: "D) Wir ergänzen das Passwort mit dem Geburtsdatum.",
-            evaluation: "Riskant. Persönliche Daten machen ein Passwort leichter erratbar.",
-            consequence: "Risiko +1."
-        }
-    ],
-    helpSources: [
-        {
-            name: "BSI – Sichere Passwörter",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Passwoerter/passwoerter_node.html"
-        }
-    ]
-};
-
 cards["login-auf-fremdem-geraet"] = {
     district: "Passwort-Park",
     title: "Der Login auf fremdem Gerät",
@@ -112,50 +31,18 @@ cards["login-auf-fremdem-geraet"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Accountschutz",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Accounts/accounts_node.html"
-        }
-    ]
-};
-
-cards["einfacher-name"] = {
-    district: "Passwort-Park",
-    title: "Der einfache Name",
-    checklist: [
-        "keine Namen, Geburtstage, Haustiernamen oder Schulnamen nutzen",
-        "lange Passwörter oder Passphrasen verwenden",
-        "Passwörter nicht leicht erratbar machen",
-        "unterschiedliche Passwörter für wichtige Konten nutzen",
-        "Passwort-Manager oder Familienlösung überlegen"
-    ],
-    answers: [
-        {
-            text: "A) Wir behalten es, weil es niemand errät.",
-            evaluation: "Teilweise riskant. Persönliche Informationen können andere leichter herausfinden, als man denkt.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "B) Wir erstellen ein längeres, schwer zu erratendes Passwort.",
-            evaluation: "Sehr sicher. Lange und schwer vorhersagbare Passwörter schützen besser.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
-        {
-            text: "C) Wir hängen nur ein Ausrufezeichen an.",
-            evaluation: "Teilweise riskant. Ein Sonderzeichen allein macht ein persönliches Passwort nicht automatisch sicher.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "D) Wir vergleichen Passwörter mit Freunden.",
-            evaluation: "Riskant. Passwörter sollten nicht mit anderen geteilt oder verglichen werden.",
-            consequence: "Risiko +2."
-        }
-    ],
-    helpSources: [
-        {
-            name: "BSI – Sichere Passwörter",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Passwoerter/passwoerter_node.html"
-        }
+      {
+        name: "BSI – Gemeinsam genutzte Geräte und sensible Vorgänge",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Basisschutz-fuer-Computer-Mobilgeraete/Basisschutz-fuer-Computer/Benutzerkonten/benutzerkonten.html"
+      },
+      {
+        name: "BSI – Umgang mit Passwörtern",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Accountschutz/Sichere-Passwoerter-erstellen/Umgang-mit-Passwoertern/umgang-mit-passwoertern_node.html"
+      },
+      {
+        name: "Google-Konto-Hilfe – Geräte mit Kontozugriff ansehen",
+        url: "https://support.google.com/accounts/answer/3067630?hl=de"
+      }
     ]
 };
 
@@ -192,10 +79,14 @@ cards["zwei-faktor-schutz"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Zwei-Faktor-Authentisierung",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Zwei-Faktor-Authentisierung/zwei-faktor-authentisierung_node.html"
-        }
+      {
+        name: "BSI – Zwei-Faktor-Authentisierung",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Accountschutz/Zwei-Faktor-Authentisierung/zwei-faktor-authentisierung_node.html"
+      },
+      {
+        name: "Verbraucherzentrale – Zwei-Faktor-Authentisierung: So schützen Sie Ihre Accounts",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/datenschutz/zweifaktorauthentisierung-so-schuetzen-sie-ihre-accounts-85173"
+      }
     ]
 };
 
@@ -233,10 +124,18 @@ cards["passwort-im-klassenchat"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Sichere Passwörter",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Passwoerter/passwoerter_node.html"
-        }
+      {
+        name: "BSI – Umgang mit Passwörtern",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Accountschutz/Sichere-Passwoerter-erstellen/Umgang-mit-Passwoertern/umgang-mit-passwoertern_node.html"
+      },
+      {
+        name: "BSI – Sichere Passwörter erstellen",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Accountschutz/Sichere-Passwoerter-erstellen/sichere-passwoerter-erstellen_node.html"
+      },
+      {
+        name: "klicksafe – Datenschutz und Privatsphäre",
+        url: "https://www.klicksafe.de/privatsphaere-und-big-data"
+      }
     ]
 };
 
@@ -274,55 +173,18 @@ cards["account-uebernommen"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Accountschutz",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Accounts/accounts_node.html"
-        },
-        {
-            name: "BSI – Zwei-Faktor-Authentisierung",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Zwei-Faktor-Authentisierung/zwei-faktor-authentisierung_node.html"
-        }
-    ]
-};
-
-cards["passwort-im-browser-speichern"] = {
-    district: "Passwort-Park",
-    title: "Passwort im Browser speichern",
-    checklist: [
-        "nicht auf fremden oder Schulgeräten speichern",
-        "Geräteschutz beachten",
-        "Passwort-Manager oder Familienlösung besprechen",
-        "wichtige Konten besonders schützen",
-        "Gerät sperren und aktuell halten",
-        "bei Unsicherheit Erwachsene fragen"
-    ],
-    answers: [
-        {
-            text: "A) Wir speichern Passwörter immer.",
-            evaluation: "Teilweise riskant. Auf fremden oder gemeinsam genutzten Geräten kann das gefährlich sein.",
-            consequence: "Risiko +1."
-        },
-        {
-            text: "B) Wir entscheiden gemeinsam und achten auf Geräteschutz.",
-            evaluation: "Sehr sicher. Passwortspeichern kann praktisch sein, braucht aber klare Regeln.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
-        {
-            text: "C) Wir speichern Passwörter auf Schul- oder fremden Geräten.",
-            evaluation: "Sehr riskant. Andere könnten auf den Account zugreifen.",
-            consequence: "Risiko +2."
-        },
-        {
-            text: "D) Wir speichern das Passwort in einer Notizen-App.",
-            evaluation: "Riskant. Ungeschützte Notizen sind kein sicherer Ort für Passwörter.",
-            consequence: "Risiko +1."
-        }
-    ],
-    helpSources: [
-        {
-            name: "BSI – Passwort-Manager",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Passwort-Manager/passwort-manager_node.html"
-        }
+      {
+        name: "BSI – Notfallplan gehacktes E-Mail-Konto",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Identitaetsdiebstahl/Hilfe-fuer-Betroffene/hilfe-fuer-betroffene_node.html"
+      },
+      {
+        name: "BSI – Gehackter Account: Der Fremde im eigenen Social-Media-Konto",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Wie-geht-Internet/Identitaetsdiebstahl-Social-Media/identitaetsdiebstahl-social-media.html"
+      },
+      {
+        name: "Verbraucherzentrale – Erste Hilfe bei gehackten Online-Konten",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/phishingradar/erste-hilfe-bei-gehackten-onlinekonten-63228"
+      }
     ]
 };
 
@@ -359,10 +221,14 @@ cards["sicherheitsfrage"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Sichere Passwörter",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Passwoerter/passwoerter_node.html"
-        }
+      {
+        name: "Okta – Sicherheitsfragen: Best Practices",
+        url: "https://www.okta.com/de-de/blog/identity-security/security-questions/"
+      },
+      {
+        name: "BSI – Accountschutz",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Accountschutz/accountschutz_node.html"
+      }
     ]
 };
 
@@ -400,10 +266,14 @@ cards["freund-will-passwort"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Sichere Passwörter",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Passwoerter/passwoerter_node.html"
-        }
+      {
+        name: "Internet-ABC – Ein sicheres Passwort muss geheim sein",
+        url: "https://www.internet-abc.de/kinder/hobby-freizeit/neues-uebers-netz/2021/sicheres-passwort/"
+      },
+      {
+        name: "BSI – Umgang mit Passwörtern",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Accountschutz/Sichere-Passwoerter-erstellen/Umgang-mit-Passwoertern/umgang-mit-passwoertern_node.html"
+      }
     ]
 };
 
@@ -440,14 +310,14 @@ cards["name-und-geburtsdatum"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Sichere Passwörter",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Passwoerter/passwoerter_node.html"
-        },
-        {
-            name: "BSI – Passwort-Manager",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Passwort-Manager/passwort-manager_node.html"
-        }
+      {
+        name: "Internet-ABC – Ein wasserdichtes Passwort",
+        url: "https://www.internet-abc.de/kinder/hobby-freizeit/surfratgeber/ein-wasserdichtes-passwort/"
+      },
+      {
+        name: "BSI – Sichere Passwörter erstellen",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Accountschutz/Sichere-Passwoerter-erstellen/sichere-passwoerter-erstellen_node.html"
+      }
     ]
 };
 
@@ -485,13 +355,17 @@ cards["passwort-fuer-mehrere-konten"] = {
         }
     ],
     helpSources: [
-        {
-            name: "BSI – Sichere Passwörter",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Passwoerter/passwoerter_node.html"
-        },
-        {
-            name: "BSI – Zwei-Faktor-Authentisierung",
-            url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Zwei-Faktor-Authentisierung/zwei-faktor-authentisierung_node.html"
-        }
+      {
+        name: "BSI – Passwort-Manager",
+        url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Accountschutz/Sichere-Passwoerter-erstellen/Passwort-Manager/passwort-manager_node.html"
+      },
+      {
+        name: "Verbraucherzentrale – Starke Passwörter erstellen",
+        url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/datenschutz/starke-passwoerter-erstellen-so-schuetzen-sie-ihre-onlinekonten-effektiv-11672"
+      },
+      {
+        name: "Internet-ABC – Ein wasserdichtes Passwort",
+        url: "https://www.internet-abc.de/kinder/hobby-freizeit/surfratgeber/ein-wasserdichtes-passwort/"
+      }
     ]
 };
