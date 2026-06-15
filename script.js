@@ -13,6 +13,11 @@ function renderCard(card) {
       <div class="badge">${card.district}</div>
 
       <h1>${card.title}</h1>
+      
+      <div class="situation">
+        <h2>Situation</h2>
+        <p>${card.situation}</p>
+      </div>
 
       <h2>Antwort auswählen</h2>
 
@@ -73,7 +78,15 @@ function showResult(answer) {
     <p><strong>Spiel-Folge:</strong> ${answer.consequence}</p>
   `;
 
-    resultBox.classList.remove("hidden");
+    resultBox.classList.remove("hidden", "correct", "wrong", "partial");
+
+    if (answer.type === "correct") {
+        resultBox.classList.add("correct");
+    } else if (answer.type === "wrong") {
+        resultBox.classList.add("wrong");
+    } else if (answer.type === "partial") {
+        resultBox.classList.add("partial");
+    }
 
     const solutionDetails = document.getElementById("solution-details");
     solutionDetails.classList.remove("hidden");

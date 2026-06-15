@@ -524,3 +524,37 @@ p {
         text-align: center;
     }
 }
+
+.situation {
+  background-color: #f2f6ff;
+  border-left: 4px solid #4a73d9;
+  padding: 16px;
+  margin: 20px 0;<
+  border-radius: 8px;
+}
+
+.situation h2 {
+  margin-top: 0;
+}
+
+.situation p {
+  margin-bottom: 0;
+}
+
+.result.correct {
+  background-color: #e6f7e6;
+  border: 2px solid #3fa34d;
+  color: #1f5c2e;
+}
+
+.result.wrong {
+  background-color: #fdeaea;
+  border: 2px solid #d9534f;
+  color: #7a1f1f;
+}
+
+.result.partial {
+  background-color: #fff3cd;
+  border: 2px solid #f0ad4e;
+  color: #7a5200;
+}
