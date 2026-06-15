@@ -188,7 +188,8 @@ cards["teamchat-nach-dem-spiel"] = {
     {
       name: "SCHAU HIN! – WhatsApp-Gruppenchats für Kinder",
       url: "https://www.schau-hin.info/grundlagen/whatsapp-gruppenchats-fuer-kinder"
-    ]
+    }
+  ]
 };
 
 cards["bilder-fuer-praesentation"] = {
