@@ -1,38 +1,36 @@
 cards["frage-nach-schule"] = {
     district: "Chat-Café",
     title: "Die Frage nach der Schule",
-    situation: "Jemand fragt im Chat: „Auf welche Schule gehst du? Dann können wir uns mal sehen.“ Du kennst die Person nur aus dem Internet.",
+    situation: "Eine Person aus einem Online-Chat fragt Emma: „Auf welche Schule gehst du? Dann können wir uns mal sehen.“ Emma kennt die Person nur aus dem Internet. Was sollte Emma tun?",
     checklist: [
         "Schule nicht nennen",
-        "Wohnort und Adresse nicht teilen",
-        "keine Hinweise auf tägliche Wege geben",
-        "bei unangenehmem Gefühl Hilfe holen",
-        "private Informationen nur sehr bewusst teilen",
-        "Erwachsene fragen, wenn jemand nach Treffpunkten fragt"
+        "keine Orte aus dem Alltag teilen",
+        "Grenzen setzen",
+        "bei Treffvorschlägen Erwachsene fragen"
     ],
     answers: [
         {
-            text: "A) Wir sagen nur den Stadtteil und nicht den Namen der Schule.",
+            text: "A) Emma nennt nur den Stadtteil, aber nicht die Schule.",
             type: "partial",
-            evaluation: "Teilweise vorsichtig, aber nicht sicher genug. Auch ein Stadtteil kann zusammen mit anderen Informationen verraten, wo du regelmäßig bist.",
+            evaluation: "Teilweise vorsichtig. Auch der Stadtteil kann Hinweise auf Emmas Alltag geben.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Wir fragen zurück, auf welche Schule die andere Person geht, bevor wir etwas über uns sagen.",
+            text: "B) Emma fragt zuerst, auf welche Schule die andere Person geht.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar, aber riskant. Zurückzufragen schützt deine eigenen Informationen nicht automatisch und kann den Kontakt weiter vertiefen.",
+            evaluation: "Teilweise nachvollziehbar, aber nicht sicher. Zurückfragen schützt Emmas eigene Daten nicht.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Wir nennen die Schule nicht und sagen klar, dass wir solche private Daten im Chat nicht teilen.",
+            text: "C) Emma sagt, dass sie ihre Schule im Chat nicht nennt, und beendet den Chat, wenn die Person weiterfragt.",
             type: "correct",
-            evaluation: "Sehr sicher. Die Schule ist ein privater Ort, an dem du regelmäßig bist. Es ist gut, freundlich aber klar eine Grenze zu setzen.",
+            evaluation: "Sehr sicher. Die Schule ist ein privater Ort, an dem Emma regelmäßig ist. Wenn jemand weiter nachfragt, ist das ein Warnzeichen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Wir nennen nicht die Schule, aber einen Ort in der Nähe, falls die Person uns wirklich treffen möchte.",
+            text: "D) Emma nennt einen Ort in der Nähe der Schule.",
             type: "wrong",
-            evaluation: "Riskant. Auch Orte in der Nähe können Hinweise auf deinen Alltag geben. Wenn jemand aus dem Internet ein Treffen vorschlägt oder nach privaten Orten fragt, solltest du Hilfe holen.",
+            evaluation: "Riskant. Auch Orte in der Nähe können verraten, wo Emma oft ist.",
             consequence: "Risiko +2."
         }
     ],
@@ -55,41 +53,38 @@ cards["frage-nach-schule"] = {
 cards["profilfoto"] = {
     district: "Chat-Café",
     title: "Das Profilfoto",
-    situation: "Eine fremde Person möchte ein aktuelles Foto von dir sehen. Sie schreibt:\n" +
-        "„Schick doch mal ein Bild, ich will wissen, wie du aussiehst.“",
+    situation: "Eine fremde Person schreibt Lara: „Schick mir mal ein aktuelles Foto von dir. Ich will wissen, wie du aussiehst.“ Was sollte Lara tun?",
     checklist: [
-        "kein Foto an fremde Personen schicken",
+        "keine Fotos an Fremde schicken",
         "Druck erkennen",
-        "keine Bilder als Vertrauensbeweis nutzen",
-        "bei unangenehmem Gefühl Chat beenden",
-        "Erwachsene fragen, wenn die Person weiter drängt",
-        "verstehen, dass Bilder gespeichert und weitergeleitet werden können"
+        "Chat beenden, wenn es unangenehm wird",
+        "Hilfe holen"
     ],
     answers: [
         {
-            text: "A) Wir schicken ein Foto, auf dem das Gesicht nicht zu sehen ist.",
+            text: "A) Lara schickt ein Foto ohne Gesicht.",
             type: "partial",
-            evaluation: "Teilweise vorsichtig, aber riskant. Auch Bilder ohne Gesicht können Hinweise enthalten, zum Beispiel Kleidung, Zimmer, Schule oder Standort. Außerdem können Bilder gespeichert und weitergeleitet werden.",
+            evaluation: "Teilweise vorsichtig. Auch ohne Gesicht können Bilder Hinweise zeigen, zum Beispiel Zimmer, Kleidung oder Standort.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Wir bitten die andere Person zuerst um ein Foto, damit es fair ist.",
+            text: "B) Lara bittet zuerst um ein Foto der anderen Person.",
             type: "wrong",
-            evaluation: "Riskant. Ein Foto beweist nicht sicher, wer die Person wirklich ist. Außerdem entsteht dadurch Druck, selbst ein Bild zu schicken.",
+            evaluation: "Riskant. Ein Foto beweist nicht sicher, wer die Person wirklich ist.",
             consequence: "Risiko +2."
         },
         {
-            text: "C) Wir schicken ein altes oder bearbeitetes Foto, damit die Person nicht genau weiß, wie wir heute aussehen.",
+            text: "C) Lara schickt ein altes oder bearbeitetes Foto.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar, aber nicht sicher genug. Auch alte oder bearbeitete Bilder können gespeichert, weitergeleitet oder mit anderen Informationen kombiniert werden.",
+            evaluation: "Teilweise nachvollziehbar, aber nicht sicher. Auch solche Bilder können gespeichert oder weitergeleitet werden.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Wir sagen, dass wir keine Fotos an fremde Personen schicken, und beenden den Chat, wenn die Person weiter drängt.",
+            text: "D) Lara sagt Nein und beendet den Chat, wenn die Person Druck macht.",
             type: "correct",
-            evaluation: "Sehr sicher. Ihr setzt eine klare Grenze und schützt eure Privatsphäre. Wenn jemand weiter Druck macht, ist es richtig, den Kontakt zu stoppen und Hilfe zu holen.",
+            evaluation: "Sehr sicher. Lara setzt eine klare Grenze und schützt ihre Privatsphäre. Sie entscheidet selbst, welche Bilder von ihr andere sehen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
+        }
     ],
     helpSources: [
         {
@@ -110,38 +105,36 @@ cards["profilfoto"] = {
 cards["schlechtes-bauchgefuehl"] = {
     district: "Chat-Café",
     title: "Das schlechte Bauchgefühl",
-    situation: "Ein Chat fühlt sich plötzlich unangenehm an. Die Person stellt persönliche Fragen und du merkst, dass du dich unwohl fühlst.",
+    situation: "Ben chattet mit jemandem aus einem Spiel. Plötzlich stellt die Person viele persönliche Fragen. Ben fühlt sich unwohl. Was sollte Ben tun?",
     checklist: [
-        "unangenehmes Gefühl ernst nehmen",
-        "nicht aus Höflichkeit weiterchatten",
-        "Chat beenden oder blockieren",
-        "Hilfe holen, wenn die Person drängt oder man sich unsicher fühlt",
-        "keine privaten Daten teilen",
-        "sich nicht schuldig fühlen, wenn man Grenzen setzt"
+        "Bauchgefühl ernst nehmen",
+        "nicht aus Höflichkeit weiterschreiben",
+        "Chat beenden",
+        "Hilfe holen"
     ],
     answers: [
         {
-            text: "A) Wir antworten nur noch kurz und geben keine genauen Informationen mehr.",
+            text: "A) Ben antwortet nur noch kurz.",
             type: "partial",
-            evaluation: "Teilweise vorsichtig. Weniger zu erzählen ist besser als private Daten zu teilen. Wenn sich der Chat aber unangenehm anfühlt, sollte man nicht nur kürzer antworten, sondern die eigene Grenze ernst nehmen.",
+            evaluation: "Teilweise vorsichtig. Wenn sich der Chat unangenehm anfühlt, sollte Ben seine Grenze klarer setzen.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Wir beenden den Chat erstmal und erzählen einer vertrauten Person davon, wenn das Gefühl bleibt oder die Person weiter drängt.",
+            text: "B) Ben beendet den Chat und erzählt es einer erwachsenen Vertrauensperson.",
             type: "correct",
-            evaluation: "Sehr sicher. Ein schlechtes Bauchgefühl ist ein wichtiges Warnzeichen. Man muss nicht aus Höflichkeit weiterschreiben und darf sich Hilfe holen.",
+            evaluation: "Sehr sicher. Wenn sich ein Chat komisch oder unangenehm anfühlt, sollte Ben das ernst nehmen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Wir löschen sofort die ganze App, damit so etwas nie wieder passiert.",
+            text: "C) Ben löscht sofort die ganze App.",
             type: "partial",
-            evaluation: "Teilweise sicher, aber sehr streng. Abstand kann helfen, wenn man sich unwohl fühlt. Die App sofort zu löschen löst aber nicht immer das eigentliche Problem. Wichtiger ist, den Chat zu beenden, Hilfe zu holen und die Person bei Bedarf zu blockieren oder zu melden.",
+            evaluation: "Teilweise sicher, aber sehr streng. Wichtiger ist, den Chat zu beenden und Hilfe zu holen.",
             consequence: "Nichts."
         },
         {
-            text: "D) Wir erklären der Person, dass wir uns unwohl fühlen, und beantworten danach nur noch harmlose Fragen.",
+            text: "D) Ben erklärt sein Gefühl und beantwortet danach nur harmlose Fragen.",
             type: "wrong",
-            evaluation: "Riskant. Es ist gut, das eigene Gefühl zu bemerken. Aber wenn die Person persönliche Fragen stellt und der Chat unangenehm wird, sollte man den Kontakt nicht weiter vertiefen.",
+            evaluation: "Riskant. Wenn der Chat unangenehm wird, sollte Ben den Kontakt nicht weiter vertiefen.",
             consequence: "Risiko +2."
         }
     ],
@@ -160,41 +153,38 @@ cards["schlechtes-bauchgefuehl"] = {
 cards["geheimer-chat"] = {
     district: "Chat-Café",
     title: "Der geheime Chat",
-    situation: "Jemand sagt: „Unser Chat ist unser Geheimnis. Erzähl niemandem davon.“\n" +
-        "Die Person sagt, dass du ihr vertrauen kannst.",
+    situation: "Eine Online-Bekanntschaft schreibt Mia: „Unser Chat ist unser Geheimnis. Erzähl niemandem davon.“ Was sollte Mia tun?",
     checklist: [
-        "Geheimhaltungsdruck als Warnsignal erkennen",
+        "merken, wenn jemand will, dass man etwas geheim hält",
         "mit einer erwachsenen Vertrauensperson sprechen",
-        "keine privaten Daten oder Bilder schicken",
-        "Chat beenden, wenn Druck entsteht",
-        "blockieren oder melden, wenn nötig",
-        "wissen: Hilfe holen gibt keinen Ärger"
+        "keine privaten Daten schicken",
+        "blockieren oder melden, wenn nötig"
     ],
     answers: [
         {
-            text: "A) Wir machen den Chat nicht zum Geheimnis und zeigen die Nachricht einer erwachsenen Vertrauensperson wenn es unangenehm wird.",
+            text: "A) Mia zeigt die Nachricht einer erwachsenen Vertrauensperson.",
             type: "correct",
-            evaluation: "Sehr sicher. Geheimhaltungsdruck ist ein wichtiges Warnsignal. Hilfe zu holen ist kein Petzen, sondern schützt dich und kann verhindern, dass die Person weiter Druck macht.",
+            evaluation: "Sehr sicher. Geheimhaltungsdruck ist ein Warnsignal. Hilfe holen ist kein Petzen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Wir erzählen es nur der besten Freundin oder dem besten Freund, weil das nicht direkt Erwachsene einbezieht.",
+            text: "B) Mia erzählt es nur ihrer besten Freundin.",
             type: "partial",
-            evaluation: "Teilweise hilfreich. Eine Freundin oder ein Freund kann unterstützen. Bei Geheimhaltungsdruck durch eine fremde oder unangenehme Person sollte aber zusätzlich eine erwachsene Vertrauensperson einbezogen werden.",
+            evaluation: "Teilweise hilfreich. Bei Geheimhaltungsdruck sollte aber auch eine erwachsene Person einbezogen werden.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Wir löschen den Chat sofort und blockieren die Person, damit die Sache vorbei ist.",
+            text: "C) Mia löscht den Chat sofort und blockiert die Person.",
             type: "partial",
-            evaluation: "Teilweise sicher. Blockieren kann richtig sein, wenn Druck entsteht. Den Chat sofort zu löschen ist aber nicht immer ideal, weil Hinweise verloren gehen können. Besser ist es, sich Unterstützung zu holen.",
+            evaluation: "Teilweise sicher. Blockieren kann helfen. Aber Mia sollte die Nachricht vorher einer erwachsenen Vertrauensperson zeigen, weil durch Löschen wichtige Hinweise verloren gehen können.",
             consequence: "Nichts."
         },
         {
-            text: "D) Wir behalten den Chat geheim, schicken aber keine privaten Bilder oder Daten.",
+            text: "D) Mia behält den Chat geheim, schickt aber keine Bilder.",
             type: "wrong",
-            evaluation: "Riskant. Keine privaten Bilder oder Daten zu schicken ist zwar wichtig, aber der Geheimhaltungsdruck bleibt ein Warnsignal. Wenn jemand verlangt, dass ein Chat geheim bleibt, sollte man sich Hilfe holen.",
+            evaluation: "Riskant. Der Geheimhaltungsdruck bleibt ein Warnsignal, auch wenn Mia keine Bilder schickt.",
             consequence: "Risiko +2."
-        },
+        }
     ],
     helpSources: [
         {
@@ -215,39 +205,36 @@ cards["geheimer-chat"] = {
 cards["altersluege"] = {
     district: "Chat-Café",
     title: "Die Alterslüge",
-    situation: "Eine Person im Chat sagt zuerst, sie sei 12 Jahre alt. Später sagt sie, sie sei 16. Dann lacht sie und meint:\n" +
-        "„War doch nur Spaß.“",
+    situation: "Eine Person sagt im Chat zu Lina zuerst, sie sei 12. Später sagt sie, sie sei 16 und schreibt: „War doch nur Spaß.“ Was sollte Lina tun?",
     checklist: [
         "Alterslüge ernst nehmen",
         "nicht einfach weiter vertrauen",
         "keine privaten Infos teilen",
-        "Erwachsene fragen, wenn man unsicher ist",
-        "Kontakt begrenzen, blockieren oder melden, wenn nötig",
-        "verstehen, dass online Identitäten gefälscht sein können"
+        "bei Unsicherheit Hilfe holen"
     ],
     answers: [
         {
-            text: "A) Wir tun so, als wäre nichts passiert, wenn die Person sonst nett ist.",
+            text: "A) Lina chattet normal weiter, weil die Person nett ist.",
             type: "wrong",
-            evaluation: "Riskant. Nett sein reicht nicht aus, wenn jemand bei wichtigen Dingen lügt. Das Alter ist im Chat eine wichtige Information, besonders wenn Vertrauen aufgebaut wird.",
+            evaluation: "Riskant. Nett sein reicht nicht aus, wenn jemand bei wichtigen Dingen lügt.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Wir teilen ab jetzt keine privaten Informationen mehr und halten Abstand, weil wir nicht sicher wissen, wer die Person wirklich ist.",
+            text: "B) Lina teilt keine privaten Infos mehr, schreibt nicht weiter allein mit der Person und holt Hilfe, wenn sie unsicher ist.",
             type: "correct",
-            evaluation: "Sehr sicher. Die Alterslüge wird ernst genommen. Wenn jemand online widersprüchliche Angaben macht, sollte man vorsichtiger werden und die eigene Privatsphäre schützen.",
+            evaluation: "Sehr sicher. Widersprüchliche Angaben beim Alter sind ein Warnzeichen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Wir blockieren sofort alle neuen Kontakte, weil man online niemandem vertrauen kann.",
+            text: "C) Lina blockiert sofort alle neuen Kontakte.",
             type: "partial",
-            evaluation: "Teilweise sicher, aber sehr streng. Abstand oder Blockieren kann richtig sein, wenn man sich unwohl fühlt. Trotzdem ist nicht jeder neue Kontakt automatisch gefährlich. Wichtig ist, Warnzeichen zu erkennen und Grenzen zu setzen.",
+            evaluation: "Teilweise sicher, aber sehr streng. Wichtig ist, Warnzeichen zu erkennen und Grenzen zu setzen.",
             consequence: "Nichts."
         },
         {
-            text: "D) Wir fragen nach einem Foto oder einer Sprachnachricht, um zu prüfen, wie alt die Person wirklich ist.",
+            text: "D) Lina fragt nach einem Foto oder einer Sprachnachricht.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar, aber nicht sicher. Fotos oder Sprachnachrichten können täuschen oder von anderen Personen stammen. Besser ist es, keine privaten Informationen zu teilen und bei Unsicherheit Hilfe zu holen.",
+            evaluation: "Teilweise nachvollziehbar, aber nicht sicher. Fotos und Stimmen können täuschen.",
             consequence: "Risiko +1."
         }
     ],
@@ -266,40 +253,36 @@ cards["altersluege"] = {
 cards["telefonnummer"] = {
     district: "Chat-Café",
     title: "Die Telefonnummer",
-    situation: "Eine Online-Bekanntschaft fragt nach deiner Telefonnummer, damit ihr „besser schreiben“ könnt.\n" +
-        "Die Person sagt:\n" +
-        "„Im Spiel ist das doch viel zu umständlich.“",
+    situation: "Eine Online-Bekanntschaft fragt Tim nach seiner Telefonnummer. Sie schreibt: „Im Spielchat ist das doch viel zu umständlich.“ Was sollte Tim tun?",
     checklist: [
-        "Telefonnummer nicht an Online-Bekanntschaften geben",
-        "Kontakt nicht auf privatere Kanäle verschieben",
+        "Telefonnummer nicht weitergeben",
+        "nicht einfach zu WhatsApp oder Snapchat wechseln",
         "keine Daten anderer Personen teilen",
-        "Erwachsene fragen, wenn Druck entsteht",
-        "bei Druck Kontakt beenden oder blockieren",
-        "persönliche Daten als schützenswert erkennen"
+        "bei Druck Hilfe holen"
     ],
     answers: [
         {
-            text: "A) Wir bleiben im Chat der Plattform und geben keine Telefonnummer weiter.",
+            text: "A) Tim bleibt im Spielchat und gibt keine Telefonnummer weiter.",
             type: "correct",
-            evaluation: "Sehr sicher. Die Telefonnummer ist eine private Information. Wenn jemand den Kontakt auf einen privateren Kanal verschieben möchte, sollte man besonders vorsichtig sein.",
+            evaluation: "Sehr sicher. Die Telefonnummer ist eine private Information. Tim schützt damit seinen Alltag und verhindert, dass der Kontakt zu privat wird.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Wir wechseln zu einem Messenger, aber geben dort nur unseren Vornamen an.",
+            text: "B) Tim wechselt zu WhatsApp, nennt dort aber nur seinen Vornamen.",
             type: "partial",
-            evaluation: "Teilweise vorsichtig, aber riskant. Weniger Informationen zu teilen ist gut, aber der Kontakt wird trotzdem privater. Außerdem kann ein Messenger weitere Daten sichtbar machen, zum Beispiel Profilbild, Status oder Telefonnummer.",
+            evaluation: "Teilweise vorsichtig. Der Kontakt wird trotzdem privater und kann mehr Daten sichtbar machen.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Wir geben die Nummer eines Elternteils oder Geschwisters, damit unsere eigene Nummer geschützt bleibt.",
+            text: "C) Tim gibt die Nummer eines Elternteils oder Geschwisters.",
             type: "wrong",
-            evaluation: "Riskant. Man darf private Daten anderer Personen nicht weitergeben. Außerdem bleibt die Frage, warum die Online-Bekanntschaft überhaupt auf einen privateren Kanal wechseln möchte.",
+            evaluation: "Riskant. Private Daten anderer Personen darf man nicht weitergeben.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Wir sagen, dass wir keine Nummer teilen möchten, fragen aber nach der Nummer der anderen Person.",
+            text: "D) Tim gibt seine Nummer nicht, fragt aber nach der Nummer der anderen Person.",
             type: "partial",
-            evaluation: "Teilweise sicher. Die eigene Nummer nicht zu teilen ist gut. Aber nach der Nummer der anderen Person zu fragen kann den Kontakt trotzdem privater machen und das Problem verschieben.",
+            evaluation: "Teilweise sicher. Trotzdem wird der Kontakt dadurch privater.",
             consequence: "Risiko +1."
         }
     ],
@@ -318,40 +301,38 @@ cards["telefonnummer"] = {
 cards["geschenk-im-spiel"] = {
     district: "Chat-Café",
     title: "Das Geschenk im Spiel",
-    situation: "Jemand schenkt dir im Spiel seltene Gegenstände. Danach fragt die Person nach privaten Informationen, zum Beispiel deinem echten Namen, deiner Schule oder deiner Telefonnummer.",
+    situation: "Eine Person schenkt Amir im Spiel seltene Gegenstände. Danach fragt sie nach seinem echten Namen, seiner Schule und seiner Telefonnummer. Was sollte Amir tun?",
     checklist: [
         "Geschenke nicht als Verpflichtung sehen",
-        "keine privaten Informationen als Gegenleistung geben",
+        "keine privaten Daten als Gegenleistung geben",
         "Druck erkennen",
-        "Erwachsene fragen, wenn die Person weiter drängt",
-        "Kontakt beenden oder blockieren, wenn nötig",
-        "verstehen, dass Geschenke manipulativ eingesetzt werden können"
+        "mit einer erwachsenen Vertrauensperson sprechen"
     ],
     answers: [
-       {
-            text: "A) Wir fragen, welche Informationen die Person genau möchte, bevor wir entscheiden.",
+        {
+            text: "A) Amir fragt, welche Infos die Person genau möchte.",
             type: "wrong",
-            evaluation: "Riskant. Dadurch wird der Kontakt weitergeführt und die Person kann neuen Druck aufbauen. Wenn jemand nach einem Geschenk private Informationen möchte, ist das ein Warnzeichen.",
+            evaluation: "Riskant. Dadurch kann die Person weiter Druck aufbauen.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Wir geben nur ungefähr Auskunft, zum Beispiel den Vornamen oder die Stadt, aber nicht die Schule oder Telefonnummer.",
+            text: "B) Amir nennt nur seinen Vornamen und die Stadt.",
             type: "partial",
-            evaluation: "Teilweise vorsichtig, aber nicht sicher genug. Weniger Informationen zu teilen ist besser als viele Details zu geben. Trotzdem können auch einzelne Angaben zusammen mit anderen Infos viel über dich verraten.",
+            evaluation: "Teilweise vorsichtig. Auch einzelne Angaben können zusammen viel verraten.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Wir geben den Gegenstand zurück und löschen das Spiel sofort, damit nichts mehr passieren kann.",
+            text: "C) Amir gibt den Gegenstand zurück und löscht sofort das Spiel.",
             type: "partial",
-            evaluation: "Teilweise sicher, aber sehr streng. Abstand kann helfen, wenn die Situation unangenehm wird. Das Spiel sofort zu löschen ist aber nicht immer nötig. Wichtig ist, keine privaten Daten zu teilen und bei Druck Hilfe zu holen.",
+            evaluation: "Teilweise sicher, aber sehr streng. Wichtiger ist, keine privaten Daten zu teilen und Hilfe zu holen.",
             consequence: "Nichts."
         },
-         {
-            text: "D) Wir bedanken uns, geben aber keine privaten Informationen weiter.",
+        {
+            text: "D) Amir bedankt sich, gibt aber keine privaten Informationen weiter.",
             type: "correct",
-            evaluation: "Sehr sicher. Ein Geschenk verpflichtet nicht dazu, echte Namen, Schule, Telefonnummer oder andere private Daten zu teilen. Wenn die Person danach Druck macht, sollte man Hilfe holen oder den Kontakt beenden.",
+            evaluation: "Sehr sicher. Ein Geschenk verpflichtet nicht dazu, private Daten zu teilen. Amir schützt damit seinen Account, seine Spielzeit und seine Privatsphäre.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
+        }
     ],
     helpSources: [
         {
@@ -368,39 +349,37 @@ cards["geschenk-im-spiel"] = {
 cards["treffen-online-bekanntschaft"] = {
     district: "Chat-Café",
     title: "Das Treffen mit der Online-Bekanntschaft",
-    situation: "David chattet seit zwei Wochen mit jemandem, mit dem er ein gemeinsames Hobby teilt. Die beiden überlegen, sich am Samstag persönlich zu treffen, und suchen gerade nach einem Treffpunkt.",
+    situation: "David chattet seit zwei Wochen mit jemandem aus einem Hobby-Forum. Die Person möchte sich am Samstag treffen und sucht mit David einen Treffpunkt. Was sollte David tun?",
     checklist: [
-        "zuerst Eltern oder eine erwachsene Vertrauensperson informieren",
         "Treffen nicht allein planen",
-        "keine privaten Daten teilen",
-        "sich nicht heimlich verabreden",
-        "gemeinsam entscheiden, ob ein Treffen überhaupt sinnvoll ist",
-        "Sicherheit wichtiger nehmen als Höflichkeit oder Neugier",
-        "öffentliche Orte allein reichen nicht aus"
+        "zuerst Erwachsene informieren",
+        "nicht heimlich verabreden",
+        "öffentliche Orte allein machen ein Treffen nicht sicher",
+        "wenn überhaupt, nur mit klarer Begleitung und Absprache"
     ],
     answers: [
         {
-            text: "A) David schlägt einen belebten öffentlichen Ort vor und sagt einem Freund Bescheid, wohin er geht.",
+            text: "A) David wählt einen belebten Ort und sagt einem Freund Bescheid.",
             type: "partial",
-            evaluation: "Teilweise sicher. Ein öffentlicher Ort und Bescheid sagen sind besser als ein heimliches Treffen. Trotzdem sollte David ein Treffen mit einer Online-Bekanntschaft nicht allein planen, sondern vorher mit einer erwachsenen Vertrauensperson sprechen.",
+            evaluation: "Teilweise sicher. Ein öffentlicher Ort hilft, aber David sollte das Treffen nicht ohne Erwachsene planen.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) David macht vor dem Treffen erst einen Videoanruf, um zu prüfen, ob die Person wirklich so alt ist wie sie sagt.",
+            text: "B) David macht vorher einen Videoanruf.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar. Ein Videoanruf kann Hinweise geben, beweist aber nicht sicher, wer die Person wirklich ist oder ob ein Treffen ungefährlich ist. Auch danach sollte David keine Verabredung allein planen.",
+            evaluation: "Teilweise nachvollziehbar. Ein Videoanruf beweist aber nicht sicher, dass ein Treffen ungefährlich ist.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) David spricht zuerst mit seinen Eltern und entscheidet, ob ein Treffen überhaupt sicher und sinnvoll ist.",
+            text: "C) David spricht zuerst mit seinen Eltern und entscheidet dann, ob ein Treffen sinnvoll ist.",
             type: "correct",
-            evaluation: "Sehr sicher. David plant das Treffen nicht allein und lässt sich nicht von Neugier oder Höflichkeit leiten. Eine erwachsene Vertrauensperson kann helfen einzuschätzen, ob und wie ein Treffen überhaupt infrage kommt.",
+            evaluation: "Sehr sicher. David plant das Treffen nicht allein und holt sich Unterstützung.",
             consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und Risiko -1."
         },
         {
-            text: "D) David wählt einen Treffpunkt mit vielen Menschen, zum Beispiel Kino oder Bowling.",
+            text: "D) David trifft sich im Kino oder beim Bowling, weil dort viele Menschen sind.",
             type: "wrong",
-            evaluation: "Riskant. Ein öffentlicher Freizeitort macht ein Treffen nicht automatisch sicher. Besonders problematisch ist, dass David das Treffen vorher nicht mit einer erwachsenen Vertrauensperson bespricht.",
+            evaluation: "Riskant. Ein öffentlicher Ort macht ein Treffen mit einer Online-Bekanntschaft nicht automatisch sicher.",
             consequence: "Risiko +2."
         }
     ],
@@ -423,39 +402,37 @@ cards["treffen-online-bekanntschaft"] = {
 cards["unbekannte-freundschaftsanfrage"] = {
     district: "Chat-Café",
     title: "Die unbekannte Freundschaftsanfrage",
-    situation: "Tom bekommt eine Freundschaftsanfrage. Das Profilfoto sieht aus wie ein Mädchen aus seiner Schule, aber er ist sich nicht sicher. Das Profil hat einige gemeinsame Kontakte.",
+    situation: "Tom bekommt eine Freundschaftsanfrage. Das Profilfoto sieht aus wie ein Mädchen aus seiner Schule. Es gibt einige gemeinsame Kontakte. Was sollte Tom tun?",
     checklist: [
-        "Anfrage nicht vorschnell annehmen",
-        "außerhalb der Plattform prüfen",
-        "gemeinsame Kontakte nicht als sicheren Beweis ansehen",
-        "keine privaten Nachrichten oder Daten schicken",
-        "bei Unsicherheit Erwachsene fragen",
-        "Fake-Profile melden, wenn nötig"
+        "Anfrage nicht sofort annehmen",
+        "Identität anders prüfen",
+        "gemeinsame Kontakte nicht als Beweis sehen",
+        "keine privaten Daten schicken"
     ],
     answers: [
         {
-            text: "A) Tom nimmt die Anfrage an, schreibt aber erstmal nichts Privates.",
+            text: "A) Tom nimmt die Anfrage an, schreibt aber nichts Privates.",
             type: "partial",
-            evaluation: "Teilweise vorsichtig, aber riskant. Nichts Privates zu schreiben ist gut. Trotzdem öffnet Tom durch das Annehmen schon einen Kontaktweg und gibt der Person möglicherweise mehr Einblick in sein Profil.",
+            evaluation: "Teilweise vorsichtig. Durch das Annehmen bekommt die Person vielleicht mehr Einblick in sein Profil.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Tom nimmt die Anfrage an, weil mehrere gemeinsame Kontakte ein gutes Zeichen sind.",
-            type: "partial",
-            evaluation: "Teilweise nachvollziehbar, aber nicht sicher. Gemeinsame Kontakte können echt wirken, beweisen aber nicht, dass das Profil wirklich zur richtigen Person gehört. Auch andere können ein Fake-Profil angenommen haben.",
-            consequence: "Risiko +1."
+            text: "B) Tom nimmt an, weil gemeinsame Kontakte ein gutes Zeichen sind.",
+            type: "wrong",
+            evaluation: "Riskant. Gemeinsame Kontakte beweisen nicht, dass das Profil echt ist. Auch Fake-Profile können gemeinsame Kontakte haben.",
+            consequence: "Risiko +2."
         },
         {
-            text: "C) Tom fragt die Person in der Schule oder über einen anderen bekannten Weg, ob das Profil wirklich ihr gehört.",
+            text: "C) Tom fragt die Person in der Schule oder über einen anderen bekannten Weg.",
             type: "correct",
-            evaluation: "Sehr sicher. Tom verlässt sich nicht nur auf Profilfoto und gemeinsame Kontakte, sondern prüft die Identität über einen anderen Weg.",
+            evaluation: "Sehr sicher. Tom prüft die Identität nicht nur über Profilfoto und gemeinsame Kontakte.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Tom stellt der Person im Chat eine Frage über die Schule, die nicht jeder sofort wissen kann.",
+            text: "D) Tom stellt im Chat eine Frage über die Schule.",
             type: "partial",
-            evaluation: "Teilweise sinnvoll. Eine Kontrollfrage kann helfen, ist aber kein sicherer Beweis. Manche Antworten können geraten, recherchiert oder von anderen übernommen sein.",
-            consequence: "+1 Zeit-Chip."
+            evaluation: "Teilweise sinnvoll. Eine Antwort kann aber geraten oder von anderen übernommen sein.",
+            consequence: "VOID bewegt 5 Felder vor."
         }
     ],
     helpSources: [

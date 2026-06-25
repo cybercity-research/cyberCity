@@ -1,37 +1,36 @@
 cards["login-auf-fremdem-geraet"] = {
     district: "Passwort-Park",
-    title: "Der Login auf fremdem Gerät",
-    situation: "Du meldest dich bei einem Freund auf dessen Tablet in deinem Account an. Nach dem Spielen fragt das Tablet, ob es dein Passwort speichern soll.",
+    title: "Einloggen auf fremdem Gerät",
+    situation: "Mia spielt bei einem Freund auf dessen Tablet. Sie meldet sich in ihrem Spielkonto an. Danach fragt das Tablet, ob es ihr Passwort speichern soll. Was sollte Mia tun?",
     checklist: [
         "auf fremden Geräten kein Passwort speichern",
         "nach der Nutzung ausloggen",
-        "prüfen, ob der Account wirklich abgemeldet ist",
-        "bei Unsicherheit Passwort ändern",
-        "möglichst nur auf eigenen oder vertrauenswürdigen Geräten einloggen"
+        "prüfen, ob der Account abgemeldet ist",
+        "bei Unsicherheit Passwort ändern"
     ],
     answers: [
         {
-            text: "A) Wir wählen „Nicht speichern“ und melden uns nach dem Spielen wieder aus.",
+            text: "A) Mia wählt „Nicht speichern“ und meldet sich nach dem Spielen ab.",
             type: "correct",
-            evaluation: "Sehr sicher. Das Passwort wird nicht auf einem fremden Gerät gespeichert, und der Account bleibt nach dem Spielen nicht offen.",
+            evaluation: "Sehr sicher. Das Passwort bleibt nicht auf dem fremden Gerät und der Account bleibt nicht offen. So schützt Mia auch ihren Spielfortschritt und ihre gesammelten Gegenstände.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Wir wählen „Nicht speichern“, bleiben aber eingeloggt, weil es das Tablet eines Freundes ist.",
+            text: "B) Mia wählt „Nicht speichern“, bleibt aber eingeloggt.",
             type: "partial",
-            evaluation: "Teilweise sicher. Das Passwort nicht zu speichern ist gut. Trotzdem kann der Account offen bleiben, wenn man sich nicht ausloggt.",
+            evaluation: "Teilweise sicher. Das Passwort wird nicht gespeichert, aber der Account kann trotzdem offen bleiben.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Wir melden uns aus und löschen danach den Browserverlauf.",
+            text: "C) Mia meldet sich ab und löscht danach den Browserverlauf.",
             type: "partial",
-            evaluation: "Teilweise sicher. Ausloggen ist wichtig. Der Browserverlauf allein löscht aber nicht zuverlässig gespeicherte Passwörter oder andere Kontodaten. Man sollte auch prüfen, dass nichts gespeichert wurde.",
-            consequence: "Nichts."
+            evaluation: "Teilweise sicher. Ausloggen ist wichtig, aber der Verlauf löscht nicht immer gespeicherte Kontodaten.",
+            consequence: "VOID bewegt 5 Felder vor."
         },
         {
-            text: "D) Wir speichern das Passwort nur, wenn unser Freund verspricht, nicht in den Account zu schauen.",
+            text: "D) Mia speichert das Passwort, weil sie ihrem Freund vertraut.",
             type: "wrong",
-            evaluation: "Riskant. Auch bei Freunden sollten Passwörter nicht auf fremden Geräten gespeichert werden. Andere Personen könnten das Gerät ebenfalls nutzen oder später Zugriff bekommen.",
+            evaluation: "Riskant. Passwörter sollten nicht auf fremden Geräten gespeichert werden, auch nicht bei Freunden.",
             consequence: "Risiko +2."
         }
     ],
@@ -54,38 +53,35 @@ cards["login-auf-fremdem-geraet"] = {
 cards["zwei-faktor-schutz"] = {
     district: "Passwort-Park",
     title: "Zwei-Faktor-Schutz",
-    situation: "Ein Spiel bietet an, den Account mit einem zusätzlichen Code zu schützen. Dann reicht das Passwort allein nicht mehr aus, um sich anzumelden.",
+    situation: "Ein Spiel bietet Tom an, seinen Account zusätzlich zu schützen. Dann braucht man neben dem Passwort noch einen zweiten Schritt, zum Beispiel einen Code aus einer App oder per SMS. Was sollte Tom tun?",
     checklist: [
-        "Zwei-Faktor-Schutz verstehen",
+        "Zwei-Faktor-Schutz nutzen",
         "Zusatzcode nicht weitergeben",
-        "Einrichtung mit Eltern besprechen",
-        "Wiederherstellungsmöglichkeiten sicher aufbewahren",
-        "besonders wichtige Konten zusätzlich schützen",
-        "Codes nicht in Chats oder öffentlich speichern"
+        "wichtige Konten extra schützen"
     ],
     answers: [
         {
-            text: "A) Wir aktivieren den Schutz und machen einen Screenshot vom Wiederherstellungscode, damit wir ihn schnell wiederfinden.",
-            type: "partial",
-            evaluation: "Teilweise sicher. Den Schutz zu aktivieren ist gut. Ein Screenshot kann aber unsicher sein, wenn andere Zugriff auf Fotos, Cloud-Speicher oder das Gerät bekommen. Wiederherstellungscodes sollten besonders geschützt aufbewahrt werden.",
+            text: "A) Tom aktiviert den Schutz nicht.",
+            type: "wrong",
+            evaluation: "Riskant. Wichtige Accounts sind mit Passwort und zusätzlichem Schutz sicherer.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Wir aktivieren den zusätzlichen Schutz und bewahren die Wiederherstellungsinfos sicher auf.",
+            text: "B) Tom aktiviert den Schutz.",
             type: "correct",
-            evaluation: "Sehr sicher. Ein zweiter Faktor schützt den Account besser, falls das Passwort bekannt wird. Wichtig ist, Zusatzcodes nicht weiterzugeben und Wiederherstellungsmöglichkeiten sicher aufzubewahren.",
+            evaluation: "Sehr sicher. Ein zusätzlicher Code schützt den Account besser, falls das Passwort bekannt wird.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Wir aktivieren den Schutz nur bei Accounts, in denen Geld, Käufe oder seltene Spielgegenstände gespeichert sind.",
+            text: "C) Tom aktiviert den Schutz nur bei Accounts mit Geld oder seltenen Spielgegenständen.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar. Solche Accounts sind besonders wichtig. Aber auch E-Mail-, Schul- oder Spielkonten ohne Geld können wertvoll sein und sollten gut geschützt werden.",
+            evaluation: "Teilweise sinnvoll. Aber auch E-Mail-, Schul- oder Spielkonten ohne Geld können wichtig sein.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Wir lassen den Schutz aus und nehmen lieber ein längeres Passwort, das wir uns gut merken können.",
+            text: "D) Tom nutzt lieber nur ein längeres Passwort.",
             type: "wrong",
-            evaluation: "Riskant. Ein Passwort kann erraten werden. Gerade wichtige Accounts sind mit einem starken Passwort und zusätzlichem Schutz besser gesichert.",
+            evaluation: "Riskant. Wichtige Accounts sind mit Passwort und zusätzlichem Schutz sicherer.",
             consequence: "Risiko +2."
         }
     ],
@@ -104,38 +100,38 @@ cards["zwei-faktor-schutz"] = {
 cards["passwort-im-klassenchat"] = {
     district: "Passwort-Park",
     title: "Passwort im Klassenchat",
-    situation: "Jemand schreibt versehentlich sein Passwort in den Klassenchat. Einige machen sich darüber lustig. Andere überlegen, ob sie ausprobieren sollen, ob es funktioniert.",
+    situation: "Jemand schreibt aus Versehen sein Passwort in den Klassenchat. Einige lachen darüber. Andere wollen testen, ob es funktioniert. Was sollte Leon tun?",
     checklist: [
-        "nicht ausprobieren",
+        "Passwort nicht ausprobieren",
         "nicht weiterleiten",
-        "Person warnen",
-        "Passwort sofort ändern lassen",
-        "bei Bedarf Erwachsene oder Lehrkraft informieren",
-        "fair bleiben und nicht bloßstellen"
+        "Person privat warnen",
+        "Passwort ändern lassen",
+        "fair bleiben",
+        "Passwort nicht ausprobieren, auch nicht aus Spaß"
     ],
     answers: [
         {
-            text: "A) Wir löschen die Nachricht bei uns und tun so, als hätten wir sie nicht gesehen.",
+            text: "A) Leon löscht die Nachricht bei sich und tut so, als hätte er sie nicht gesehen.",
             type: "partial",
-            evaluation: "Teilweise fair. Nicht weiterzuleiten und nicht darüber zu lachen ist gut. Aber die Person sollte schnell erfahren, dass ihr Passwort sichtbar war, damit sie es ändern kann.",
-            consequence: "Nichts."
+            evaluation: "Teilweise fair. Aber die Person sollte schnell erfahren, dass ihr Passwort sichtbar war.",
+            consequence: "VOID bewegt 3 Felder vor."
         },
         {
-            text: "B) Wir testen das Passwort nicht, schicken aber einen Screenshot an Freunde, damit sie Bescheid wissen.",
+            text: "B) Leon testet es nicht, schickt aber einen Screenshot an Freunde.",
             type: "wrong",
-            evaluation: "Riskant und unfair. Auch ohne Einloggen wird das Passwort dadurch weiterverbreitet. Passwörter sollten nicht geteilt oder herumgeschickt werden.",
+            evaluation: "Riskant und unfair. Dadurch wird das Passwort weiterverbreitet.",
             consequence: "Risiko +2."
         },
         {
-            text: "C) Wir schreiben der Person privat, dass das Passwort im Chat steht, und sagen ihr, dass sie es sofort ändern sollte.",
+            text: "C) Leon schreibt der Person privat, dass sie das Passwort sofort ändern sollte.",
             type: "correct",
-            evaluation: "Sehr sicher und fair. Ihr nutzt das Passwort nicht aus, stellt die Person nicht bloß und helft dabei, den Account schnell zu schützen.",
+            evaluation: "Sehr sicher und fair. Leon nutzt das Passwort nicht aus und hilft der Person.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Wir schreiben in den Gruppenchat, dass alle das Passwort ignorieren sollen.",
+            text: "D) Leon schreibt in den Gruppenchat, dass alle das Passwort ignorieren sollen.",
             type: "partial",
-            evaluation: "Teilweise gut gemeint, aber nicht ideal. Dadurch wird noch mehr Aufmerksamkeit auf das Passwort gelenkt. Besser ist es, die Person direkt und möglichst unauffällig zu warnen.",
+            evaluation: "Gut gemeint, aber nicht ideal. Dadurch bekommt das Passwort noch mehr Aufmerksamkeit.",
             consequence: "Risiko +1."
         }
     ],
@@ -158,40 +154,39 @@ cards["passwort-im-klassenchat"] = {
 cards["account-uebernommen"] = {
     district: "Passwort-Park",
     title: "Der Account wurde übernommen",
-    situation: "Dein Account verschickt Nachrichten, die du nicht geschrieben hast. Freunde fragen dich, warum du ihnen komische Links geschickt hast.",
+    situation: "Leas Account verschickt plötzlich Nachrichten, die sie nicht geschrieben hat. Freunde fragen, warum sie komische Links sendet. Was sollte Lea tun?",
     checklist: [
         "Passwort sofort ändern",
-        "aktive Sitzungen prüfen und abmelden",
-        "Zwei-Faktor-Schutz aktivieren",
+        "prüfen, wo der Account noch angemeldet ist",
+        "Zwei-Faktor-Schutz aktivieren wenn möglich",
         "Freunde warnen",
-        "Erwachsene um Hilfe bitten",
-        "verdächtige Nachrichten melden"
+        "Support oder Erwachsene fragen"
     ],
     answers: [
         {
-            text: "A) Wir antworten den Freunden, dass sie die Links öffnen sollen, damit sie sehen, ob wirklich etwas komisch ist.",
+            text: "A) Lea sagt ihren Freunden, sie sollen die Links testen.",
             type: "wrong",
-            evaluation: "Riskant. Dadurch könnten noch mehr Personen auf gefährliche Links klicken. Bei verdächtigen Nachrichten sollte man andere warnen, nicht zum Testen auffordern.",
+            evaluation: "Riskant. Dadurch könnten noch mehr Personen auf gefährliche Links klicken.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Wir löschen die App vom Handy und warten ab, ob keine weiteren Nachrichten verschickt werden.",
+            text: "B) Lea löscht die App und wartet ab.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar, aber nicht ausreichend. Die App zu löschen kann Abstand schaffen, aber der Account bleibt online und kann weiter missbraucht werden. Das Passwort und aktive Sitzungen müssen geprüft werden.",
+            evaluation: "Teilweise nachvollziehbar, aber nicht genug. Der Account kann weiter missbraucht werden.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Wir erstellen sofort einen neuen Account und schreiben allen, dass sie den alten ignorieren sollen.",
+            text: "C) Lea erstellt einen neuen Account und warnt alle vor dem alten.",
             type: "partial",
-            evaluation: "Teilweise sicher, aber unvollständig. Freunde zu warnen ist gut. Der alte Account kann aber weiter missbraucht werden, wenn er nicht abgesichert, gemeldet oder zurückgeholt wird.",
+            evaluation: "Teilweise sicher. Freunde zu warnen ist gut, aber der alte Account muss trotzdem abgesichert werden.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Wir ändern sofort das Passwort, melden fremde Sitzungen ab und warnen Freunde, nicht auf die Links zu klicken.",
+            text: "D) Lea ändert das Passwort, meldet den Account auf fremden Geräten ab und warnt ihre Freunde.",
             type: "correct",
-            evaluation: "Sehr sicher. Der Account wird schnell abgesichert und andere werden vor den verschickten Links gewarnt. Wenn es nicht klappt, sollte man Hilfe holen oder den Support nutzen.",
+            evaluation: "Sehr sicher. So schützt Lea ihren Account, ihre Freunde, Chats und Erinnerungen. Außerdem verhindert sie, dass andere auf die Links klicken.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
+        }
     ],
     helpSources: [
         {
@@ -212,37 +207,35 @@ cards["account-uebernommen"] = {
 cards["sicherheitsfrage"] = {
     district: "Passwort-Park",
     title: "Sicherheitsfrage",
-    situation: "Eine Webseite fragt als Sicherheitsfrage: „Wie heißt dein Haustier?“",
+    situation: "Eine Webseite fragt Leyla: „Wie heißt dein Haustier?“ Diese Sicherheitsfrage soll später helfen, wenn sie ihr Passwort vergisst. Was sollte Leyla tun?",
     checklist: [
-        "keine leicht recherchierbaren Antworten nutzen",
-        "echte Namen, Geburtstage und Haustiernamen vermeiden",
-        "schwer erratbare Antwort sicher merken",
-        "Antwort nicht öffentlich posten",
-        "mit Eltern eine sichere Lösung finden"
+        "keine echten Infos nehmen, die andere kennen könnten",
+        "Antwort geheim halten",
+        "Antwort sicher aufbewahren"
     ],
     answers: [
         {
-            text: "A) Wir nehmen den echten Haustiernamen, weil man die Frage ehrlich beantworten soll.",
+            text: "A) Leyla nimmt den echten Haustiernamen.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar, aber riskant. Sicherheitsfragen sollen zwar später wiedererkennbar sein, aber echte Haustiernamen können erraten oder aus Profilen herausgefunden werden.",
+            evaluation: "Teilweise nachvollziehbar, aber riskant. Echte Haustiernamen können andere vielleicht herausfinden.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Wir nutzen eine schwer erratbare Antwort und bewahren sie sicher auf, zum Beispiel zusammen mit den Kontoinformationen.",
+            text: "B) Leyla nutzt eine schwer erratbare Antwort und bewahrt sie sicher auf.",
             type: "correct",
-            evaluation: "Sehr sicher. Die Antwort muss nicht leicht erratbar oder öffentlich bekannt sein. Wichtig ist, dass sie schwer zu erraten ist und später zuverlässig wiedergefunden werden kann.",
+            evaluation: "Sehr sicher. Die Antwort muss nicht die echte Antwort sein. Wichtig ist, dass sie geheim bleibt und nicht leicht erraten werden kann.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Wir nehmen eine lustige Fantasieantwort, erzählen sie aber auch Freunden, damit sie uns erinnern können.",
+            text: "C) Leyla nimmt eine Fantasieantwort und erzählt sie Freunden.",
             type: "wrong",
-            evaluation: "Riskant. Eine schwer erratbare Antwort ist nur dann sicher, wenn sie geheim bleibt. Freunde sollten Sicherheitsantworten nicht kennen.",
+            evaluation: "Riskant. Eine Sicherheitsantwort ist nur sicher, wenn sie geheim bleibt.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Wir schreiben bei jeder Sicherheitsfrage dieselbe kurze Antwort, damit wir sie nie vergessen.",
+            text: "D) Leyla nimmt bei jeder Sicherheitsfrage dieselbe kurze Antwort.",
             type: "partial",
-            evaluation: "Teilweise praktisch, aber nicht ideal. Eine kurze gleiche Antwort kann leichter erraten oder bei mehreren Konten missbraucht werden. Besser ist eine schwer erratbare Antwort, die sicher aufbewahrt wird.",
+            evaluation: "Teilweise praktisch, aber nicht ideal. Eine kurze gleiche Antwort kann leichter missbraucht werden.",
             consequence: "Risiko +1."
         }
     ],
@@ -261,38 +254,36 @@ cards["sicherheitsfrage"] = {
 cards["freund-will-passwort"] = {
     district: "Passwort-Park",
     title: "Der Freund will das Passwort",
-    situation: "Jonas’ bester Freund möchte sich kurz mit Jonas’ Account in einem Spiel anmelden, weil er einen seltenen Gegenstand anschauen will. Jonas vertraut seinem Freund, ist sich aber unsicher.",
+    situation: "Jonas bester Freund will sich kurz mit Jonas’ Spielaccount anmelden, um einen seltenen Gegenstand anzuschauen. Was sollte Jonas tun?",
     checklist: [
         "Passwort nicht teilen",
         "Account nicht aus der Hand geben",
         "freundliche Alternative anbieten",
-        "Gegenstand auf dem eigenen Gerät zeigen",
-        "erklären, dass Passwortschutz nichts mit Misstrauen zu tun hat",
-        "bei bereits geteiltem Passwort Passwort ändern"
+        "bei geteiltem Passwort ändern"
     ],
     answers: [
         {
-            text: "A) Jonas loggt sich selbst ein und zeigt den Gegenstand auf seinem eigenen Gerät, ohne sein Passwort weiterzugeben.",
+            text: "A) Jonas loggt sich selbst ein und zeigt den Gegenstand auf seinem Gerät.",
             type: "correct",
-            evaluation: "Sehr sicher. Jonas schützt seinen Account und findet trotzdem eine freundliche Lösung. Ein Passwort geheim zu halten bedeutet nicht, dass er seinem Freund misstraut.",
+            evaluation: "Sehr sicher. Jonas gibt sein Passwort nicht weiter und schützt seinen Account, in dem Spielzeit, seltene Gegenstände und Fortschritt stecken.",
             consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und möglicher Passwort-Profi Badge."
         },
         {
-            text: "B) Jonas gibt das Passwort nur kurz weiter und ändert es direkt danach.",
+            text: "B) Jonas gibt das Passwort kurz weiter und ändert es danach.",
             type: "partial",
-            evaluation: "Teilweise vorsichtig, aber riskant. Das Passwort danach zu ändern ist besser als es dauerhaft zu teilen. Trotzdem kann schon ein kurzer Zugriff reichen, damit etwas verändert, weitergegeben oder missbraucht wird.",
+            evaluation: "Teilweise vorsichtig. Trotzdem kann schon kurzer Zugriff für Änderungen oder Missbrauch reichen.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Jonas erstellt ein einfaches Übergangspasswort, damit sein richtiges Passwort geheim bleibt.",
+            text: "C) Jonas erstellt ein Übergangspasswort.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar, aber nicht sicher genug. Ein Übergangspasswort schützt vielleicht das alte Passwort, gibt aber trotzdem Zugriff auf den Account. Besser ist es, den Account nicht aus der Hand zu geben.",
+            evaluation: "Teilweise nachvollziehbar. Aber der Freund bekommt trotzdem Zugriff auf den Account und könnte aus Versehen etwas ändern.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Jonas lässt seinen Freund allein an seinem Gerät spielen, weil das Passwort dann nicht verraten wird.",
+            text: "D) Jonas lässt den Freund allein an seinem Gerät spielen.",
             type: "wrong",
-            evaluation: "Riskant. Das Passwort bleibt zwar geheim, aber der Account ist trotzdem unbeaufsichtigt offen. Der Freund könnte aus Versehen oder absichtlich Einstellungen ändern, Käufe machen oder Nachrichten schreiben.",
+            evaluation: "Riskant. Der Account ist dann offen und unbeaufsichtigt.",
             consequence: "Risiko +2."
         }
     ],
@@ -311,37 +302,36 @@ cards["freund-will-passwort"] = {
 cards["name-und-geburtsdatum"] = {
     district: "Passwort-Park",
     title: "Name und Geburtsdatum",
-    situation: "Leyla erstellt ein neues Passwort. Sie überlegt, ihren Vornamen und ihr Geburtsdatum zu benutzen, damit sie es sich gut merken kann.",
+    situation: "Leyla erstellt ein neues Passwort. Sie überlegt, ihren Vornamen und ihr Geburtsdatum zu benutzen, damit sie es sich merken kann. Was sollte sie tun?",
     checklist: [
-        "keine Namen oder Geburtstage verwenden",
-        "kein Passwort nutzen, das andere leicht erraten können",
-        "langes Passwort oder Passphrase verwenden",
+        "keine Namen oder Geburtstage nutzen",
+        "langes Passwort verwenden",
         "Passwort nicht wiederverwenden",
-        "Passwort sicher merken oder Passwort-Manager nutzen"
+        "langen Merksatz nutzen, den andere nicht erraten können"
     ],
     answers: [
         {
-            text: "A) Leyla nimmt ihren Namen und Geburtstag, ersetzt aber ein paar Buchstaben durch Zahlen und Sonderzeichen.",
+            text: "A) Leyla nimmt Name und Geburtstag, ersetzt aber ein paar Buchstaben.",
             type: "partial",
-            evaluation: "Teilweise besser als nur Name und Geburtstag, aber immer noch riskant. Persönliche Informationen bleiben leichter erratbar, auch wenn einzelne Zeichen verändert werden.",
+            evaluation: "Teilweise besser, aber immer noch riskant. Namen, Geburtstage und einfache Ersetzungen wie @ oder Zahlen können leichter erraten werden.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Leyla nimmt ein kurzes Passwort, das sie niemandem sagt und nicht aufschreibt.",
+            text: "B) Leyla nimmt ein kurzes Passwort, das sie niemandem sagt.",
             type: "partial",
-            evaluation: "Teilweise richtig. Ein Passwort geheim zu halten ist wichtig. Wenn es aber kurz ist, kann es trotzdem leichter erraten oder geknackt werden.",
+            evaluation: "Teilweise richtig. Geheimhalten ist wichtig, aber kurze Passwörter sind leichter zu knacken.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Leyla denkt sich einen längeren Merksatz aus, der nichts mit ihrem Namen, Geburtstag oder Profil zu tun hat.",
+            text: "C) Leyla denkt sich einen langen Merksatz ohne persönliche Daten aus.",
             type: "correct",
-            evaluation: "Sehr sicher. Ein längerer Merksatz kann gut merkbar und trotzdem schwer zu erraten sein. Persönliche Daten wie Name oder Geburtstag sollten nicht im Passwort vorkommen.",
+            evaluation: "Sehr sicher. Ein langer Merksatz kann gut merkbar und schwer zu erraten sein.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Leyla nimmt ein Passwort, das sie schon bei einem anderen Konto nutzt, und fügt hinten eine neue Zahl an.",
+            text: "D) Leyla nimmt ein altes Passwort und hängt eine neue Zahl an.",
             type: "wrong",
-            evaluation: "Riskant. Wiederverwendete oder nur leicht veränderte Passwörter können mehrere Konten gefährden, wenn eines davon bekannt wird.",
+            evaluation: "Riskant. Wiederverwendete Passwörter können mehrere Konten gefährden.",
             consequence: "Risiko +2."
         }
     ],
@@ -360,40 +350,39 @@ cards["name-und-geburtsdatum"] = {
 cards["passwort-fuer-mehrere-konten"] = {
     district: "Passwort-Park",
     title: "Ein Passwort für mehrere Konten",
-    situation: "Ben benutzt dasselbe Passwort für sein Spielkonto, seine E-Mail und eine Lernplattform. Er findet das praktisch, weil er es sich gut merken kann.",
+    situation: "Ben benutzt dasselbe Passwort für sein Spielkonto, seine E-Mail und eine Lernplattform. Was sollte Ben tun?",
     checklist: [
-        "nicht dasselbe Passwort überall verwenden",
-        "verstehen, dass ein gehacktes Konto andere Konten gefährden kann",
-        "unterschiedliche Passwörter nutzen",
+        "nicht dasselbe Passwort überall nutzen",
         "E-Mail-Konto besonders schützen",
-        "Passwort-Manager oder Familienlösung überlegen",
-        "Zwei-Faktor-Schutz nutzen, wenn möglich"
+        "unterschiedliche Passwörter verwenden",
+        "mit Eltern über einen Passwort-Manager sprechen",
+        "Zwei-Faktor-Schutz nutzen"
     ],
     answers: [
-         {
-            text: "A) Ben schreibt sein gemeinsames Passwort in eine private Chatnachricht an sich selbst, damit er es nicht vergisst.",
+        {
+            text: "A) Ben speichert das Passwort in einer privaten Chatnachricht an sich selbst.",
             type: "wrong",
-            evaluation: "Riskant. Passwörter sollten nicht in Chats gespeichert werden. Außerdem bleibt das Problem bestehen, dass ein einziges bekanntes Passwort mehrere Konten gefährden kann.",
+            evaluation: "Riskant. Passwörter sollten nicht in Chats gespeichert werden.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Ben behält das Passwort, solange es lang ist und er es niemandem erzählt.",
+            text: "B) Ben behält das Passwort, solange es lang ist und geheim bleibt.",
             type: "partial",
-            evaluation: "Teilweise richtig. Ein langes und geheimes Passwort ist besser als ein kurzes. Trotzdem sollte dasselbe Passwort nicht für mehrere Konten genutzt werden, weil es durch Datenlecks oder Phishing bekannt werden kann.",
+            evaluation: "Teilweise richtig. Trotzdem sollte ein Passwort nicht für mehrere Konten genutzt werden.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Ben nutzt dasselbe Passwort nur für unwichtige Konten und ein anderes für Konten mit Geld.",
+            text: "C) Ben nutzt dasselbe Passwort nur für unwichtige Konten.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar, aber unvollständig. Konten mit Geld sind besonders wichtig. Aber auch E-Mail-, Schul-, Lern- oder Spielkonten können wertvoll sein und andere Konten gefährden.",
+            evaluation: "Teilweise nachvollziehbar. Auch Spiel-, Schul- oder Lernkonten können wichtig sein.",
             consequence: "Risiko +1."
         },
         {
-            text: "A) Ben ändert zuerst das E-Mail-Passwort und nutzt danach für wichtige Konten unterschiedliche Passwörter.",
+            text: "D) Ben ändert zuerst das E-Mail-Passwort und nutzt danach unterschiedliche Passwörter.",
             type: "correct",
-            evaluation: "Sehr sicher. Wenn ein Passwort mehrfach genutzt wird, können mehrere Konten gefährdet sein. Das E-Mail-Konto ist besonders wichtig, weil darüber oft andere Konten zurückgesetzt werden können.",
+            evaluation: "Sehr sicher. Das E-Mail-Konto ist besonders wichtig, weil man darüber oft andere Konten zurücksetzen kann. So schützt Ben auch Spielstände, Schulzugänge und persönliche Nachrichten.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
+        }
     ],
     helpSources: [
         {

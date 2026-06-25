@@ -1,40 +1,36 @@
 cards["peinliches-klassenfoto"] = {
     district: "Social-Media-Platz",
     title: "Das peinliche Klassenfoto",
-    situation: "Im Klassenchat wird ein peinliches Foto geteilt. Einige schreiben lachende Emojis. Jemand schreibt:\n" +
-        "„Schick es weiter, das ist so witzig!“\n" +
-        "Du merkst, dass die betroffene Person es nicht witzig findet.",
+    situation: "Im Klassenchat wird ein peinliches Foto von Tim geteilt. Einige lachen und schreiben: „Schick es weiter!“. Was sollte Leon tun?",
     checklist: [
         "Foto nicht weiterleiten",
-        "nicht mitlachen oder verletzende Kommentare schreiben",
+        "nicht mitlachen",
         "betroffene Person unterstützen",
-        "falls nötig Beweise sichern, aber nicht weiterverbreiten",
-        "erwachsene Vertrauensperson informieren",
-        "melden oder blockieren, wenn es weitergeht"
+        "bei Bedarf Hilfe holen"
     ],
     answers: [
         {
-            text: "A) Wir schauen es uns nur an und schreiben nichts dazu.",
+            text: "A) Leon schaut es sich nur an und schreibt nichts dazu.",
             type: "partial",
-            evaluation: "Teilweise sicher. Nicht mitzulachen und nichts Gemeines zu schreiben ist besser als mitzumachen. Aber die betroffene Person braucht vielleicht Unterstützung, und das Foto sollte nicht weiterverbreitet werden.",
-            consequence: "+1 Zeit-Chip."
+            evaluation: "Teilweise sicher. Nicht mitzumachen ist gut, aber Tim braucht vielleicht Unterstützung.",
+            consequence: "VOID bewegt 2 Felder vor."
         },
         {
-            text: "B) Wir leiten das Foto nicht weiter, schreiben nicht verletzend mit und sagen, dass das unfair ist. Wenn es weitergeht, holen wir Hilfe.",
+            text: "B) Leon leitet es nicht weiter, widerspricht fair und holt Hilfe, wenn es weitergeht.",
             type: "correct",
-            evaluation: "Sehr sicher und fair. So wird das Foto nicht weiterverbreitet, die betroffene Person wird unterstützt und bei weiterem Druck kann eine erwachsene Vertrauensperson helfen.",
+            evaluation: "Sehr sicher und fair. Das Foto wird nicht weiterverbreitet und Tim wird unterstützt. So schützt Leon auch Tims Würde und seinen Ruf in der Klasse.",
             consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und möglicher Fair-online Badge."
         },
         {
-            text: "C) Wir machen einen Screenshot und schicken ihn an mehrere Freunde, damit alle sehen, was passiert ist.",
+            text: "C) Leon macht einen Screenshot und schickt ihn an Freunde.",
             type: "wrong",
-            evaluation: "Riskant. Auch wenn es als Beweis gemeint ist, wird das Bild dadurch weiterverbreitet. Beweise sollten nur gezielt für Hilfe oder eine Meldung genutzt werden, nicht im Freundeskreis herumgeschickt werden.",
+            evaluation: "Riskant. Dadurch wird das peinliche Bild weiterverbreitet.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Wir schreiben der betroffenen Person privat, dass sie den Chat einfach ignorieren soll.",
+            text: "D) Leon schreibt Tim privat, dass er nicht allein ist, unternimmt aber sonst nichts.",
             type: "partial",
-            evaluation: "Teilweise unterstützend. Privat nachzufragen kann helfen. Nur zu sagen, dass sie es ignorieren soll, reicht aber nicht immer, weil das Bild weiter Schaden anrichten kann.",
+            evaluation: "Teilweise unterstützend. Tim privat zu stärken ist gut, aber wenn das Foto weitergeteilt wird, sollte Leon zusätzlich Hilfe holen.",
             consequence: "Risiko +1."
         }
     ],
@@ -61,40 +57,36 @@ cards["peinliches-klassenfoto"] = {
 cards["geruecht-im-chat"] = {
     district: "Social-Media-Platz",
     title: "Das Gerücht im Chat",
-    situation: "Josie bekommt eine Nachricht:\n" +
-        "„Cindy ist in Brian verliebt! Sag es weiter, das ist voll lustig.“\n" +
-        "Josie weiß nicht, ob das stimmt. Außerdem könnte Cindy sehr peinlich berührt sein, wenn andere davon erfahren.",
+    situation: "Josie bekommt eine Nachricht: „Cindy ist in Brian verliebt! Sag es weiter.“ Josie weiß nicht, ob das stimmt. Was sollte sie tun?",
     checklist: [
-        "Nachricht nicht weiterleiten",
-        "nicht über Cindy lachen oder sie bloßstellen",
-        "private Gefühle anderer respektieren",
-        "nicht prüfen wollen, ob das Gerücht stimmt, indem man andere fragt",
-        "bei Druck ruhig sagen: „Das geht uns nichts an“",
-        "Cindy unterstützen, falls das Gerücht schon herumgeht"
+        "Gerücht nicht weiterleiten",
+        "niemanden bloßstellen",
+        "Privatsphäre respektieren",
+        "klar sagen: Das ist privat"
     ],
     answers: [
         {
-            text: "A) Josie leitet die Nachricht nicht weiter und schreibt zurück: „Das ist privat und geht uns nichts an.“",
+            text: "A) Josie leitet es nicht weiter und schreibt: „Das ist privat.“",
             type: "correct",
-            evaluation: "Sehr sicher und fair. Josie verbreitet das Gerücht nicht weiter, schützt Cindys Privatsphäre und setzt eine klare Grenze.",
+            evaluation: "Sehr sicher und fair. Josie schützt Cindys Privatsphäre und stoppt das Gerücht.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "A) Josie löscht die Nachricht und macht nicht mit.",
+            text: "B) Josie löscht die Nachricht und macht nicht mit.",
             type: "partial",
-            evaluation: "Teilweise sicher. Nicht mitzumachen ist gut. Wenn andere das Gerücht aber weiterverbreiten, kann es helfen, klar zu sagen, dass Cindy nicht bloßgestellt werden soll.",
-            consequence: "Nichts."
+            evaluation: "Teilweise sicher. Nicht mitzumachen ist gut, aber ein klarer Stopp kann noch besser helfen.",
+            consequence: "VOID bewegt 2 Felder vor."
         },
         {
-            text: "C) Josie fragt Cindy privat, ob das Gerücht stimmt, damit sie besser helfen kann.",
+            text: "C) Josie fragt Cindy vorsichtig privat, ob alles okay ist, ohne das Gerücht weiterzuerzählen.",
             type: "partial",
-            evaluation: "Gut gemeint, aber heikel. Unterstützung kann wichtig sein, aber Cindy könnte sich dadurch zusätzlich unangenehm berührt fühlen. Besser ist zuerst, das Gerücht nicht weiterzutragen und andere zu stoppen.",
-            consequence: "Nichts."
+            evaluation: "Gut gemeint, aber heikel. Cindy könnte sich dadurch zusätzlich unwohl fühlen.",
+            consequence: "VOID bewegt 4 Felder vor."
         },
         {
-            text: "D) Josie fragt Brian heimlich, ob Cindy wirklich in ihn verliebt ist.",
+            text: "D) Josie fragt Brian heimlich, ob das Gerücht stimmt.",
             type: "wrong",
-            evaluation: "Riskant. Dadurch wird das Gerücht weitergetragen und Cindy kann bloßgestellt werden, auch wenn Josie es nur überprüfen wollte.",
+            evaluation: "Riskant. Dadurch wird das Gerücht weitergetragen.",
             consequence: "Risiko +2."
         }
     ],
@@ -117,38 +109,36 @@ cards["geruecht-im-chat"] = {
 cards["teamchat-nach-dem-spiel"] = {
     district: "Social-Media-Platz",
     title: "Der Teamchat nach dem Spiel",
-    situation: "Joel loggt sich in den Chat seiner Basketballmannschaft ein. Dort sieht er, dass einige Teammitglieder Matt fertig machen, weil Matt im letzten Spiel den entscheidenden Wurf verfehlt hat. Einige Kommentare werden sehr persönlich.",
+    situation: "Joel sieht im Teamchat, dass Matt beleidigt wird, weil er im Basketballspiel den entscheidenden Wurf verfehlt hat. Die Kommentare werden immer persönlicher. Was sollte Joel tun?",
     checklist: [
-        "nicht mitbeleidigen oder mitlachen",
-        "Matt nicht öffentlich bloßstellen",
-        "ruhig und fair widersprechen, wenn es sicher möglich ist",
-        "Matt privat unterstützen",
-        "Screenshots nur als Beweis sichern und nicht weiterverbreiten",
-        "Trainerin, Trainer oder eine erwachsene Vertrauensperson informieren, wenn es persönlich oder verletzend wird"
+        "nicht mitbeleidigen",
+        "fair widersprechen",
+        "betroffene Person unterstützen",
+        "bei Bedarf Erwachsene informieren"
     ],
     answers: [
         {
-            text: "A) Joel schreibt Matt privat, dass er auf seiner Seite ist, sagt aber sonst nichts.",
+            text: "A) Joel schreibt Matt privat, dass er auf seiner Seite ist.",
             type: "partial",
-            evaluation: "Teilweise unterstützend. Matt privat zu stärken kann helfen. Wenn die Gruppe aber weiter persönlich angreift, sollte Joel zusätzlich Hilfe holen oder fair widersprechen, wenn es sicher möglich ist.",
-            consequence: "+1 Zeit-Chip."
+            evaluation: "Teilweise unterstützend. Wenn die Gruppe weitermacht, sollte Joel zusätzlich Hilfe holen.",
+            consequence: "VOID bewegt 1 Feld vor."
         },
         {
-            text: "B) Joel macht Screenshots und schickt sie in einen anderen Gruppenchat, damit alle sehen, wer gemein war.",
+            text: "B) Joel macht Screenshots und schickt sie in einen anderen Gruppenchat.",
             type: "wrong",
-            evaluation: "Riskant. Auch wenn Joel die Angriffe beweisen möchte, verbreitet er die Situation damit weiter. Screenshots sollten nur gezielt als Beweis für Hilfe oder eine Meldung genutzt werden.",
+            evaluation: "Riskant. Dadurch wird die Situation weiterverbreitet. Wenn Beweise nötig sind, sollte Joel sie nur einer erwachsenen Vertrauensperson zeigen.",
             consequence: "Risiko +2."
         },
         {
-            text: "C) Joel schreibt ruhig in den Chat, dass persönliche Angriffe unfair sind, und informiert eine erwachsene Vertrauensperson, wenn es weitergeht.",
+            text: "C) Joel schreibt ruhig, dass persönliche Angriffe unfair sind, und holt Hilfe, wenn es weitergeht.",
             type: "correct",
-            evaluation: "Sehr sicher und fair. Joel macht nicht mit, setzt eine klare Grenze und holt Hilfe, wenn die Kommentare weiter verletzend bleiben.",
-            consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und möglicher Fair-online Badge."
+            evaluation: "Sehr sicher und fair. Joel macht nicht mit und setzt eine klare Grenze.",
+            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Joel schreibt einen harmlosen Witz über den verfehlten Wurf, damit die Stimmung lockerer wird.",
+            text: "D) Joel macht einen Witz über den verfehlten Wurf.",
             type: "partial",
-            evaluation: "Gut gemeint, aber riskant. Ein Witz kann die Situation weiter anheizen oder Matt noch mehr verletzen. Besser ist es, persönliche Angriffe zu stoppen und Matt zu unterstützen.",
+            evaluation: "Gut gemeint, aber riskant. Auch ein Witz kann Matt noch mehr verletzen.",
             consequence: "Risiko +1."
         }
     ],
@@ -167,41 +157,38 @@ cards["teamchat-nach-dem-spiel"] = {
 cards["bilder-fuer-praesentation"] = {
     district: "Social-Media-Platz",
     title: "Die Bilder für die Präsentation",
-    situation: "Jo und Matt arbeiten gemeinsam an einer Präsentation für die Schule. Sie brauchen dafür passende Bilder und finden im Internet viele Fotos, die gut aussehen.\n" +
-        "Jo ist sich aber unsicher, ob sie die Bilder einfach kopieren und in ihre Präsentation einfügen dürfen.",
+    situation: "Jo und Matt brauchen Bilder für eine Schulpräsentation. Im Internet finden sie viele passende Fotos, sind aber unsicher, ob sie diese einfach kopieren dürfen. Was sollen sie tun?",
     checklist: [
-        "Nutzungsrechte prüfen",
-        "nicht automatisch jedes Bild kopieren",
-        "freie Bildquellen oder Creative-Commons-Bilder nutzen",
-        "Quelle korrekt angeben, wenn erlaubt",
-        "bei Unsicherheit Lehrkraft oder Erwachsene fragen",
-        "respektieren, dass Bilder jemandem gehören können"
+           "prüfen, ob man die Bilder benutzen darf",
+            "freie Bildquellen nutzen",
+            "Quelle angeben",
+            "bei Unsicherheit Lehrkraft fragen"
     ],
     answers: [
         {
-            text: "A) Jo und Matt schreiben die Quelle unter jedes Bild und verwenden es dann.",
+            text: "A) Sie schreiben die Quelle darunter und nutzen die Bilder.",
             type: "partial",
-            evaluation: "Teilweise richtig. Eine Quellenangabe ist wichtig, aber sie bedeutet nicht automatisch, dass das Bild verwendet werden darf. Vorher sollten sie prüfen, ob die Nutzung erlaubt ist.",
+            evaluation: "Teilweise richtig. Eine Quellenangabe bedeutet nicht automatisch, dass die Nutzung erlaubt ist.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Jo und Matt verwenden die Bilder, weil die Präsentation nur in der Schule gezeigt wird.",
+            text: "B) Sie nutzen die Bilder, weil die Präsentation nur in der Schule gezeigt wird.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar. Für Schule können andere Regeln gelten als für öffentliche Posts. Trotzdem sollten sie nicht einfach jedes Bild kopieren, sondern die Nutzungsbedingungen prüfen oder die Lehrkraft fragen.",
+            evaluation: "Teilweise nachvollziehbar. Trotzdem sollten sie prüfen, ob die Nutzung erlaubt ist.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Jo und Matt verändern die Bilder mit Filtern oder schneiden sie zu, damit sie als eigene Bilder gelten.",
+            text: "C) Sie bearbeiten die Bilder mit Filtern, damit sie als eigene Bilder gelten.",
             type: "wrong",
-            evaluation: "Riskant. Ein Bild zu bearbeiten macht es nicht automatisch frei nutzbar. Auch veränderte Bilder können weiterhin geschützt sein.",
+            evaluation: "Riskant. Bearbeiten macht ein Bild nicht automatisch frei nutzbar.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Jo und Matt suchen gezielt nach frei nutzbaren Bildern und notieren die Quelle so, wie es dort angegeben ist.",
+            text: "D) Sie suchen frei nutzbare Bilder und geben die Quelle korrekt an.",
             type: "correct",
-            evaluation: "Sehr sicher. Sie wählen Bilder, die für die Nutzung geeignet sind, und geben die Quelle korrekt an. So respektieren sie, dass Bilder jemandem gehören können.",
+            evaluation: "Sehr sicher. So nutzen sie Bilder, die erlaubt sind, und geben trotzdem an, woher sie kommen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
+        }
     ],
     helpSources: [
         {
@@ -218,38 +205,36 @@ cards["bilder-fuer-praesentation"] = {
 cards["digitaler-fussabdruck"] = {
     district: "Social-Media-Platz",
     title: "Der digitale Fußabdruck",
-    situation: "Nach der Unterrichtsstunde über Berufe überlegt Mia, welchen Eindruck ihre Online-Profile machen. Sie fragt sich, was Schulen, Universitäten oder Arbeitgeber über sie sehen könnten. Sie möchte online einen guten Eindruck hinterlassen.",
+    situation: "Mia fragt sich, welchen Eindruck ihre Online-Profile machen. Vielleicht sehen später auch Schulen, Vereine oder Arbeitgeber alte Posts. Was sollte sie tun?",
     checklist: [
-        "überlegen, welchen Eindruck das eigene Profil macht",
-        "alte Posts, Kommentare und Fotos prüfen",
-        "peinliche, verletzende oder zu private Inhalte entfernen oder verbergen",
+        "sichtbare Inhalte prüfen",
+        "alte Posts aufräumen",
         "Privatsphäre-Einstellungen kontrollieren",
-        "keine falschen oder übertriebenen Informationen posten",
-        "sich fragen: Würde ich wollen, dass Lehrkräfte, Vereine oder spätere Arbeitgeber das sehen?"
+        "bewusst posten"
     ],
     answers: [
         {
-            text: "A) Mia schaut sich ihre Profile aus Sicht anderer an und räumt Inhalte auf, die zu privat, verletzend oder peinlich wirken könnten.",
+            text: "A) Mia schaut ihr Profil so an, wie andere es sehen, und löscht oder versteckt zu persönliche oder peinliche Inhalte.",
             type: "correct",
-            evaluation: "Sehr sicher. Mia gestaltet ihren digitalen Fußabdruck bewusst, ohne sich falsch darzustellen. Sie prüft, was sichtbar ist, und schützt ihre Privatsphäre.",
+            evaluation: "Sehr sicher. Mia schützt ihren digitalen Ruf und entscheidet bewusst, welche Erinnerungen, Fotos und Posts andere sehen können.",
             consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und möglicher Datenschutz-Badge."
         },
         {
-            text: "B) Mia löscht sofort alle Konten, damit niemand etwas über sie finden kann.",
+            text: "B) Mia löscht sofort alle Konten.",
             type: "partial",
-            evaluation: "Teilweise sicher, aber sehr streng. Löschen kann in manchen Fällen sinnvoll sein. Oft reicht es aber, alte Inhalte zu prüfen, Privatsphäre-Einstellungen anzupassen und bewusster zu posten.",
+            evaluation: "Teilweise sicher, aber sehr streng. Oft reichen bessere Einstellungen und bewusstes Aufräumen.",
             consequence: "Nichts."
         },
         {
-            text: "C) Mia postet extra viele perfekte Bilder und Erfolgsmomente, damit ihr Profil möglichst beeindruckend aussieht.",
+            text: "C) Mia postet extra viele perfekte Bilder.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar, aber problematisch. Ein guter Eindruck kann wichtig sein, aber übertriebene oder unechte Selbstdarstellung erzeugt Druck und schützt nicht automatisch die Privatsphäre.",
+            evaluation: "Teilweise nachvollziehbar, aber nicht ideal. Ein perfektes Profil schützt nicht automatisch die Privatsphäre.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Mia lässt alles so, wie es ist, weil alte Kinder- und Jugendprofile später sowieso niemanden interessieren.",
+            text: "D) Mia lässt alles so, weil alte Posts später niemanden interessieren.",
             type: "wrong",
-            evaluation: "Riskant. Online-Inhalte können lange sichtbar bleiben, gespeichert oder weitergegeben werden. Deshalb ist es sinnvoll, regelmäßig zu prüfen, was andere sehen können.",
+            evaluation: "Riskant. Online-Inhalte können lange sichtbar bleiben oder weitergegeben werden.",
             consequence: "Risiko +2."
         }
     ],
@@ -276,39 +261,38 @@ cards["digitaler-fussabdruck"] = {
 cards["foto-soll-weg"] = {
     district: "Social-Media-Platz",
     title: "Das Foto soll weg",
-    situation: "Auf Romys Profil erscheint plötzlich ein Foto von ihr im Schlafanzug. Sie sieht müde aus, ihre Haare stehen lustig ab, und sie wusste gar nicht, dass jemand dieses Foto bei der Übernachtung gemacht hat. Romy möchte, dass das Foto verschwindet.",
+    situation: "Auf dem Profil eines Freundes erscheint ein Foto von Romy im Schlafanzug. Sie wusste nicht, dass es gemacht wurde, und möchte, dass es verschwindet. Was sollte Romy tun?",
     checklist: [
-        "ruhig bleiben und nicht selbst beleidigend reagieren",
-        "die Person bitten, das Foto zu löschen",
-        "Foto nicht weiterverbreiten oder selbst erneut posten",
-        "Screenshot nur als Beweis sichern, wenn nötig",
-        "Privatsphäre- oder Meldefunktion der Plattform nutzen",
-        "eine erwachsene Vertrauensperson um Hilfe bitten"
+        "ruhig bleiben",
+        "Löschung verlangen",
+        "nicht weiterverbreiten",
+        "Meldeweg nutzen",
+        "Hilfe holen"
     ],
     answers: [
         {
-            text: "A) Romy schreibt einen wütenden Kommentar unter das Foto, damit alle sehen, dass sie das nicht erlaubt hat.",
+            text: "A) Romy schreibt wütend unter das Foto.",
             type: "partial",
-            evaluation: "Verständlich, aber riskant. Romy setzt zwar eine Grenze, aber ein wütender öffentlicher Kommentar kann den Streit vergrößern und noch mehr Aufmerksamkeit auf das Foto lenken.",
+            evaluation: "Verständlich, aber riskant. Ein öffentlicher Streit kann noch mehr Aufmerksamkeit erzeugen.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Romy bittet die Person, das Foto zu löschen. Wenn es nicht entfernt wird, nutzt sie die Meldefunktion.",
+            text: "B) Romy bittet um Löschung und nutzt die Meldefunktion, wenn es nicht entfernt wird.",
             type: "correct",
-            evaluation: "Sehr sicher. Romy reagiert ruhig, verbreitet das Foto nicht weiter und nutzt passende Hilfewege, falls die andere Person nicht reagiert.",
+            evaluation: "Sehr sicher. Romy schützt ihre Privatsphäre und sorgt dafür, dass ein unangenehmes Foto nicht weiter zu ihrer Online-Geschichte gehört.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Romy speichert das Foto und schickt es ihren Freunden, damit sie zeigen kann, wie gemein das ist.",
+            text: "C) Romy speichert das Foto und schickt es Freunden als Beweis.",
             type: "wrong",
-            evaluation: "Riskant. Dadurch wird das Foto weiterverbreitet, obwohl Romy eigentlich möchte, dass es verschwindet. Beweise sollten nur gezielt für Hilfe oder eine Meldung genutzt werden.",
+            evaluation: "Riskant. Dadurch wird das Foto weiterverbreitet. Wenn Romy Beweise braucht, sollte sie diese nur einer erwachsenen Vertrauensperson zeigen.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Romy meldet das Foto in der App, sagt aber niemandem Bescheid, obwohl sie sich sehr unwohl fühlt.",
+            text: "D) Romy meldet das Foto, sagt aber niemandem Bescheid.",
             type: "partial",
-            evaluation: "Teilweise sicher. Die Meldefunktion zu nutzen ist gut. Wenn Romy sich sehr unwohl fühlt oder das Foto nicht entfernt wird, sollte sie zusätzlich eine erwachsene Vertrauensperson um Hilfe bitten.",
-            consequence: "Nichts."
+            evaluation: "Teilweise sicher. Wenn Romy sich sehr unwohl fühlt, sollte sie zusätzlich Hilfe holen.",
+            consequence: "VOID bewegt 3 Felder vor."
         }
     ],
     helpSources: [
@@ -326,38 +310,36 @@ cards["foto-soll-weg"] = {
 cards["bild-ohne-erlaubnis"] = {
     district: "Social-Media-Platz",
     title: "Das Bild ohne Erlaubnis",
-    situation: "Du hast ein lustiges Foto von einem Freund oder einer Freundin gemacht. Du möchtest es posten, weil du glaubst, dass andere es witzig finden.",
+    situation: "Max hat ein lustiges Foto von einem Freund gemacht. Er möchte es posten, weil andere es bestimmt witzig finden. Was sollte Max tun?",
     checklist: [
-        "vorher um Erlaubnis fragen",
-        "ein Nein akzeptieren",
-        "keine peinlichen oder privaten Fotos posten",
-        "überlegen, wie sich die andere Person fühlen könnte",
-        "Bilder nicht heimlich teilen",
-        "bei Gruppenfotos alle Beteiligten beachten"
+        "vorher fragen",
+        "Nein akzeptieren",
+        "keine peinlichen Fotos posten",
+        "an Gefühle anderer denken"
     ],
     answers: [
         {
-            text: "A) Wir posten es, wenn die Person darauf lustig aussieht und es nur als Spaß gemeint ist.",
+            text: "A) Max postet es, weil es nur Spaß ist.",
             type: "wrong",
-            evaluation: "Riskant. Lustig für eine Person kann für die andere peinlich oder verletzend sein. Gute Absicht ersetzt keine Erlaubnis.",
+            evaluation: "Riskant. Spaß für eine Person kann für die andere peinlich oder verletzend sein.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Wir machen das Gesicht unkenntlich und posten es, ohne noch einmal zu fragen.",
+            text: "B) Max macht das Gesicht unkenntlich und postet es.",
             type: "partial",
-            evaluation: "Teilweise sicher. Das Gesicht unkenntlich zu machen kann helfen. Trotzdem kann die Person durch Kleidung, Ort oder Situation erkennbar sein oder sich unwohl fühlen. Bei Bildern von anderen sollte man vorher fragen.",
-            consequence: "Nichts."
+            evaluation: "Teilweise sicher. Die Person kann trotzdem durch Kleidung, Ort oder Situation erkennbar sein.",
+            consequence: "VOID bewegt 5 Felder vor."
         },
         {
-            text: "C) Wir zeigen der Person das Foto zuerst und posten es nur, wenn sie wirklich einverstanden ist.",
+            text: "C) Max zeigt der Person das Foto und postet es nur mit echter Zustimmung.",
             type: "correct",
-            evaluation: "Sehr sicher und respektvoll. Die andere Person darf mitentscheiden, welches Bild von ihr online erscheint. Ein Nein sollte akzeptiert werden.",
+            evaluation: "Sehr sicher und respektvoll. Die Person darf mitentscheiden, welches Bild online erscheint und welche Erinnerungen andere von ihr sehen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Wir posten es nur in die Story, weil es nach kurzer Zeit wieder verschwindet.",
+            text: "D) Max postet es nur kurz in die Story.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar, aber riskant. Stories wirken weniger dauerhaft, können aber gespeichert, gescreenshotet oder weitergeleitet werden. Auch dafür braucht es vorher Zustimmung.",
+            evaluation: "Teilweise nachvollziehbar. Stories können gespeichert oder weitergeleitet werden.",
             consequence: "Risiko +1."
         }
     ],
@@ -376,42 +358,37 @@ cards["bild-ohne-erlaubnis"] = {
 cards["unglaubliches-skateboard-video"] = {
     district: "Social-Media-Platz",
     title: "Das unglaubliche Skateboard-Video",
-    situation: "Bob bekommt von Ben ein Video. Darin macht ein Skateboarder unglaubliche Tricks, die fast unmöglich aussehen. Einige Freunde schreiben schon:\n" +
-        "„Krass, das musst du weiterleiten!“\n" +
-        "Bob fragt sich, ob das Video echt ist oder vielleicht geschnitten, gestellt oder bearbeitet wurde.",
+    situation: "Bob bekommt ein Video mit fast unmöglichen Skateboard-Tricks. Freunde schreiben: „Krass, weiterleiten!“ Bob fragt sich, ob das Video echt ist. Was sollte Bob tun?",
     checklist: [
-        "nicht sofort glauben oder weiterleiten",
-        "prüfen, wer das Video veröffentlicht hat",
-        "nach dem Originalvideo oder weiteren Quellen suchen",
-        "auf Schnitte, ungewöhnliche Bewegungen oder Bearbeitung achten",
-        "Kommentare, Likes und viele Aufrufe nicht als Beweis sehen",
-        "bei Unsicherheit sagen: „Ich weiß nicht, ob das echt ist.“"
+        "prüfen, woher das Video kommt",
+        "nach dem Original suchen",
+        "Likes nicht als Beweis sehen"
     ],
     answers: [
         {
-            text: "A) Bob leitet das Video weiter, schreibt aber dazu: „Keine Ahnung, ob das echt ist.“",
+            text: "A) Bob leitet es weiter und schreibt: „Keine Ahnung, ob das echt ist.“",
             type: "partial",
-            evaluation: "Teilweise ehrlich, aber nicht ideal. Der Hinweis zeigt Unsicherheit, trotzdem wird das Video weiterverbreitet. Besser ist es, erst zu prüfen oder es nicht weiterzuschicken.",
+            evaluation: "Teilweise ehrlich, aber nicht ideal. Das Video wird trotzdem weiterverbreitet.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Bob schaut sich das Video mehrmals an und achtet auf komische Schnitte oder Bewegungen.",
+            text: "B) Bob schaut genau auf komische Schnitte oder Bewegungen.",
             type: "partial",
-            evaluation: "Teilweise sinnvoll. Auffällige Schnitte oder Bewegungen können Hinweise geben. Allein durch Anschauen erkennt man aber nicht immer sicher, ob ein Video bearbeitet oder gestellt ist.",
-            consequence: "+1 Zeit-Chip."
+            evaluation: "Teilweise sinnvoll. Anschauen allein beweist aber nicht, ob ein Video echt ist.",
+            consequence: "VOID bewegt 2 Felder vor."
         },
         {
-            text: "C) Bob glaubt dem Video, wenn es viele Likes, Kommentare und Aufrufe hat.",
+            text: "C) Bob glaubt dem Video, weil es viele Likes hat.",
             type: "wrong",
-            evaluation: "Riskant. Viele Reaktionen zeigen nur, dass ein Video Aufmerksamkeit bekommt. Sie beweisen nicht, dass es echt oder unverändert ist.",
+            evaluation: "Riskant. Viele Likes beweisen nicht, dass ein Video echt ist.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Bob schaut, woher das Video kommt, sucht nach dem Original und prüft, ob andere verlässliche Quellen es erklären.",
+            text: "D) Bob prüft, woher das Video kommt, sucht das Original und vergleicht mit verlässlichen Quellen.",
             type: "correct",
-            evaluation: "Sehr sicher. Bob glaubt das Video nicht nur, weil es beeindruckend aussieht, sondern prüft Herkunft, Original und weitere Hinweise, bevor er es teilt.",
+            evaluation: "Sehr sicher. Bob prüft das Video, bevor er es glaubt oder teilt.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
+        }
     ],
     helpSources: [
         {
@@ -432,39 +409,36 @@ cards["unglaubliches-skateboard-video"] = {
 cards["ehrlicher-blog"] = {
     district: "Social-Media-Platz",
     title: "Der ehrliche Blog?",
-    situation: "Pua bekommt einen Link zu einem Blog. Dort werden dramatische „Vorher-Nachher“-Bilder gezeigt. Die Autorin empfiehlt ein Produkt und schreibt, dass es ihr Leben verändert habe.\n" +
-        "Pua fragt sich, ob die Empfehlung ehrlich ist oder ob die Autorin damit Geld verdienen möchte.",
+    situation: "Pua liest einen Blog mit dramatischen Vorher-Nachher-Bildern. Die Autorin empfiehlt ein Produkt und verlinkt einen Rabattcode. Pua fragt sich, ob das ehrliche Erfahrung oder Werbung ist. Was sollte Pua tun?",
     checklist: [
-        "prüfen, ob der Beitrag Werbung oder gesponsert ist",
-        "auf Affiliate-Links, Rabattcodes oder Produktverkauf achten",
-        "dramatische Vorher-Nachher-Bilder kritisch betrachten",
-        "nach unabhängigen Quellen oder fachlichen Informationen suchen",
-        "nicht nur auf persönliche Erfahrungsberichte vertrauen",
-        "bei Gesundheits- oder Körperthemen Erwachsene oder Fachpersonen fragen"
+        "Werbung erkennen",
+        "Rabattcodes kritisch sehen",
+        "Bilder prüfen",
+        "unabhängige Quellen suchen"
     ],
     answers: [
         {
-            text: "A) Pua glaubt dem Blog, wenn die Vorher-Nachher-Bilder überzeugend aussehen.",
+            text: "A) Pua glaubt dem Blog, wenn die Bilder überzeugend aussehen.",
             type: "wrong",
-            evaluation: "Riskant. Bilder können bearbeitet, gestellt oder einseitig ausgewählt sein. Dramatische Bilder sind kein sicherer Beweis dafür, dass ein Produkt wirkt.",
+            evaluation: "Riskant. Bilder können bearbeitet, gestellt oder einseitig ausgewählt sein.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Pua schaut nach, ob Werbung, Rabattcodes oder Produktlinks im Beitrag vorkommen, und sucht zusätzlich nach unabhängigen Informationen.",
+            text: "B) Pua prüft Werbung, Rabattcodes und sucht unabhängige Informationen.",
             type: "correct",
-            evaluation: "Sehr sicher. Pua erkennt mögliche kommerzielle Interessen und verlässt sich nicht nur auf persönliche Erfahrungsberichte oder beeindruckende Bilder.",
+            evaluation: "Sehr sicher. Pua erkennt, dass der Blog Werbung sein könnte, und verlässt sich nicht nur auf die Bilder oder Kommentare.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
             text: "C) Pua vertraut dem Blog eher, wenn viele positive Kommentare darunterstehen.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar, aber unsicher. Viele positive Kommentare können echt wirken, beweisen aber nicht, dass die Empfehlung unabhängig ist. Kommentare können einseitig, gefälscht oder von Fans geschrieben sein.",
+            evaluation: "Teilweise nachvollziehbar. Kommentare können aber gefälscht oder einseitig sein.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Pua bestellt das Produkt nicht, teilt den Link aber mit Freundinnen, damit sie selbst entscheiden können.",
+            text: "D) Pua bestellt nichts, teilt den Link aber mit Freundinnen.",
             type: "partial",
-            evaluation: "Teilweise vorsichtig. Nicht sofort zu bestellen ist gut. Trotzdem kann Pua durch das Weiterleiten problematische Werbung verbreiten, besonders wenn es um Gesundheit, Körper oder Aussehen geht.",
+            evaluation: "Teilweise vorsichtig. Durch Weiterleiten kann problematische Werbung verbreitet werden.",
             consequence: "Risiko +1."
         }
     ],
@@ -487,39 +461,36 @@ cards["ehrlicher-blog"] = {
 cards["einseitige-webseite"] = {
     district: "Social-Media-Platz",
     title: "Die einseitige Webseite",
-    situation: "Nina und Matt schreiben einen Aufsatz über Schuluniformen. Nina findet eine Webseite, die auf den ersten Blick wie eine gute Quelle aussieht. Beim Lesen merkt sie aber: Die Seite benutzt sehr starke Wörter und zeigt fast nur eine Meinung.\n" +
-        "Nina ist sich nicht sicher, ob die Webseite für ihren Aufsatz zuverlässig ist.",
+    situation: "Nina schreibt einen Aufsatz über Schuluniformen. Eine Webseite passt zu ihrer Meinung, benutzt aber sehr starke Wörter und zeigt fast nur eine Seite. Was sollte Nina tun?",
     checklist: [
-        "auf übertriebene oder sehr emotionale Wörter achten",
-        "prüfen, ob verschiedene Seiten des Themas gezeigt werden",
-        "zwischen Meinung, Werbung und Information unterscheiden",
-        "nach Autor, Herausgeber und Ziel der Webseite schauen",
-        "Informationen mit anderen zuverlässigen Quellen vergleichen",
-        "bei Schulaufgaben neutrale oder fachliche Quellen bevorzugen"
+        "übertriebene oder starke Wörter erkennen",
+        "mehrere Meinungen prüfen",
+        "Autor oder Anbieter prüfen",
+        "mit anderen Quellen vergleichen"
     ],
     answers: [
         {
-            text: "A) Nina nutzt die Webseite, weil starke Wörter zeigen, dass die Autorin oder der Autor sich gut auskennt.",
+            text: "A) Nina nutzt die Seite, weil starke Wörter Fachwissen zeigen.",
             type: "wrong",
-            evaluation: "Riskant. Sehr starke oder emotionale Sprache kann ein Hinweis darauf sein, dass eine Quelle einseitig, werbend oder manipulativ ist.",
+            evaluation: "Riskant. Sehr starke Sprache kann auf Einseitigkeit oder Manipulation hinweisen.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Nina nimmt die Webseite, weil sie genau zu ihrer eigenen Meinung über Schuluniformen passt.",
+            text: "B) Nina nimmt die Seite, weil sie zu ihrer Meinung passt.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar, aber einseitig. Eine Quelle kann zur eigenen Meinung passen, sollte aber trotzdem zuverlässig sein und verschiedene Argumente berücksichtigen.",
+            evaluation: "Teilweise nachvollziehbar. Eine passende Quelle ist nicht automatisch zuverlässig.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Nina schaut nach, wer hinter der Seite steht, ob mehrere Sichtweisen vorkommen, und vergleicht die Informationen mit anderen Quellen.",
+            text: "C) Nina prüft, wer hinter der Seite steht, und vergleicht sie mit anderen Quellen.",
             type: "correct",
-            evaluation: "Sehr sicher. Nina prüft die Quelle genauer, erkennt mögliche Einseitigkeit und verlässt sich nicht nur auf eine Webseite.",
+            evaluation: "Sehr sicher. Nina erkennt mögliche Einseitigkeit und prüft die Informationen genauer.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Nina verwendet nur die Überschriften und ein paar starke Sätze, weil sie dadurch ihren Aufsatz überzeugender machen kann.",
+            text: "D) Nina übernimmt nur die stärksten Sätze.",
             type: "partial",
-            evaluation: "Teilweise praktisch, aber riskant. Überschriften und zugespitzte Sätze können ein Thema verzerren. Für einen Aufsatz sollte Nina den Inhalt genauer prüfen und neutrale Quellen einbeziehen.",
+            evaluation: "Teilweise praktisch, aber riskant. Zugespitzte Sätze können ein Thema verzerren.",
             consequence: "Risiko +1."
         }
     ],
@@ -542,39 +513,36 @@ cards["einseitige-webseite"] = {
 cards["komischer-wiki-artikel"] = {
     district: "Social-Media-Platz",
     title: "Der komische Wiki-Artikel",
-    situation: "Johann und Annie finden einen Artikel in einem Online-Lexikon. Einige Aussagen klingen für Johann ziemlich komisch. Außerdem weiß er, dass solche Artikel manchmal von vielen verschiedenen Personen bearbeitet werden können.\n" +
-        "Johann möchte herausfinden, ob der Artikel zuverlässig genug für seine Schulaufgabe ist.",
+    situation: "Johann findet einen Wiki-Artikel für seine Schulaufgabe. Einige Aussagen klingen komisch, und der Artikel kann von vielen Personen bearbeitet werden. Was sollte Johann tun?",
     checklist: [
-        "nicht alles sofort glauben, nur weil es online steht",
-        "prüfen, ob Quellen oder Belege angegeben sind",
-        "Information mit anderen zuverlässigen Quellen vergleichen",
-        "auf Änderungsverlauf, Aktualität und Diskussionen achten, wenn möglich",
-        "bei wichtigen Informationen offizielle oder fachliche Quellen nutzen",
-        "bei Unsicherheit Lehrkraft oder Erwachsene fragen"
+        "nicht blind glauben",
+        "Quellen prüfen",
+        "mit anderen Seiten vergleichen",
+        "wichtige Infos genauer prüfen"
     ],
     answers: [
         {
-            text: "A) Johann nutzt den Artikel als ersten Überblick, prüft aber die Quellen und vergleicht wichtige Aussagen mit anderen zuverlässigen Seiten.",
+            text: "A) Johann nutzt den Artikel als Überblick, prüft aber Quellen und wichtige Aussagen.",
             type: "correct",
-            evaluation: "Sehr sicher. Johann verwirft den Artikel nicht sofort, verlässt sich aber auch nicht blind darauf. Er nutzt ihn als Startpunkt und überprüft wichtige Informationen genauer.",
+            evaluation: "Sehr sicher. Johann nutzt den Artikel als Startpunkt, verlässt sich aber nicht blind darauf.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Johann übernimmt den Artikel, weil Online-Lexika meistens von vielen Menschen verbessert werden.",
+            text: "B) Johann übernimmt den Artikel, weil viele Menschen ihn verbessern.",
             type: "partial",
-            evaluation: "Teilweise nachvollziehbar, aber nicht sicher genug. Viele Bearbeitungen können hilfreich sein, garantieren aber nicht, dass alle Aussagen richtig, aktuell oder gut belegt sind.",
+            evaluation: "Teilweise nachvollziehbar. Viele Bearbeitungen garantieren aber keine richtigen Informationen.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Johann verwirft den Artikel sofort, weil solche Seiten von verschiedenen Personen bearbeitet werden können.",
+            text: "C) Johann verwirft den Artikel sofort.",
             type: "partial",
-            evaluation: "Teilweise vorsichtig, aber zu streng. Bearbeitbare Seiten können trotzdem nützlich sein, wenn Quellen, Aktualität und Belege geprüft werden.",
+            evaluation: "Teilweise vorsichtig, aber zu streng. Solche Seiten können nützlich sein, wenn man sie prüft.",
             consequence: "Nichts."
         },
         {
-            text: "D) Johann nimmt nur die Stellen, die besonders spannend oder lustig klingen, damit seine Präsentation interessanter wird.",
+            text: "D) Johann nimmt nur die spannendsten Aussagen.",
             type: "wrong",
-            evaluation: "Riskant. Auffällige oder lustige Aussagen sind nicht automatisch wahr. Gerade ungewöhnliche Aussagen sollten besonders sorgfältig überprüft werden.",
+            evaluation: "Riskant. Gerade auffällige Aussagen müssen besonders sorgfältig geprüft werden.",
             consequence: "Risiko +2."
         }
     ],
@@ -593,41 +561,38 @@ cards["komischer-wiki-artikel"] = {
 cards["oeffentliches-profil"] = {
     district: "Social-Media-Platz",
     title: "Das öffentliche Profil",
-    situation: "Dein Profil zeigt deinen Namen, dein Alter, deine Schule, deinen Wohnort und viele Fotos.\n" +
-        "Du findest das praktisch, weil Freunde dich so leichter finden können.",
+    situation: "Leas Profil zeigt Name, Alter, Schule, Wohnort und viele Fotos. Sie findet das praktisch, weil Freunde sie so leichter finden. Was sollte Lea tun?",
     checklist: [
-        "Schule und Wohnort nicht öffentlich zeigen",
-        "Alter und private Fotos bewusst prüfen",
-        "Privatsphäre-Einstellungen nutzen",
-        "Profil nur für bekannte Personen sichtbar machen",
-        "keine Adresse, Telefonnummer oder Tagesabläufe posten",
-        "gemeinsam mit Erwachsenen Einstellungen prüfen"
+        "private Daten entfernen",
+        "prüfen, wer das Profil sehen kann",
+        "Schule und Wohnort verbergen",
+        "Privatsphäre-Einstellungen nutzen"
     ],
     answers: [
         {
-            text: "A) Wir lassen alles öffentlich, damit Freunde uns leichter finden.",
+            text: "A) Lea lässt alles öffentlich.",
             type: "wrong",
-            evaluation: "Riskant. Zu viele öffentliche Informationen können von fremden Personen genutzt werden, zum Beispiel Schule, Wohnort, Alter oder Fotos.",
+            evaluation: "Riskant. Fremde können viele Informationen über Lea sammeln.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Wir entfernen nur den Wohnort, weil die Schule nicht so schlimm ist.",
+            text: "B) Lea entfernt nur den Wohnort.",
             type: "partial",
-            evaluation: "Teilweise sicher. Den Wohnort zu entfernen ist ein guter Anfang. Aber auch Schule, Alter, Fotos und andere Hinweise können zusammen viel über eine Person verraten.",
+            evaluation: "Teilweise sicher. Schule, Alter und Fotos können trotzdem viel verraten.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Wir löschen das Profil sofort, damit niemand mehr etwas sehen kann.",
+            text: "C) Lea löscht das Profil sofort.",
             type: "partial",
-            evaluation: "Sehr vorsichtig, aber nicht immer nötig. Oft reicht es, Privatsphäre-Einstellungen zu ändern und private Informationen zu entfernen. Wichtig ist, bewusst zu entscheiden, was sichtbar bleibt.",
+            evaluation: "Sehr vorsichtig, aber nicht immer nötig. Oft reichen bessere Einstellungen.",
             consequence: "Nichts."
         },
         {
-            text: "D) Wir prüfen, wer das Profil sehen kann, und entfernen Schule, Wohnort und andere private Informationen.",
+            text: "D) Lea prüft, wer ihr Profil sehen kann, und entfernt Schule, Wohnort und andere private Infos.",
             type: "correct",
-            evaluation: "Sehr sicher. Das Profil bleibt nutzbar, aber private Daten sind besser geschützt. Freunde können einen trotzdem finden, ohne dass alle Details öffentlich sichtbar sind.",
+            evaluation: "Sehr sicher. Lea schützt nicht nur ihre Daten, sondern auch ihren Alltag, ihre Fotos und ihren eigenen Online-Ruf.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
+        }
     ],
     helpSources: [
         {
@@ -652,38 +617,36 @@ cards["oeffentliches-profil"] = {
 cards["mutprobe"] = {
     district: "Social-Media-Platz",
     title: "Die Mutprobe",
-    situation: "In einer Challenge sollst du ein peinliches Video posten. Alle sagen: „Traust du dich nicht?“ Du möchtest nicht als langweilig gelten.",
+    situation: "In einer Challenge soll Lina ein peinliches Video posten. Andere schreiben: „Traust du dich nicht?“ Lina will nicht langweilig wirken. Was sollte Lina tun?",
     checklist: [
         "Gruppendruck erkennen",
-        "Nein sagen dürfen",
-        "keine peinlichen oder gefährlichen Inhalte posten",
-        "nicht andere unter Druck setzen",
-        "Hilfe holen, wenn Druck stark wird",
-        "überlegen, ob man den Inhalt später bereuen könnte"
+        "Nein sagen",
+        "nichts Peinliches posten",
+        "Druck nicht weitergeben"
     ],
     answers: [
         {
-            text: "A) Wir machen mit, damit die anderen nicht denken, dass wir langweilig sind.",
+            text: "A) Lina macht mit, damit die anderen nicht lachen.",
             type: "wrong",
-            evaluation: "Riskant. Gruppendruck kann dazu führen, dass man etwas postet, das später peinlich, verletzend oder schwer zu löschen ist.",
+            evaluation: "Riskant. Gruppendruck kann dazu führen, dass man später etwas bereut.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Wir sagen Nein und machen bei der Challenge nicht mit. Wenn andere weiter Druck machen, holen wir Hilfe.",
+            text: "B) Lina sagt Nein und holt Hilfe, wenn der Druck weitergeht.",
             type: "correct",
-            evaluation: "Sehr sicher. Grenzen zu setzen ist stark, auch wenn andere drängen. Niemand muss peinliche oder unangenehme Inhalte posten, nur um dazuzugehören.",
+            evaluation: "Sehr sicher. Grenzen zu setzen ist stark, auch wenn andere drängen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Wir posten das Video nur kurz oder nur in eine private Story.",
+            text: "C) Lina postet das Video nur kurz oder nur privat.",
             type: "partial",
-            evaluation: "Teilweise vorsichtig, aber riskant. Auch kurze oder private Posts können gespeichert, gescreenshotet oder weitergeleitet werden.",
+            evaluation: "Teilweise vorsichtig. Auch kurze oder private Posts können gespeichert werden.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Wir machen selbst nicht mit, nominieren aber jemand anderen.",
+            text: "D) Lina macht nicht mit, nominiert aber jemand anderen.",
             type: "partial",
-            evaluation: "Teilweise sicher für uns selbst, aber unfair. Dadurch wird der Druck an eine andere Person weitergegeben. Besser ist es, den Gruppendruck nicht weiterzuführen.",
+            evaluation: "Teilweise sicher für Lina selbst, aber unfair. Dadurch gibt sie den Druck an jemand anderen weiter.",
             consequence: "Risiko +1."
         }
     ],
@@ -706,38 +669,37 @@ cards["mutprobe"] = {
 cards["fake-account"] = {
     district: "Social-Media-Platz",
     title: "Der Fake-Account",
-    situation: "Jemand erstellt ein Profil mit dem Namen eines Mitschülers und postet Unsinn. Viele finden es lustig und folgen dem Profil.",
+    situation: "Jemand erstellt ein Profil mit dem Namen eines Mitschülers und postet Unsinn. Viele aus der Klasse folgen dem Profil. Was sollte Emil tun?",
     checklist: [
         "Fake-Profil nicht unterstützen",
-        "nicht folgen oder teilen",
+        "nicht folgen",
         "betroffene Person informieren",
         "Profil melden",
-        "Erwachsene oder Lehrkraft einbeziehen",
-        "verstehen, dass Identitätsmissbrauch verletzend sein kann"
+        "Hilfe holen"
     ],
     answers: [
         {
-            text: "A) Wir folgen dem Profil nicht, informieren die betroffene Person und melden den Account.",
+            text: "A) Emil folgt nicht, informiert die betroffene Person und meldet den Account.",
             type: "correct",
-            evaluation: "Sehr sicher und fair. So wird der Fake-Account nicht unterstützt, die betroffene Person erfährt davon und es kann Hilfe geholt werden.",
+            evaluation: "Sehr sicher und fair. Der Fake-Account wird nicht unterstützt. So schützt Emil den Namen, den Ruf und die Privatsphäre der betroffenen Person.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Wir folgen dem Profil, weil es lustig gemeint ist und viele aus der Klasse es auch machen.",
+            text: "B) Emil folgt, weil es lustig ist.",
             type: "wrong",
-            evaluation: "Riskant. Folgen, Liken oder Lachen unterstützt den Fake-Account und kann die betroffene Person verletzen oder bloßstellen.",
+            evaluation: "Riskant. Folgen oder Liken unterstützt den Fake-Account und kann verletzen.",
             consequence: "Risiko +2."
         },
         {
-            text: "C) Wir folgen dem Profil nicht, sagen aber auch niemandem etwas, damit wir uns nicht einmischen.",
+            text: "C) Emil folgt nicht, sagt aber niemandem etwas.",
             type: "partial",
-            evaluation: "Teilweise sicher. Nicht zu folgen ist gut. Trotzdem kann der Fake-Account weiter Schaden anrichten, wenn niemand die betroffene Person informiert oder das Profil meldet.",
-            consequence: "Nichts."
+            evaluation: "Teilweise sicher. Der Fake-Account kann aber weiter Schaden anrichten.",
+            consequence: "VOID bewegt 2 Felder vor."
         },
         {
-            text: "D) Wir schreiben dem Fake-Account öffentlich, dass die Person aufhören soll.",
+            text: "D) Emil schreibt dem Fake-Account öffentlich, dass die Person aufhören soll.",
             type: "partial",
-            evaluation: "Gut gemeint, aber riskant. Öffentliche Kommentare können die Situation weiter anheizen und dem Fake-Profil noch mehr Aufmerksamkeit geben. Besser ist melden, nicht teilen und Hilfe holen.",
+            evaluation: "Gut gemeint, aber riskant. Öffentliche Kommentare können dem Profil mehr Aufmerksamkeit geben.",
             consequence: "Risiko +1."
         }
     ],
@@ -756,41 +718,38 @@ cards["fake-account"] = {
 cards["verstoerendes-video"] = {
     district: "Social-Media-Platz",
     title: "Das verstörende Video",
-    situation: "Lena schaut ein Video auf einer Plattform. Plötzlich erscheint ein Video mit sehr verstörenden Bildern, das ihr Angst macht. Sie weiß nicht, ob sie einfach weiterschauen, schließen oder etwas sagen soll.",
+    situation: "Lena sieht plötzlich ein Video mit verstörenden Bildern, also Bildern, die ihr Angst machen. Was sollte Lena tun?",
     checklist: [
-        "Video sofort schließen",
-        "nicht weiter anschauen",
+        "Video schließen und melden",
         "nicht weiterleiten",
-        "keine Screenshots machen oder herumzeigen",
-        "einer erwachsenen Vertrauensperson davon erzählen",
-        "Inhalt melden, wenn möglich",
-        "über Gefühle sprechen dürfen"
+        "keine Screenshots teilen",
+        "mit Erwachsenen sprechen"
     ],
     answers: [
         {
             text: "A) Lena schickt das Video an eine Freundin und fragt, ob sie es auch schlimm findet.",
             type: "wrong",
-            evaluation: "Riskant. Dadurch wird der belastende Inhalt weiterverbreitet und kann auch andere erschrecken oder belasten. Besser ist es, Hilfe zu holen und den Inhalt zu melden.",
+            evaluation: "Riskant. Dadurch wird der belastende Inhalt weiterverbreitet.",
             consequence: "Risiko +2."
         },
         {
             text: "B) Lena schließt das Video und meldet es in der App.",
-            type: "correct",
-            evaluation: "Sicher. Schließen und Melden ist gut. Wenn Lena Angst bekommen hat oder das Video sie beschäftigt, sollte sie zusätzlich mit einer erwachsenen Vertrauensperson sprechen.",
-            consequence: "+1 Zeit-Chip."
+            type: "partial",
+            evaluation: "Sicherer Schritt. Wenn Lena Angst hat, sollte sie zusätzlich mit einer erwachsenen Person sprechen.",
+            consequence: "VOID bewegt 1 Feld vor."
         },
         {
-            text: "C) Lena schaut das Video zu Ende, um zu verstehen, ob es wirklich so schlimm ist.",
+            text: "C) Lena schaut es zu Ende, um zu verstehen, ob es wirklich schlimm ist.",
             type: "wrong",
-            evaluation: "Riskant. Wenn ein Video Angst macht oder verstörend ist, muss Lena es nicht weiter anschauen. Weiterzuschauen kann sie zusätzlich belasten.",
+            evaluation: "Riskant. Lena muss belastende Inhalte nicht weiter anschauen.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Lena schließt das Video sofort, schaut nicht weiter und sucht Hilfe, wenn es ihr nicht gut geht.",
+            text: "D) Lena schließt das Video und sucht Hilfe, wenn es ihr nicht gut geht.",
             type: "correct",
-            evaluation: "Sehr sicher. Lena schützt sich vor weiterem belastendem Inhalt und bleibt mit ihrer Angst nicht allein. Eine erwachsene Person kann helfen, den Inhalt zu melden oder die Plattform-Einstellungen zu prüfen.",
+            evaluation: "Sehr sicher. Lena schützt sich und bleibt mit ihrer Angst nicht allein.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
-        },
+        }
     ],
     helpSources: [
         {
@@ -811,38 +770,36 @@ cards["verstoerendes-video"] = {
 cards["urlaubsstandort"] = {
     district: "Social-Media-Platz",
     title: "Der Urlaubsstandort",
-    situation: "Maja ist mit ihrer Familie im Urlaub. Sie möchte ein schönes Foto posten. Am liebsten würde sie den Ort markieren, weil das Bild dann spannender wirkt. Gleichzeitig ist sie unsicher, wie viel andere dadurch über ihren Urlaub erfahren.",
+    situation: "Maja ist mit ihrer Familie im Urlaub. Sie möchte sofort ein Foto posten und den genauen Ort markieren, weil das Bild dann spannender wirkt. Was sollte sie tun?",
     checklist: [
-        "genauen aktuellen Standort nicht öffentlich teilen",
-        "erst später posten",
-        "Privatsphäre-Einstellungen prüfen",
-        "keine Reisedauer öffentlich machen",
-        "Familie fragen, bevor gemeinsame Bilder gepostet werden",
-        "Standortdaten als private Information verstehen"
+        "aktuellen Standort nicht öffentlich teilen",
+        "lieber später posten",
+        "Familie fragen",
+        "Privatsphäre prüfen"
     ],
     answers: [
         {
-            text: "A) Maja postet das Foto sofort, aber ohne Hotelnamen. Sie schreibt nur dazu, in welcher Stadt sie gerade ist.",
+            text: "A) Maja postet sofort, aber ohne Hotelnamen.",
             type: "partial",
-            evaluation: "Teilweise vorsichtig. Den Hotelnamen wegzulassen ist gut. Trotzdem verrät Maja öffentlich, wo sie gerade ist und dass sie nicht zu Hause ist.",
+            evaluation: "Teilweise vorsichtig. Sie verrät trotzdem, wo sie gerade ist.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Maja postet das Foto sofort ohne Standortmarkierung, schreibt aber: „Zwei Wochen Urlaub, endlich weg von zu Hause!“",
+            text: "B) Maja postet ohne Standort, schreibt aber: „Zwei Wochen Urlaub!“",
             type: "partial",
-            evaluation: "Teilweise sicher. Keine Standortmarkierung zu nutzen ist gut. Der Text verrät aber trotzdem, dass Maja gerade verreist ist und länger nicht zu Hause sein könnte.",
+           evaluation: "Teilweise sicher. Der Text verrät trotzdem, dass ihre Familie länger nicht zu Hause ist.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Maja postet das Foto später, ohne genauen Standort, und fragt ihre Familie, ob alle mit dem Bild einverstanden sind.",
+            text: "C) Maja postet später, ohne genauen Standort, und fragt ihre Familie vorher.",
             type: "correct",
-            evaluation: "Sehr sicher. Maja teilt den Moment, ohne ihren aktuellen Aufenthaltsort oder die Privatsphäre ihrer Familie unnötig preiszugeben.",
+            evaluation: "Sehr sicher. Maja schützt ihren aktuellen Aufenthaltsort und die Privatsphäre ihrer Familie.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Maja teilt das Foto nur in ihrer Story für enge Freunde und markiert dort den Ort.",
+            text: "D) Maja postet nur für enge Freunde und markiert dort den Ort.",
             type: "partial",
-            evaluation: "Teilweise sicherer als öffentlich posten. Trotzdem können auch enge Kontakte Inhalte speichern, zeigen oder weiterleiten. Genaue aktuelle Standortdaten bleiben privat.",
+            evaluation: "Teilweise sicherer. Trotzdem können auch enge Kontakte Inhalte speichern oder weiterleiten.",
             consequence: "Risiko +1."
         }
     ],
