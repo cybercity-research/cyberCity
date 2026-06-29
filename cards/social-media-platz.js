@@ -10,25 +10,25 @@ cards["peinliches-klassenfoto"] = {
     ],
     answers: [
         {
-            text: "A) Leon schaut es sich nur an und schreibt nichts dazu.",
+            text: "A) Er schaut nur zu und schreibt nichts.",
             type: "partial",
             evaluation: "Teilweise sicher. Nicht mitzumachen ist gut, aber Tim braucht vielleicht Unterstützung.",
             consequence: "VOID bewegt 2 Felder vor."
         },
         {
-            text: "B) Leon leitet es nicht weiter, widerspricht fair und holt Hilfe, wenn es weitergeht.",
+            text: "B) Er leitet das Foto nicht weiter, widerspricht fair und holt Hilfe, wenn es weitergeht.",
             type: "correct",
             evaluation: "Sehr sicher und fair. Das Foto wird nicht weiterverbreitet und Tim wird unterstützt. So schützt Leon auch Tims Würde und seinen Ruf in der Klasse.",
             consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und möglicher Fair-online Badge."
         },
         {
-            text: "C) Leon macht einen Screenshot und schickt ihn an Freunde.",
+            text: "C) Er macht einen Screenshot und schickt ihn an Freunde.",
             type: "wrong",
             evaluation: "Riskant. Dadurch wird das peinliche Bild weiterverbreitet.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Leon schreibt Tim privat, dass er nicht allein ist, unternimmt aber sonst nichts.",
+            text: "D) Er schreibt Tim privat, dass er nicht allein ist, unternimmt aber sonst nichts.",
             type: "partial",
             evaluation: "Teilweise unterstützend. Tim privat zu stärken ist gut, aber wenn das Foto weitergeteilt wird, sollte Leon zusätzlich Hilfe holen.",
             consequence: "Risiko +1."
@@ -66,25 +66,25 @@ cards["geruecht-im-chat"] = {
     ],
     answers: [
         {
-            text: "A) Josie leitet es nicht weiter und schreibt: „Das ist privat.“",
+            text: "A) Sie leitet es nicht weiter und schreibt: „Das ist privat.“",
             type: "correct",
             evaluation: "Sehr sicher und fair. Josie schützt Cindys Privatsphäre und stoppt das Gerücht.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Josie löscht die Nachricht und macht nicht mit.",
+            text: "B) Sie löscht die Nachricht und macht nicht mit.",
             type: "partial",
             evaluation: "Teilweise sicher. Nicht mitzumachen ist gut, aber ein klarer Stopp kann noch besser helfen.",
             consequence: "VOID bewegt 2 Felder vor."
         },
         {
-            text: "C) Josie fragt Cindy vorsichtig privat, ob alles okay ist, ohne das Gerücht weiterzuerzählen.",
+            text: "C) Sie fragt Cindy vorsichtig privat, ob alles okay ist, ohne das Gerücht weiterzuerzählen.",
             type: "partial",
             evaluation: "Gut gemeint, aber heikel. Cindy könnte sich dadurch zusätzlich unwohl fühlen.",
             consequence: "VOID bewegt 4 Felder vor."
         },
         {
-            text: "D) Josie fragt Brian heimlich, ob das Gerücht stimmt.",
+            text: "D) Sie fragt Brian heimlich, ob das Gerücht stimmt.",
             type: "wrong",
             evaluation: "Riskant. Dadurch wird das Gerücht weitergetragen.",
             consequence: "Risiko +2."
@@ -109,7 +109,7 @@ cards["geruecht-im-chat"] = {
 cards["teamchat-nach-dem-spiel"] = {
     district: "Social-Media-Platz",
     title: "Der Teamchat nach dem Spiel",
-    situation: "Joel sieht im Teamchat, dass Matt beleidigt wird, weil er im Basketballspiel den entscheidenden Wurf verfehlt hat. Die Kommentare werden immer persönlicher. Was sollte Joel tun?",
+    situation: "Joel sieht im Teamchat, dass Matt beleidigt wird, weil er im Basketballspiel den entscheidenden Wurf verfehlt hat. Was sollte Joel tun?",
     checklist: [
         "nicht mitbeleidigen",
         "fair widersprechen",
@@ -118,25 +118,25 @@ cards["teamchat-nach-dem-spiel"] = {
     ],
     answers: [
         {
-            text: "A) Joel schreibt Matt privat, dass er auf seiner Seite ist.",
+            text: "A) Er schreibt Matt privat, dass er auf seiner Seite ist.",
             type: "partial",
             evaluation: "Teilweise unterstützend. Wenn die Gruppe weitermacht, sollte Joel zusätzlich Hilfe holen.",
             consequence: "VOID bewegt 1 Feld vor."
         },
         {
-            text: "B) Joel macht Screenshots und schickt sie in einen anderen Gruppenchat.",
+            text: "B) Er macht Screenshots und schickt sie in einen anderen Gruppenchat.",
             type: "wrong",
             evaluation: "Riskant. Dadurch wird die Situation weiterverbreitet. Wenn Beweise nötig sind, sollte Joel sie nur einer erwachsenen Vertrauensperson zeigen.",
             consequence: "Risiko +2."
         },
         {
-            text: "C) Joel schreibt ruhig, dass persönliche Angriffe unfair sind, und holt Hilfe, wenn es weitergeht.",
+            text: "C) Er schreibt ruhig, dass persönliche Angriffe unfair sind, und holt Hilfe, wenn es weitergeht.",
             type: "correct",
             evaluation: "Sehr sicher und fair. Joel macht nicht mit und setzt eine klare Grenze.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Joel macht einen Witz über den verfehlten Wurf.",
+            text: "D) Er macht einen Witz über den verfehlten Wurf.",
             type: "partial",
             evaluation: "Gut gemeint, aber riskant. Auch ein Witz kann Matt noch mehr verletzen.",
             consequence: "Risiko +1."
@@ -166,7 +166,7 @@ cards["bilder-fuer-praesentation"] = {
     ],
     answers: [
         {
-            text: "A) Sie schreiben die Quelle darunter und nutzen die Bilder.",
+            text: "A) Sie geben die Quelle an und nutzen die Bilder.",
             type: "partial",
             evaluation: "Teilweise richtig. Eine Quellenangabe bedeutet nicht automatisch, dass die Nutzung erlaubt ist.",
             consequence: "Risiko +1."
@@ -214,25 +214,25 @@ cards["digitaler-fussabdruck"] = {
     ],
     answers: [
         {
-            text: "A) Mia schaut ihr Profil so an, wie andere es sehen, und löscht oder versteckt zu persönliche oder peinliche Inhalte.",
+            text: "A) Sie schaut ihr Profil so an, wie andere es sehen, und löscht oder versteckt zu persönliche oder peinliche Inhalte.",
             type: "correct",
             evaluation: "Sehr sicher. Mia schützt ihren digitalen Ruf und entscheidet bewusst, welche Erinnerungen, Fotos und Posts andere sehen können.",
             consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und möglicher Datenschutz-Badge."
         },
         {
-            text: "B) Mia löscht sofort alle Konten.",
+            text: "B) Sie löscht sofort alle Konten.",
             type: "partial",
             evaluation: "Teilweise sicher, aber sehr streng. Oft reichen bessere Einstellungen und bewusstes Aufräumen.",
             consequence: "Nichts."
         },
         {
-            text: "C) Mia postet extra viele perfekte Bilder.",
+            text: "C) Sie postet besonders viele perfekte Bilder.",
             type: "partial",
             evaluation: "Teilweise nachvollziehbar, aber nicht ideal. Ein perfektes Profil schützt nicht automatisch die Privatsphäre.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Mia lässt alles so, weil alte Posts später niemanden interessieren.",
+            text: "D) Sie lässt alles so, weil alte Posts später niemanden interessieren.",
             type: "wrong",
             evaluation: "Riskant. Online-Inhalte können lange sichtbar bleiben oder weitergegeben werden.",
             consequence: "Risiko +2."
@@ -261,7 +261,7 @@ cards["digitaler-fussabdruck"] = {
 cards["foto-soll-weg"] = {
     district: "Social-Media-Platz",
     title: "Das Foto soll weg",
-    situation: "Auf dem Profil eines Freundes erscheint ein Foto von Romy im Schlafanzug. Sie wusste nicht, dass es gemacht wurde, und möchte, dass es verschwindet. Was sollte Romy tun?",
+    situation: "Auf dem Profil eines Freundes erscheint ein Foto von Romy im Schlafanzug. Sie wusste nicht, dass es gemacht wurde, und möchte, dass es verschwindet. Was sollte sie tun?",
     checklist: [
         "ruhig bleiben",
         "Löschung verlangen",
@@ -271,25 +271,25 @@ cards["foto-soll-weg"] = {
     ],
     answers: [
         {
-            text: "A) Romy schreibt wütend unter das Foto.",
+            text: "A) Sie schreibt wütend unter das Foto.",
             type: "partial",
             evaluation: "Verständlich, aber riskant. Ein öffentlicher Streit kann noch mehr Aufmerksamkeit erzeugen.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Romy bittet um Löschung und nutzt die Meldefunktion, wenn es nicht entfernt wird.",
+            text: "B) Sie bittet um Löschung und nutzt die Meldefunktion, wenn es nicht entfernt wird.",
             type: "correct",
             evaluation: "Sehr sicher. Romy schützt ihre Privatsphäre und sorgt dafür, dass ein unangenehmes Foto nicht weiter zu ihrer Online-Geschichte gehört.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Romy speichert das Foto und schickt es Freunden als Beweis.",
+            text: "C) Sie speichert das Foto und schickt es Freunden als Beweis.",
             type: "wrong",
             evaluation: "Riskant. Dadurch wird das Foto weiterverbreitet. Wenn Romy Beweise braucht, sollte sie diese nur einer erwachsenen Vertrauensperson zeigen.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Romy meldet das Foto, sagt aber niemandem Bescheid.",
+            text: "D) Sie meldet das Foto, sagt aber niemandem Bescheid.",
             type: "partial",
             evaluation: "Teilweise sicher. Wenn Romy sich sehr unwohl fühlt, sollte sie zusätzlich Hilfe holen.",
             consequence: "VOID bewegt 3 Felder vor."
@@ -310,7 +310,7 @@ cards["foto-soll-weg"] = {
 cards["bild-ohne-erlaubnis"] = {
     district: "Social-Media-Platz",
     title: "Das Bild ohne Erlaubnis",
-    situation: "Max hat ein lustiges Foto von einem Freund gemacht. Er möchte es posten, weil andere es bestimmt witzig finden. Was sollte Max tun?",
+    situation: "Max hat ein lustiges Foto von einem Freund gemacht und möchte es posten. Was sollte Max tun?",
     checklist: [
         "vorher fragen",
         "Nein akzeptieren",
@@ -319,25 +319,25 @@ cards["bild-ohne-erlaubnis"] = {
     ],
     answers: [
         {
-            text: "A) Max postet es, weil es nur Spaß ist.",
+            text: "A) Er postet es, weil es nur Spaß ist.",
             type: "wrong",
             evaluation: "Riskant. Spaß für eine Person kann für die andere peinlich oder verletzend sein.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Max macht das Gesicht unkenntlich und postet es.",
+            text: "B) Er macht das Gesicht unkenntlich und postet es.",
             type: "partial",
             evaluation: "Teilweise sicher. Die Person kann trotzdem durch Kleidung, Ort oder Situation erkennbar sein.",
             consequence: "VOID bewegt 5 Felder vor."
         },
         {
-            text: "C) Max zeigt der Person das Foto und postet es nur mit echter Zustimmung.",
+            text: "C) Er zeigt der Person das Foto und postet es nur mit Zustimmung.",
             type: "correct",
             evaluation: "Sehr sicher und respektvoll. Die Person darf mitentscheiden, welches Bild online erscheint und welche Erinnerungen andere von ihr sehen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Max postet es nur kurz in die Story.",
+            text: "D) Er postet es nur kurz in die Story.",
             type: "partial",
             evaluation: "Teilweise nachvollziehbar. Stories können gespeichert oder weitergeleitet werden.",
             consequence: "Risiko +1."
@@ -366,25 +366,25 @@ cards["unglaubliches-skateboard-video"] = {
     ],
     answers: [
         {
-            text: "A) Bob leitet es weiter und schreibt: „Keine Ahnung, ob das echt ist.“",
+            text: "A) Er leitet es weiter und schreibt: „Keine Ahnung, ob das echt ist.“",
             type: "partial",
             evaluation: "Teilweise ehrlich, aber nicht ideal. Das Video wird trotzdem weiterverbreitet.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Bob schaut genau auf komische Schnitte oder Bewegungen.",
+            text: "B) Er schaut genau auf komische Schnitte oder Bewegungen.",
             type: "partial",
             evaluation: "Teilweise sinnvoll. Anschauen allein beweist aber nicht, ob ein Video echt ist.",
             consequence: "VOID bewegt 2 Felder vor."
         },
         {
-            text: "C) Bob glaubt dem Video, weil es viele Likes hat.",
+            text: "C) Er glaubt dem Video, weil es viele Likes hat.",
             type: "wrong",
             evaluation: "Riskant. Viele Likes beweisen nicht, dass ein Video echt ist.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Bob prüft, woher das Video kommt, sucht das Original und vergleicht mit verlässlichen Quellen.",
+            text: "D) Er prüft, woher das Video kommt, sucht das Original und vergleicht mit verlässlichen Quellen.",
             type: "correct",
             evaluation: "Sehr sicher. Bob prüft das Video, bevor er es glaubt oder teilt.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
@@ -418,25 +418,25 @@ cards["ehrlicher-blog"] = {
     ],
     answers: [
         {
-            text: "A) Pua glaubt dem Blog, wenn die Bilder überzeugend aussehen.",
+            text: "A) Sie glaubt dem Blog, wenn die Bilder überzeugend aussehen.",
             type: "wrong",
             evaluation: "Riskant. Bilder können bearbeitet, gestellt oder einseitig ausgewählt sein.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Pua prüft Werbung, Rabattcodes und sucht unabhängige Informationen.",
+            text: "B) Sie prüft Werbung, Rabattcodes und sucht unabhängige Informationen.",
             type: "correct",
             evaluation: "Sehr sicher. Pua erkennt, dass der Blog Werbung sein könnte, und verlässt sich nicht nur auf die Bilder oder Kommentare.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Pua vertraut dem Blog eher, wenn viele positive Kommentare darunterstehen.",
+            text: "C) Sie vertraut dem Blog eher, wenn viele positive Kommentare darunterstehen.",
             type: "partial",
             evaluation: "Teilweise nachvollziehbar. Kommentare können aber gefälscht oder einseitig sein.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Pua bestellt nichts, teilt den Link aber mit Freundinnen.",
+            text: "D) Sie bestellt nichts, teilt den Link aber mit Freundinnen.",
             type: "partial",
             evaluation: "Teilweise vorsichtig. Durch Weiterleiten kann problematische Werbung verbreitet werden.",
             consequence: "Risiko +1."
@@ -470,25 +470,25 @@ cards["einseitige-webseite"] = {
     ],
     answers: [
         {
-            text: "A) Nina nutzt die Seite, weil starke Wörter Fachwissen zeigen.",
+            text: "A) Sie nutzt die Seite wegen der starken Wörter.",
             type: "wrong",
             evaluation: "Riskant. Sehr starke Sprache kann auf Einseitigkeit oder Manipulation hinweisen.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Nina nimmt die Seite, weil sie zu ihrer Meinung passt.",
+            text: "B) Sie nimmt die Seite, weil sie zu ihrer Meinung passt.",
             type: "partial",
             evaluation: "Teilweise nachvollziehbar. Eine passende Quelle ist nicht automatisch zuverlässig.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Nina prüft, wer hinter der Seite steht, und vergleicht sie mit anderen Quellen.",
+            text: "C) Sie prüft den Autor und vergleicht andere Quellen.",
             type: "correct",
             evaluation: "Sehr sicher. Nina erkennt mögliche Einseitigkeit und prüft die Informationen genauer.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Nina übernimmt nur die stärksten Sätze.",
+            text: "D) Sie übernimmt nur die stärksten Sätze.",
             type: "partial",
             evaluation: "Teilweise praktisch, aber riskant. Zugespitzte Sätze können ein Thema verzerren.",
             consequence: "Risiko +1."
@@ -522,25 +522,25 @@ cards["komischer-wiki-artikel"] = {
     ],
     answers: [
         {
-            text: "A) Johann nutzt den Artikel als Überblick, prüft aber Quellen und wichtige Aussagen.",
+            text: "A) Er nutzt den Artikel als Überblick und prüft Quellen und wichtige Aussagen.",
             type: "correct",
             evaluation: "Sehr sicher. Johann nutzt den Artikel als Startpunkt, verlässt sich aber nicht blind darauf.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Johann übernimmt den Artikel, weil viele Menschen ihn verbessern.",
+            text: "B) Er übernimmt den Artikel, weil viele ihn verbessern.",
             type: "partial",
             evaluation: "Teilweise nachvollziehbar. Viele Bearbeitungen garantieren aber keine richtigen Informationen.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Johann verwirft den Artikel sofort.",
+            text: "C) Er verwirft den Artikel sofort.",
             type: "partial",
             evaluation: "Teilweise vorsichtig, aber zu streng. Solche Seiten können nützlich sein, wenn man sie prüft.",
             consequence: "Nichts."
         },
         {
-            text: "D) Johann nimmt nur die spannendsten Aussagen.",
+            text: "D) Er nimmt nur die spannendsten Aussagen.",
             type: "wrong",
             evaluation: "Riskant. Gerade auffällige Aussagen müssen besonders sorgfältig geprüft werden.",
             consequence: "Risiko +2."
@@ -570,25 +570,25 @@ cards["oeffentliches-profil"] = {
     ],
     answers: [
         {
-            text: "A) Lea lässt alles öffentlich.",
+            text: "A) Sie lässt alles öffentlich.",
             type: "wrong",
             evaluation: "Riskant. Fremde können viele Informationen über Lea sammeln.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Lea entfernt nur den Wohnort.",
+            text: "B) Sie entfernt nur den Wohnort.",
             type: "partial",
             evaluation: "Teilweise sicher. Schule, Alter und Fotos können trotzdem viel verraten.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Lea löscht das Profil sofort.",
+            text: "C) Sie löscht das Profil sofort.",
             type: "partial",
             evaluation: "Sehr vorsichtig, aber nicht immer nötig. Oft reichen bessere Einstellungen.",
             consequence: "Nichts."
         },
         {
-            text: "D) Lea prüft, wer ihr Profil sehen kann, und entfernt Schule, Wohnort und andere private Infos.",
+            text: "D) Sie prüft, wer ihr Profil sehen kann, und entfernt Schule, Wohnort und andere private Infos.",
             type: "correct",
             evaluation: "Sehr sicher. Lea schützt nicht nur ihre Daten, sondern auch ihren Alltag, ihre Fotos und ihren eigenen Online-Ruf.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
@@ -626,25 +626,25 @@ cards["mutprobe"] = {
     ],
     answers: [
         {
-            text: "A) Lina macht mit, damit die anderen nicht lachen.",
+            text: "A) Sie macht mit, damit die anderen nicht lachen.",
             type: "wrong",
             evaluation: "Riskant. Gruppendruck kann dazu führen, dass man später etwas bereut.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Lina sagt Nein und holt Hilfe, wenn der Druck weitergeht.",
+            text: "B) Sie sagt Nein und holt Hilfe, wenn der Druck weitergeht.",
             type: "correct",
             evaluation: "Sehr sicher. Grenzen zu setzen ist stark, auch wenn andere drängen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Lina postet das Video nur kurz oder nur privat.",
+            text: "C) Sie postet das Video nur kurz oder nur privat.",
             type: "partial",
             evaluation: "Teilweise vorsichtig. Auch kurze oder private Posts können gespeichert werden.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Lina macht nicht mit, nominiert aber jemand anderen.",
+            text: "D) Sie macht nicht mit, nominiert aber jemand anderen.",
             type: "partial",
             evaluation: "Teilweise sicher für Lina selbst, aber unfair. Dadurch gibt sie den Druck an jemand anderen weiter.",
             consequence: "Risiko +1."
@@ -679,25 +679,25 @@ cards["fake-account"] = {
     ],
     answers: [
         {
-            text: "A) Emil folgt nicht, informiert die betroffene Person und meldet den Account.",
+            text: "A) Er folgt nicht, informiert die Person und meldet den Account.",
             type: "correct",
             evaluation: "Sehr sicher und fair. Der Fake-Account wird nicht unterstützt. So schützt Emil den Namen, den Ruf und die Privatsphäre der betroffenen Person.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Emil folgt, weil es lustig ist.",
+            text: "B) Er folgt, weil es lustig ist.",
             type: "wrong",
             evaluation: "Riskant. Folgen oder Liken unterstützt den Fake-Account und kann verletzen.",
             consequence: "Risiko +2."
         },
         {
-            text: "C) Emil folgt nicht, sagt aber niemandem etwas.",
+            text: "C) Er folgt nicht und sagt niemandem etwas.",
             type: "partial",
             evaluation: "Teilweise sicher. Der Fake-Account kann aber weiter Schaden anrichten.",
             consequence: "VOID bewegt 2 Felder vor."
         },
         {
-            text: "D) Emil schreibt dem Fake-Account öffentlich, dass die Person aufhören soll.",
+            text: "D) Er schreibt dem Fake-Account öffentlich, dass die Person aufhören soll.",
             type: "partial",
             evaluation: "Gut gemeint, aber riskant. Öffentliche Kommentare können dem Profil mehr Aufmerksamkeit geben.",
             consequence: "Risiko +1."
@@ -718,7 +718,7 @@ cards["fake-account"] = {
 cards["verstoerendes-video"] = {
     district: "Social-Media-Platz",
     title: "Das verstörende Video",
-    situation: "Lena sieht plötzlich ein Video mit verstörenden Bildern, also Bildern, die ihr Angst machen. Was sollte Lena tun?",
+    situation: "Lena sieht in einer App plötzlich ein Video mit Bildern, die ihr Angst machen. Was sollte sie tun?",
     checklist: [
         "Video schließen und melden",
         "nicht weiterleiten",
@@ -727,25 +727,25 @@ cards["verstoerendes-video"] = {
     ],
     answers: [
         {
-            text: "A) Lena schickt das Video an eine Freundin und fragt, ob sie es auch schlimm findet.",
+            text: "A) Sie schickt das Video an eine Freundin und fragt, ob sie es auch schlimm findet.",
             type: "wrong",
             evaluation: "Riskant. Dadurch wird der belastende Inhalt weiterverbreitet.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Lena schließt das Video und meldet es in der App.",
+            text: "B) Sie schließt das Video und meldet es in der App.",
             type: "partial",
             evaluation: "Sicherer Schritt. Wenn Lena Angst hat, sollte sie zusätzlich mit einer erwachsenen Person sprechen.",
             consequence: "VOID bewegt 1 Feld vor."
         },
         {
-            text: "C) Lena schaut es zu Ende, um zu verstehen, ob es wirklich schlimm ist.",
+            text: "C) Sie schaut es zu Ende, um zu verstehen, ob es wirklich schlimm ist.",
             type: "wrong",
             evaluation: "Riskant. Lena muss belastende Inhalte nicht weiter anschauen.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Lena schließt das Video und sucht Hilfe, wenn es ihr nicht gut geht.",
+            text: "D) Sie schließt das Video, meldet es und sucht Hilfe, wenn es ihr nicht gut geht.",
             type: "correct",
             evaluation: "Sehr sicher. Lena schützt sich und bleibt mit ihrer Angst nicht allein.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
@@ -770,7 +770,7 @@ cards["verstoerendes-video"] = {
 cards["urlaubsstandort"] = {
     district: "Social-Media-Platz",
     title: "Der Urlaubsstandort",
-    situation: "Maja ist mit ihrer Familie im Urlaub. Sie möchte sofort ein Foto posten und den genauen Ort markieren, weil das Bild dann spannender wirkt. Was sollte sie tun?",
+    situation: "Maja ist mit ihrer Familie im Urlaub. Sie möchte ein Foto posten und den Ort markieren, weil das Bild dann spannender wirkt. Was sollte sie tun?",
     checklist: [
         "aktuellen Standort nicht öffentlich teilen",
         "lieber später posten",
@@ -779,25 +779,25 @@ cards["urlaubsstandort"] = {
     ],
     answers: [
         {
-            text: "A) Maja postet sofort, aber ohne Hotelnamen.",
+            text: "A) Sie postet sofort, aber ohne Hotelnamen.",
             type: "partial",
             evaluation: "Teilweise vorsichtig. Sie verrät trotzdem, wo sie gerade ist.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Maja postet ohne Standort, schreibt aber: „Zwei Wochen Urlaub!“",
+            text: "B) Sie postet ohne Standort, schreibt aber: „Zwei Wochen Urlaub!“",
             type: "partial",
            evaluation: "Teilweise sicher. Der Text verrät trotzdem, dass ihre Familie länger nicht zu Hause ist.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Maja postet später, ohne genauen Standort, und fragt ihre Familie vorher.",
+            text: "C) Sie postet später, ohne genauen Standort, und fragt ihre Familie vorher.",
             type: "correct",
             evaluation: "Sehr sicher. Maja schützt ihren aktuellen Aufenthaltsort und die Privatsphäre ihrer Familie.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Maja postet nur für enge Freunde und markiert dort den Ort.",
+            text: "D) Sie postet mit Standort nur für enge Freunde.",
             type: "partial",
             evaluation: "Teilweise sicherer. Trotzdem können auch enge Kontakte Inhalte speichern oder weiterleiten.",
             consequence: "Risiko +1."

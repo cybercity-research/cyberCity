@@ -12,25 +12,25 @@ cards["gaming-gutschein"] = {
     ],
     answers: [
         {
-            text: "A) Nora prüft in der offiziellen App oder Webseite, ob es diese Aktion gibt.",
+            text: "A) In der offiziellen App oder auf der Webseite nach der Aktion suchen.",
             type: "correct",
             evaluation: "Sehr sicher. Nora folgt nicht dem unbekannten Link und lässt sich nicht unter Druck setzen. So schützt sie auch ihren Gaming-Account und alles, was sie sich dort aufgebaut hat.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Nora löscht die Nachricht sofort und blockiert alle unbekannten Kontakte.",
+            text: "B) Die Nachricht sofort löschen und unbekannte Kontakte direkt blockieren.",
             type: "partial",
             evaluation: "Teilweise sicher. Nicht zu klicken ist gut, aber Nora sollte auch verstehen, woran sie den Trick erkennt.",
             consequence: "Nichts."
         },
         {
-            text: "C) Nora klickt auf den Link, gibt aber keine Daten ein.",
+            text: "C) Den Link öffnen, aber keine Daten eingeben.",
             type: "wrong",
             evaluation: "Riskant. Schon das Öffnen eines verdächtigen Links kann zu weiteren Tricks oder gefährlichen Seiten führen.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Nora fragt in einem Forum, ob der Gutschein bei anderen funktioniert hat.",
+            text: "D) In einem Forum nachfragen, ob der Gutschein echt ist.",
             type: "partial",
             evaluation: "Teilweise nachvollziehbar. Andere können sich aber auch irren oder selbst getäuscht worden sein.",
             consequence: "Risiko +1."
@@ -61,25 +61,25 @@ cards["falscher-paketdienst"] = {
     ],
     answers: [
         {
-            text: "A) Tom bezahlt die 1,99 €, weil er wirklich ein Paket erwartet.",
+            text: "A) Die 1,99 € über den Link bezahlen, weil er wirklich ein Paket erwartet.",
             type: "wrong",
             evaluation: "Riskant. Auch wenn Tom ein Paket erwartet, sollte er nicht über einen SMS-Link zahlen. Betrüger nutzen genau solche Zufälle aus.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Tom prüft die Sendung in der offiziellen Paketdienst-App oder Webseite.",
+            text: "B) Die Sendung in der offiziellen Paketdienst-App oder Webseite prüfen.",
             type: "correct",
             evaluation: "Sehr sicher. Tom folgt nicht dem SMS-Link und gibt keine Zahlungsdaten auf einer unbekannten Seite ein.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Tom öffnet den Link und schaut, ob Logo und Adresse stimmen.",
+            text: "C) Den Link öffnen und Logo sowie Adresse prüfen.",
             type: "wrong",
             evaluation: "Riskant. Gefälschte Seiten können echte Logos und persönliche Angaben nachmachen.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Tom fragt zu Hause nach und wartet erstmal mit der Zahlung.",
+            text: "D) Zu Hause nachfragen und erstmal nicht zahlen.",
             type: "partial",
             evaluation: "Teilweise sicher. Nachfragen ist gut. Noch sicherer ist die Prüfung über die offizielle App oder Webseite.",
             consequence: "VOID bewegt 3 Felder vor."
@@ -100,7 +100,7 @@ cards["falscher-paketdienst"] = {
 cards["angeblicher-support"] = {
     district: "Betrugs-Basar",
     title: "Der angebliche Support",
-    situation: "Milan bekommt im Chat eine Nachricht: „Ich bin vom Support deines Spiels. Dein Konto wird gesperrt, wenn du mir nicht dein Passwort schickst.“ Was sollte Milan tun?",
+    situation: "Milan erhält im Chat eine Support-Nachricht: „Dein Konto wird gesperrt, wenn du mir nicht dein Passwort schickst.“ Was sollte Milan tun?",
     checklist: [
         "Passwort niemals weitergeben",
         "nicht auf Druck reagieren",
@@ -111,25 +111,25 @@ cards["angeblicher-support"] = {
     ],
     answers: [
         {
-            text: "A) Milan schickt nicht das Passwort, aber seinen Benutzernamen.",
+            text: "A) Er schickt nur den Benutzernamen.",
             type: "partial",
             evaluation: "Teilweise vorsichtig. Das Passwort nicht zu schicken ist gut, aber auch andere Kontodaten sollte er nicht an Fremde geben.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Milan löscht sofort das Spiel.",
+            text: "B) Er löscht sofort das Spiel.",
             type: "partial",
             evaluation: "Teilweise sicher, aber sehr streng. Besser ist es, den offiziellen Support zu prüfen und das Konto zu schützen.",
             consequence: "Nichts."
         },
         {
-            text: "C) Milan antwortet nicht und prüft über die Webseite oder App, ob es ein Problem gibt.",
+            text: "C) Er antwortet nicht und prüft über Webseite oder App.",
             type: "correct",
             evaluation: "Sehr sicher. Echter Support fragt nicht nach Passwörtern, und Milan lässt sich nicht unter Druck setzen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Milan schreibt zurück: „Beweis erst mal, dass du vom Support bist.“",
+            text: "D) Er fordert einen Beweis.",
             type: "wrong",
             evaluation: "Riskant. Eine Antwort kann dazu führen, dass der Betrüger weiter Druck macht oder neue Tricks versucht.",
             consequence: "Risiko +2."
@@ -150,7 +150,7 @@ cards["angeblicher-support"] = {
 cards["fake-shop"] = {
     district: "Betrugs-Basar",
     title: "Der Fake-Shop",
-    situation: "Lena findet ein neues Spiel in einem Online-Shop extrem billig. Die Seite sieht modern aus, aber es gibt kein Impressum, also keine klaren Infos darüber, wem der Shop gehört. Was sollte sie tun?",
+    situation: "Lena findet ein Spiel extrem billig in einem Online-Shop. Die Seite sieht modern aus, hat aber kein Impressum, also keine klaren Infos darüber, wem der Shop gehört. Was sollte sie tun?",
     checklist: [
         "nicht sofort kaufen",
         "prüfen, wem der Shop gehört",
@@ -161,25 +161,25 @@ cards["fake-shop"] = {
     ],
     answers: [
         {
-            text: "A) Lena kauft grundsätzlich keine Spiele online.",
+            text: "A) Sie kauft nie Spiele online.",
             type: "partial",
             evaluation: "Teilweise sicher, aber zu streng. Online-Shopping ist nicht automatisch gefährlich, wenn man Shops gut prüft.",
             consequence: "Nichts."
         },
         {
-            text: "B) Lena kauft nur, wenn eine bekannte Zahlungsmethode angeboten wird.",
+            text: "B) Sie kauft, wenn eine bekannte Zahlungsmethode angeboten wird.",
             type: "partial",
             evaluation: "Teilweise nachvollziehbar. Eine sichere Zahlungsmethode allein macht einen verdächtigen Shop nicht vertrauenswürdig.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Lena kauft schnell, weil der mögliche Verlust klein ist.",
+            text: "C) Sie kauft schnell, weil der Verlust klein wäre.",
             type: "wrong",
             evaluation: "Riskant. Auch bei kleinen Käufen können Adresse, Zahlungsdaten oder andere private Daten missbraucht werden.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Lena kauft nicht direkt und prüft den Anbieter zuerst außerhalb der Shop-Seite.",
+            text: "D) Sie kauft nicht direkt und prüft den Anbieter zuerst woanders.",
             type: "correct",
             evaluation: "Sehr sicher. Fehlendes Impressum, kaum Anbieterinfos und ein extrem niedriger Preis sind Warnzeichen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
@@ -200,7 +200,7 @@ cards["fake-shop"] = {
 cards["gewinnspiel-mail"] = {
     district: "Betrugs-Basar",
     title: "Die Gewinnspiel-Mail",
-    situation: "Ella bekommt eine E-Mail: „Du hast ein Tablet gewonnen. Sende deinen Namen, deine Adresse und dein Geburtsdatum.“ Was sollte Ella tun?",
+    situation: "Ella bekommt eine E-Mail: „Du hast ein Tablet gewonnen. Sende deinen Namen, deine Adresse und dein Geburtsdatum.“ Was sollte sie tun?",
     checklist: [
         "nicht auf Gewinnversprechen reagieren",
         "keine privaten Daten senden",
@@ -211,25 +211,25 @@ cards["gewinnspiel-mail"] = {
     ],
     answers: [
         {
-            text: "A) Ella antwortet nicht und prüft, ob sie überhaupt teilgenommen hat.",
+            text: "A) Sie antwortet nicht und prüft, ob sie teilgenommen hat.",
             type: "correct",
             evaluation: "Sehr sicher. Wenn Ella bei keinem Gewinnspiel mitgemacht hat, ist die Nachricht wahrscheinlich ein Trick.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Ella sendet nur ihren Namen.",
+            text: "B) Sie sendet nur ihren Namen.",
             type: "partial",
             evaluation: "Teilweise vorsichtig. Trotzdem sollte sie auf eine verdächtige Gewinnspiel-Mail gar nicht antworten.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Ella fragt zurück, von welchem Gewinnspiel die Mail kommt.",
+            text: "C) Sie fragt zurück, von welchem Gewinnspiel die Mail kommt.",
             type: "wrong",
             evaluation: "Riskant. Eine Antwort kann zeigen, dass ihre E-Mail-Adresse aktiv ist.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Ella löscht die Mail sofort, ohne sie jemandem zu zeigen.",
+            text: "D) Sie löscht die Mail sofort.",
             type: "partial",
             evaluation: "Teilweise sicher. Nicht zu antworten ist gut. Noch besser ist es, die Mail einem Erwachsenen zu zeigen oder als Spam zu melden.",
             consequence: "Nichts."
@@ -264,25 +264,25 @@ cards["verdaechtiger-qr-code"] = {
     ],
     answers: [
         {
-            text: "A) Lea schließt die Seite und scannt ab jetzt nie wieder QR-Codes.",
+            text: "A) Sie scannt nie wieder QR-Codes.",
             type: "partial",
             evaluation: "Teilweise sicher, aber zu streng. QR-Codes sind nicht automatisch gefährlich, aber man muss prüfen, welche Webseite sich öffnet.",
             consequence: "Nichts."
         },
         {
-            text: "B) Lea gibt keine Daten ein und prüft, ob die Aktion offiziell ist.",
+            text: "B) Sie gibt keine Daten ein und prüft die Aktion.",
             type: "correct",
             evaluation: "Sehr sicher. Lea behandelt den QR-Code wie einen unbekannten Link und gibt keine privaten Daten ein.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Lea gibt nur Vornamen und E-Mail ein.",
+            text: "C) Sie gibt nur Namen und E-Mail ein.",
             type: "partial",
             evaluation: "Teilweise vorsichtig. Auch wenige Daten können für Spam, Werbung oder Betrug genutzt werden.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Lea gibt die Daten ein, weil die Seite professionell aussieht.",
+            text: "D) Sie gibt die Daten ein, weil die Seite echt aussieht.",
             type: "wrong",
             evaluation: "Riskant. Gefälschte Seiten können professionell aussehen und echte Logos verwenden.",
             consequence: "Risiko +2."
@@ -307,7 +307,7 @@ cards["verdaechtiger-qr-code"] = {
 cards["banknachricht"] = {
     district: "Betrugs-Basar",
     title: "Die Banknachricht",
-    situation: "Eine Nachricht auf Pauls Handy sagt: „Dein Bankkonto oder Bezahlkonto wurde gesperrt. Melde dich sofort über diesen Link an.“ Die Nachricht sieht offiziell aus. Was sollte Paul tun?",
+    situation: "Paul bekommt eine Nachricht: „Dein Bankkonto wurde gesperrt. Melde dich über diesen Link an.“ Die Nachricht sieht offiziell aus. Was sollte Paul tun?",
     checklist: [
         "nicht auf Bank-Links klicken",
         "keine Login-Daten eingeben",
@@ -317,25 +317,25 @@ cards["banknachricht"] = {
     ],
     answers: [
         {
-            text: "A) Paul löscht die Nachricht und ignoriert ab jetzt alle Banknachrichten.",
+            text: "A) Er ignoriert ab jetzt alle Banknachrichten.",
             type: "partial",
             evaluation: "Teilweise sicher, aber zu streng. Echte Banknachrichten können wichtig sein und sollten offiziell geprüft werden.",
             consequence: "Nichts."
         },
         {
-            text: "B) Paul öffnet den Link, um zu schauen, ob das Banklogo stimmt.",
+            text: "B) Er öffnet den Link und prüft das Logo.",
             type: "wrong",
             evaluation: "Riskant. Gefälschte Seiten können Logos, Farben und Namen nachmachen.",
             consequence: "Risiko +2."
         },
         {
-            text: "C) Paul prüft das Konto über die offizielle Bank-App oder gibt die Webseite selbst ein.",
+            text: "C) Er prüft sein Konto über die offizielle App.",
             type: "correct",
             evaluation: "Sehr sicher. Paul folgt nicht dem Link und gibt keine Login-Daten auf einer unbekannten Seite ein.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Paul gibt nur seine E-Mail-Adresse oder Kundennummer ein.",
+            text: "D) Er gibt nur seine E-Mail oder Kundennummer ein.",
             type: "wrong",
             evaluation: "Riskant. Auch einzelne Infos können Betrügern helfen, ein Konto anzugreifen oder glaubwürdiger zu wirken.",
             consequence: "Risiko +2."
@@ -356,7 +356,7 @@ cards["banknachricht"] = {
 cards["influencer-code"] = {
     district: "Betrugs-Basar",
     title: "Der Influencer-Code",
-    situation: "Ein Influencer sagt im Video: „Mit meinem Link bekommst du kostenlose Spielwährung.“ Auf der Seite soll Mia sich mit ihrem Spielkonto anmelden. Was sollte Mia tun?",
+    situation: "Ein Influencer verspricht kostenlose Spielwährung. Dafür soll Mia sich auf einer fremden Seite anmelden. Was sollte sie tun?",
     checklist: [
         "Links aus Videos kritisch prüfen",
         "keine Login-Daten auf fremden Seiten eingeben",
@@ -366,25 +366,25 @@ cards["influencer-code"] = {
     ],
     answers: [
         {
-            text: "A) Mia meidet ab jetzt alle Links von Influencern.",
+            text: "A) Sie meidet alle Influencer-Links.",
             type: "partial",
             evaluation: "Teilweise sicher, aber zu streng. Nicht jeder Influencer-Link ist gefährlich, aber Login-Daten auf fremden Seiten sind ein Warnzeichen.",
             consequence: "Nichts."
         },
         {
-            text: "B) Mia meldet sich mit einem zweiten Account an.",
+            text: "B) Sie nutzt einen zweiten Account.",
             type: "wrong",
             evaluation: "Riskant. Auch mit einem zweiten Account kann Mia Daten verlieren, auf eine Fake-Seite geraten oder Ärger mit dem Spielkonto bekommen.",
             consequence: "Risiko +2."
         },
         {
-            text: "C) Mia liest Kommentare und fragt Freunde, ob der Link funktioniert.",
+            text: "C) Sie liest Kommentare und fragt Freunde.",
             type: "partial",
             evaluation: "Teilweise nachvollziehbar. Kommentare und Freunde beweisen nicht, dass eine Seite sicher ist.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Mia öffnet das Spiel und prüft dort, ob es die Aktion offiziell gibt.",
+            text: "D) Sie prüft die Aktion direkt im Spiel.",
             type: "correct",
             evaluation: "Sehr sicher. Mia gibt keine Login-Daten auf einer fremden Seite ein und schützt so ihren Account, ihre Spielwährung und ihren Fortschritt.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
@@ -405,7 +405,7 @@ cards["influencer-code"] = {
 cards["komischer-link-vom-freund"] = {
     district: "Betrugs-Basar",
     title: "Der komische Link vom Freund",
-    situation: "Lukas bekommt von einem Freund eine Nachricht: „Schau dir dieses Video an!“ Der Link sieht komisch aus und der Text klingt anders als sonst. Was sollte Lukas tun?",
+    situation: "Lukas bekommt von einem Freund einen merkwürdigen Link. Was sollte er tun?",
     checklist: [
         "Link nicht sofort anklicken",
         "ungewöhnliche Sprache beachten",
@@ -415,25 +415,25 @@ cards["komischer-link-vom-freund"] = {
     ],
     answers: [
         {
-            text: "A) Lukas öffnet den Link, weil der Freund sonst vertrauenswürdig ist.",
+            text: "A) Er öffnet den Link, weil er dem Freund vertraut.",
             type: "wrong",
             evaluation: "Riskant. Auch ein Konto von einem Freund kann gehackt sein.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Lukas fragt im gleichen Chat: „Hast du mir das wirklich geschickt?“",
+            text: "B) Er fragt im gleichen Chat nach.",
             type: "partial",
             evaluation: "Teilweise vorsichtig. Nicht zu klicken ist gut. Aber wenn der Account gehackt wurde, antwortet vielleicht gar nicht der echte Freund.",
             consequence: "VOID bewegt 5 Felder vor."
         },
         {
-            text: "C) Lukas öffnet den Link, gibt aber keine Daten ein.",
+            text: "C) Er öffnet den Link, gibt aber keine Daten ein.",
             type: "wrong",
             evaluation: "Riskant. Schon das Öffnen eines verdächtigen Links kann problematisch sein.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Lukas fragt den Freund über einen anderen Weg, ob die Nachricht echt ist.",
+            text: "D) Er fragt den Freund über einen anderen Weg.",
             type: "correct",
             evaluation: "Sehr sicher. Lukas prüft die Nachricht über einen zweiten Weg, bevor er dem Link vertraut. So schützt er seinen Account, seine Chats und seine Kontakte.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."

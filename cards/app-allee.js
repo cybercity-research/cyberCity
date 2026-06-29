@@ -1,7 +1,7 @@
 cards["taschenlampen-app"] = {
     district: "App-Allee",
     title: "Die Taschenlampen-App",
-    situation: "Mia will eine Taschenlampen-App installieren. Beim Öffnen fragt die App nach Zugriff auf Mikrofon, Standort, Kontakte und Fotos. Was sollte Mia tun?",
+    situation: "Mia will eine Taschenlampen-App installieren. Die App verlangt Zugriff auf Mikrofon, Standort, Kontakte und Fotos. Was sollte Mia tun?",
     checklist: [
         "Berechtigungen prüfen",
         "nur nötige Zugriffe erlauben",
@@ -11,25 +11,25 @@ cards["taschenlampen-app"] = {
     ],
     answers: [
         {
-            text: "A) Mia erlaubt alle Zugriffe, weil die App gute Bewertungen hat.",
+            text: "A) Alle Zugriffe erlauben, weil die App gute Bewertungen hat.",
             type: "wrong",
             evaluation: "Riskant. Gute Bewertungen bedeuten nicht automatisch, dass eine App wenig Daten sammelt.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Mia erlaubt die Zugriffe nur kurz und schaltet sie später wieder aus.",
+            text: "B) Zugriffe kurz erlauben und später ausschalten.",
             type: "partial",
             evaluation: "Teilweise vorsichtig. Besser ist es, unnötige Zugriffe gar nicht erst zu erlauben.",
             consequence: "VOID bewegt 3 Felder vor."
         },
         {
-            text: "C) Mia nutzt die eingebaute Taschenlampe oder sucht eine App mit weniger Zugriffen.",
+            text: "C) Eingebaute Taschenlampe nutzen oder App mit weniger Zugriffen wählen.",
             type: "correct",
             evaluation: "Sehr sicher. Eine Taschenlampe braucht normalerweise keinen Zugriff auf Kontakte, Standort oder Mikrofon.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Mia installiert die App, erlaubt aber keine Foto-, Kontakt-, Standort- oder Mikrofonzugriffe.",
+            text: "D) App installieren, aber unnötige Zugriffe ablehnen.",
             type: "partial",
             evaluation: "Teilweise sicher. Zugriffe abzulehnen ist gut. Noch besser ist es, die eingebaute Taschenlampe zu nutzen oder eine App zu wählen, die solche Zugriffe gar nicht verlangt.",
             consequence: "Risiko +1."
@@ -55,7 +55,7 @@ cards["taschenlampen-app"] = {
 cards["online-quiz"] = {
     district: "App-Allee",
     title: "Das Online-Quiz",
-    situation: "Jonny sieht ein Quiz: „Welcher Star bist du?“ Vor dem Start soll er Geburtstag, Schule und Lieblingsort eingeben. \"Außerdem möchte das Quiz Infos aus seinem Profil sehen, zum Beispiel Beiträge, Freundesliste oder andere Kontodaten. Was sollte Jonny tun?",
+    situation: "Jonny entdeckt ein Quiz. Vor dem Start soll er Geburtstag, Schule, Lieblingsort und Zugriff auf sein Social-Media-Profil erlauben, zum Beispiel Beiträge, Freundesliste oder andere Kontodaten. Was sollte er tun?",
     checklist: [
         "private Daten nicht eingeben",
         "Profilzugriff kritisch prüfen",
@@ -65,25 +65,25 @@ cards["online-quiz"] = {
     ],
     answers: [
         {
-            text: "A) Jonny macht das Quiz, gibt aber falsche Daten ein.",
+            text: "A) Falsche Daten eingeben.",
             type: "partial",
             evaluation: "Teilweise sicher. Falsche Angaben schützen echte Daten, aber der Profilzugriff bleibt problematisch.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Jonny erlaubt nur den Profilzugriff, aber keine Kontakte.",
+            text: "B) Nur den Profilzugriff erlauben.",
             type: "partial",
             evaluation: "Teilweise vorsichtig. Trotzdem kann schon das Profil private Informationen verraten.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Jonny sucht ein Quiz, das keine privaten Daten oder Profilzugriffe verlangt.",
+            text: "C) Ein Quiz ohne private Daten oder Profilzugriffe wählen.",
             type: "correct",
             evaluation: "Sehr sicher. Ein Spaß-Quiz sollte keine privaten Daten oder unnötigen Zugriffe brauchen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "D) Jonny macht das Quiz, teilt das Ergebnis aber nicht öffentlich.",
+            text: "D) Quiz machen, aber Ergebnis nicht teilen.",
             type: "wrong",
             evaluation: "Riskant. Auch ohne Teilen kann das Quiz Daten sammeln, wenn Jonny Zugriff erlaubt.",
             consequence: "Risiko +2."
@@ -104,7 +104,7 @@ cards["online-quiz"] = {
 cards["in-app-kauf"] = {
     district: "App-Allee",
     title: "Der In-App-Kauf",
-    situation: "Emma spielt ein Handyspiel. Plötzlich erscheint: „500 Diamanten für 4,99 € – nur heute!“ Was sollte Emma tun?",
+    situation: "Emma spielt ein Handyspiel. Plötzlich erscheint: „500 Diamanten für 4,99 € – nur heute!“ Was sollte sie tun?",
     checklist: [
         "nicht heimlich kaufen",
         "Familienregeln beachten",
@@ -115,25 +115,25 @@ cards["in-app-kauf"] = {
     ],
     answers: [
         {
-            text: "A) Emma wartet kurz, überlegt und fragt nach den Familienregeln.",
+            text: "A) Warten, überlegen und nach den Familienregeln fragen.",
             type: "correct",
             evaluation: "Sehr sicher. Emma kauft nicht spontan, lässt sich nicht vom Zeitdruck stressen, beachtet die Familienregeln und entscheidet nicht heimlich.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Emma kauft einmal, weil 4,99 € nicht viel klingt.",
+            text: "B) Kaufen, weil 4,99 € wenig sind.",
             type: "wrong",
             evaluation: "Riskant. Kleine Beträge können sich schnell summieren.",
             consequence: "Risiko +2."
         },
         {
-            text: "C) Emma fragt Freunde, ob sich die Diamanten lohnen.",
+            text: "C) Freunde fragen, ob sich der Kauf lohnt.",
             type: "partial",
             evaluation: "Teilweise nachvollziehbar. Freunde können Tipps geben, entscheiden aber nicht über Geld oder Familienregeln.",
             consequence: "VOID bewegt 4 Felder vor."
         },
         {
-            text: "D) Emma löscht das Spiel sofort, weil Kaufangebote immer gefährlich sind.",
+            text: "D) Das Spiel sofort löschen, weil Kaufangebote immer gefährlich sind.",
             type: "partial",
             evaluation: "Teilweise sicher, aber sehr streng. Besser ist es, bewusst mit Käufen umzugehen.",
             consequence: "Nichts."
@@ -154,7 +154,7 @@ cards["in-app-kauf"] = {
 cards["standortfreigabe"] = {
     district: "App-Allee",
     title: "Standortfreigabe",
-    situation: "Ben lädt eine Sticker-App herunter. Beim Start fragt sie: „Darf ich deinen Standort immer sehen?“ Was sollte Ben tun?",
+    situation: "Ben lädt eine Sticker-App herunter. Sie möchte ständig auf seinen Standort zugreifen. Was sollte Ben tun?",
     checklist: [
         "Standort nur erlauben, wenn nötig",
         "„immer erlauben“ vermeiden",
@@ -163,25 +163,25 @@ cards["standortfreigabe"] = {
     ],
     answers: [
         {
-            text: "A) Ben erlaubt „immer“, weil die App sonst vielleicht nicht richtig funktioniert.",
+            text: "A) „Immer erlauben“ auswählen, damit die App auf jeden Fall funktioniert.",
             type: "wrong",
             evaluation: "Riskant. Die App könnte dauerhaft Standortdaten sammeln, obwohl sie diese nicht braucht.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Ben lehnt den Standort ab.",
+            text: "B) Den Standortzugriff ablehnen.",
             type: "correct",
             evaluation: "Sehr sicher. Eine Sticker-App braucht normalerweise nicht zu wissen, wo Ben gerade ist.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Ben erlaubt den Standort, weil die App viele gute Bewertungen hat.",
+            text: "C) Den Standort erlauben, weil die App gute Bewertungen hat.",
             type: "wrong",
             evaluation: "Teilweise nachvollziehbar. Bewertungen zeigen aber nicht, ob der Standort wirklich nötig ist.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Ben wählt „Beim Verwenden erlauben“.",
+            text: "D) „Beim Verwenden erlauben“ wählen.",
             type: "partial",
             evaluation: "Besser als „immer erlauben“, aber Ben sollte zuerst prüfen, ob die App den Standort überhaupt braucht.",
             consequence: "Risiko +1."
@@ -202,7 +202,7 @@ cards["standortfreigabe"] = {
 cards["mikrofonzugriff"] = {
     district: "App-Allee",
     title: "Mikrofonzugriff",
-    situation: "Lina lädt eine Mal-App herunter. Beim Start fragt die App nach Zugriff auf das Mikrofon. Was sollte Lina tun?",
+    situation: "Lina lädt eine Mal-App herunter. Die App möchte auf ihr Mikrofon zugreifen. Was sollte Lina tun?",
     checklist: [
         "Berechtigung hinterfragen",
         "unnötigen Mikrofonzugriff ablehnen",
@@ -211,25 +211,25 @@ cards["mikrofonzugriff"] = {
     ],
     answers: [
         {
-            text: "A) Lina lehnt das Mikrofon ab und prüft, ob die App trotzdem funktioniert.",
+            text: "A) Mikrofon ablehnen und prüfen, ob die App trotzdem funktioniert.",
             type: "correct",
             evaluation: "Sehr sicher. Eine Mal-App braucht normalerweise kein Mikrofon. Wenn sie ohne Mikrofon nicht funktioniert, sollte Lina lieber eine andere App wählen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Lina erlaubt das Mikrofon kurz und schaltet es später wieder aus.",
+            text: "B) Mikrofon kurz erlauben und später ausschalten.",
             type: "partial",
             evaluation: "Teilweise vorsichtig. Besser ist es, unnötige Zugriffe gar nicht erst zu erlauben.",
             consequence: "VOID bewegt 1 Feld vor."
         },
         {
-            text: "C) Lina erlaubt den Zugriff, weil die App sonst vielleicht nicht startet.",
+            text: "C) Zugriff erlauben, damit die App sicher startet.",
             type: "wrong",
             evaluation: "Riskant. Eine Mal-App sollte nicht ohne guten Grund Zugriff auf Mikrofon oder Gespräche bekommen.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Lina löscht die App sofort, weil jede App mit Mikrofonzugriff gefährlich ist.",
+            text: "D) App sofort löschen, weil jede App mit Mikrofonzugriff gefährlich ist.",
             type: "partial",
             evaluation: "Teilweise sicher, aber zu streng. Nicht jede Mikrofon-App ist gefährlich, aber die Berechtigung muss zur Funktion passen.",
             consequence: "Nichts."
@@ -246,7 +246,7 @@ cards["mikrofonzugriff"] = {
 cards["altersabfrage"] = {
     district: "App-Allee",
     title: "Die Altersabfrage",
-    situation: "Sam möchte eine App nutzen, die viele aus seiner Klasse haben. Bei der Anmeldung merkt er: Eigentlich ist er zu jung dafür. Was sollte Sam tun?" ,
+    situation: "Sam möchte eine App nutzen, die viele aus seiner Klasse haben. Er ist dafür aber eigentlich zu jung. Was sollte er tun?" ,
     checklist: [
         "Altersgrenzen ernst nehmen",
         "nicht beim Alter lügen",
@@ -256,25 +256,25 @@ cards["altersabfrage"] = {
     ],
     answers: [
         {
-            text: "A) Sam gibt ein älteres Geburtsjahr ein.",
+            text: "A) Ein älteres Geburtsjahr angeben.",
             type: "wrong",
             evaluation: "Riskant. Dadurch können Inhalte oder Funktionen freigeschaltet werden, die nicht für sein Alter gedacht sind.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Sam prüft mit seinen Eltern, ob es eine App gibt, die besser zu seinem Alter passt.",
+            text: "B) Mit den Eltern nach einer passenden App suchen.",
             type: "correct",
             evaluation: "Sehr sicher. Altersgrenzen helfen einzuschätzen, ob eine App für Kinder geeignet ist.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Sam nutzt die App nur kurz und postet nichts.",
+            text: "C) Die App nur kurz nutzen.",
             type: "partial",
             evaluation: "Teilweise vorsichtig. Auch beim kurzen Nutzen können ungeeignete Inhalte oder Kontakte auftauchen.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Sam fragt Freunde, welche Einstellungen sie benutzen.",
+            text: "D) Freunde nach ihren Einstellungen fragen.",
             type: "partial",
             evaluation: "Teilweise sinnvoll. Freunde ersetzen aber keine gemeinsame Prüfung mit Erwachsenen.",
             consequence: "VOID bewegt 6 Felder vor."
@@ -305,19 +305,19 @@ cards["peinliche-werbung"] = {
     ],
     answers: [
         {
-            text: "A) Daniel fragt Lea vor anderen, wonach sie gesucht hat.",
+            text: "A) Lea vor anderen nach ihrem Suchverlauf fragen.",
             type: "wrong",
             evaluation: "Riskant. Das kann peinlich und verletzend sein.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Daniel klickt die Werbung weg.",
+            text: "B) Die Werbung einfach wegklicken.",
             type: "partial",
             evaluation: "Teilweise hilfreich. Die Werbung verschwindet kurz, aber die Ursache bleibt vielleicht bestehen.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Daniel spricht Lea nicht vor anderen darauf an. Wenn Lea möchte, prüfen sie zusammen Verlauf, Cookies oder Werbeeinstellungen.",
+            text: "C) Lea nicht bloßstellen und gemeinsam Verlauf, Cookies oder Werbeeinstellungen prüfen.",
             type: "correct",
             evaluation: "Sehr sicher. Daniel stellt Lea nicht bloß und beide können die Privatsphäre-Einstellungen verbessern.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
@@ -348,7 +348,7 @@ cards["peinliche-werbung"] = {
 cards["altes-kinderkonto"] = {
     district: "App-Allee",
     title: "Das alte Kinderkonto",
-    situation: "Louis findet ein altes Konto auf einer Kinder-Webseite. Er nutzt die Seite nicht mehr. Was sollte er tun?",
+    situation: "Louis findet ein altes Konto auf einer Kinder-Webseite, das er nicht mehr nutzt. Was sollte er tun?",
     checklist: [
         "alte Konten nicht ignorieren",
         "nach Konto löschen suchen",
@@ -359,25 +359,25 @@ cards["altes-kinderkonto"] = {
     ],
     answers: [
         {
-            text: "A) Louis löscht nur die App oder das Lesezeichen.",
+            text: "A) Die App oder das Lesezeichen löschen.",
             type: "partial",
             evaluation: "Teilweise hilfreich. Das Konto und die gespeicherten Daten können trotzdem weiter bestehen.",
             consequence: "Risiko +1."
         },
         {
-            text: "B) Louis meldet sich ab und wartet, bis das Konto automatisch verschwindet.",
+            text: "B) Sich abmelden und warten, bis das Konto automatisch verschwindet.",
             type: "wrong",
             evaluation: "Riskant. Abmelden bedeutet nicht, dass ein Konto gelöscht wird.",
             consequence: "Risiko +2."
         },
         {
-            text: "C) Louis schreibt dem Support, also der Hilfe der Webseite, und schickt sein Passwort mit.",
+            text: "C) Dem Support das Passwort schicken.",
             type: "wrong",
             evaluation: "Riskant. Passwörter sollte man niemals per Nachricht verschicken.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Louis sucht in den Einstellungen nach „Konto löschen“ oder „Daten löschen“.",
+            text: "D) In den Einstellungen „Konto löschen“ oder „Daten löschen“ wählen.",
             type: "correct",
             evaluation: "Sehr sicher. So prüft Louis, ob das Konto wirklich geschlossen wird und alte Fotos, Nachrichten oder persönliche Daten nicht weiter gespeichert bleiben.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
@@ -408,25 +408,25 @@ cards["bildschirmzeit-check"] = {
     ],
     answers: [
         {
-            text: "A) Noah spielt heimlich weiter.",
+            text: "A) Heimlich weiterspielen.",
             type: "wrong",
             evaluation: "Riskant. Heimlich weiterzuspielen schwächt Vertrauen und ignoriert die eigene Grenze.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Noah spielt noch eine Runde, damit die Freunde nicht enttäuscht sind.",
+            text: "B) Noch eine Runde spielen, damit die Freunde nicht enttäuscht sind.",
             type: "partial",
             evaluation: "Teilweise nachvollziehbar. Gruppendruck kann aber dazu führen, dass man immer länger spielt.",
             consequence: "VOID bewegt 5 Felder vor."
         },
         {
-            text: "C) Noah löscht das Spiel sofort.",
+            text: "C) Das Spiel sofort löschen.",
             type: "partial",
             evaluation: "Teilweise sicher, aber sehr streng. Oft reichen klare Pausen und Regeln.",
             consequence: "Nichts."
         },
         {
-            text: "D) Noah sagt den Freunden, dass er jetzt Pause macht und später weiterspielt.",
+            text: "D) Den Freunden sagen, dass jetzt Pause ist und später weiterspielen.",
             type: "correct",
             evaluation: "Sehr sicher. Noah nimmt seine Müdigkeit ernst und bleibt trotzdem freundlich.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
@@ -461,25 +461,25 @@ cards["streit-um-bildschirmzeit"] = {
     ],
     answers: [
         {
-            text: "A) Noah nimmt das Handy heimlich mit ins Bett.",
+            text: "A) Das Handy heimlich mit ins Bett nehmen.",
             type: "wrong",
             evaluation: "Riskant. Heimlich weitermachen schwächt Vertrauen und kann den Schlaf stören.",
             consequence: "Risiko +2."
         },
         {
-            text: "B) Noah gibt das Handy ab und sagt gar nichts mehr dazu.",
+            text: "B) Das Handy abgeben und nichts mehr sagen.",
             type: "partial",
             evaluation: "Teilweise sicher. Das Handy wegzulegen hilft, aber der Streit wird dadurch nicht gemeinsam gelöst.",
             consequence: "Nichts."
         },
         {
-            text: "C) Noah bittet um eine Ausnahme für wichtige Nachrichten.",
+            text: "C) Um eine Ausnahme für wichtige Nachrichten bitten.",
             type: "partial",
             evaluation: "Teilweise nachvollziehbar. Ausnahmen können sinnvoll sein, brauchen aber klare Regeln.",
             consequence: "VOID bewegt 2 Felder vor."
         },
         {
-            text: "D) Noah schlägt eine Abendregel vor, zum Beispiel feste Handyzeit und einen Ladeplatz außerhalb des Betts.",
+            text: "D) Eine feste Abendregel mit Handyzeit und Ladeplatz außerhalb des Betts vorschlagen.",
             type: "correct",
             evaluation: "Sehr sicher. Eine gemeinsame Regel hilft besser als Streit oder Heimlichkeit.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
@@ -519,25 +519,25 @@ cards["oeffentliches-wlan"] = {
     ],
     answers: [
         {
-            text: "A) Max nutzt für sein E-Mail-Konto mobile Daten oder wartet bis zuhause.",
+            text: "A) Für E-Mails mobile Daten nutzen oder bis zuhause warten.",
             type: "correct",
             evaluation: "Sehr sicher. Für wichtige Logins ist ein offenes WLAN ohne Passwort riskanter.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Max loggt sich ein, wenn die Webseite ein Schloss-Symbol zeigt.",
+            text: "B) Sich einloggen, wenn ein Schloss-Symbol angezeigt wird.",
             type: "partial",
             evaluation: "Teilweise vorsichtig. Das Schloss-Symbol ist wichtig, aber Max sollte trotzdem prüfen, ob die Adresse wirklich stimmt. Für wichtige Konten sind mobile Daten sicherer.",
             consequence: "Risiko +1."
         },
         {
-            text: "C) Max nutzt die E-Mail-App, weil Apps im WLAN automatisch sicher sind.",
+            text: "C) Die E-Mail-App nutzen, weil Apps automatisch sicher sind.",
             type: "wrong",
             evaluation: "Riskant. Apps sind nicht automatisch sicherer als Webseiten.",
             consequence: "Risiko +2."
         },
         {
-            text: "D) Max schaltet WLAN komplett aus und nutzt unterwegs kein Internet.",
+            text: "D) Unterwegs gar kein Internet nutzen.",
             type: "partial",
             evaluation: "Teilweise sicher, aber zu streng. Er darf unterwegs Internet nutzen, sollte aber wichtige Konten im offenen WLAN vermeiden.",
             consequence: "Nichts."
