@@ -270,19 +270,19 @@ cards["verdaechtiger-qr-code"] = {
             consequence: "Nichts."
         },
         {
-            text: "B) Sie gibt keine Daten ein und prüft die Aktion.",
+            text: "B) Sie benutzt einen QR-Code-Scanner, der zunächst den Link anzeigt, und überprüft diesen.",
             type: "correct",
-            evaluation: "Sehr sicher. Lea behandelt den QR-Code wie einen unbekannten Link und gibt keine privaten Daten ein.",
+            evaluation: "Sehr sicher. Lea behandelt den QR-Code wie einen unbekannten Link.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "C) Sie gibt nur Namen und E-Mail ein.",
+            text: "C) Sie scannt den QR-Code und gibt nur ihren Namen und ihre E-Mail-Adresse ein.",
             type: "partial",
-            evaluation: "Teilweise vorsichtig. Auch wenige Daten können für Spam, Werbung oder Betrug genutzt werden.",
+            evaluation: "Teilweise vorsichtig. Auch wenige persönliche Daten können für Spam, Werbung oder Betrug genutzt werden.",
             consequence: "Risiko +1."
         },
         {
-            text: "D) Sie gibt die Daten ein, weil die Seite echt aussieht.",
+            text: "D) Sie scannt den QR-Code und gibt ihre Daten ein, weil die Seite echt aussieht.",
             type: "wrong",
             evaluation: "Riskant. Gefälschte Seiten können professionell aussehen und echte Logos verwenden.",
             consequence: "Risiko +2."
@@ -331,7 +331,7 @@ cards["banknachricht"] = {
         {
             text: "C) Er prüft sein Konto über die offizielle App.",
             type: "correct",
-            evaluation: "Sehr sicher. Paul folgt nicht dem Link und gibt keine Login-Daten auf einer unbekannten Seite ein.",
+            evaluation: "Sehr sicher. Eine seriöse Bank fordert per E-Mail niemals PIN, TAN, Passwort oder andere Zugangsdaten an. Links in unerwarteten Bank-E-Mails sollte man nicht öffnen, sondern die offizielle App oder die selbst eingegebene Internetadresse der Bank nutzen.",
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {

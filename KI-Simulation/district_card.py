@@ -8,7 +8,7 @@ district_cards = {
             "answers": [
                 {"type": "wrong", "risk": 2},
                 {"type": "partial", "void": 3},
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial", "risk": 1}
             ]
         },
@@ -30,7 +30,7 @@ district_cards = {
             "skill": "apps",
             "difficulty": 2,
             "answers": [
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "wrong", "risk": 2},
                 {"type": "partial", "void": 4},
                 {"type": "partial"}
@@ -54,7 +54,7 @@ district_cards = {
             "skill": "apps",
             "difficulty": 1,
             "answers": [
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial", "void": 1},
                 {"type": "wrong", "risk": 2},
                 {"type": "partial"}
@@ -80,7 +80,7 @@ district_cards = {
             "answers": [
                 {"type": "wrong", "risk": 2},
                 {"type": "partial", "risk": 1},
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial", "void": 3}
             ]
         },
@@ -105,7 +105,7 @@ district_cards = {
                 {"type": "wrong", "risk": 2},
                 {"type": "partial", "void": 5},
                 {"type": "partial"},
-                {"type": "correct", "security": 1, "time": 1}
+                {"type": "correct", "security": 2, "time": 2}
             ]
         },
         {
@@ -126,7 +126,7 @@ district_cards = {
             "skill": "apps",
             "difficulty": 3,
             "answers": [
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial", "risk": 1},
                 {"type": "wrong", "risk": 2},
                 {"type": "partial"}
@@ -154,7 +154,7 @@ district_cards = {
                 "difficulty": 2,
                 "answers": [
                     {"type": "wrong", "risk": 2},
-                    {"type": "correct", "security": 1, "time": 1},
+                    {"type": "correct", "security": 2, "time": 2},
                     {"type": "wrong", "risk": 2},
                     {"type": "partial", "void": 3}
                 ]
@@ -180,7 +180,7 @@ district_cards = {
                     {"type": "partial"},
                     {"type": "partial", "risk": 1},
                     {"type": "wrong", "risk": 2},
-                    {"type": "correct", "security": 1, "time": 1}
+                    {"type": "correct", "security": 2, "time": 2}
                 ]
             },
             {
@@ -202,7 +202,7 @@ district_cards = {
                 "difficulty": 2,
                 "answers": [
                     {"type": "partial"},
-                    {"type": "correct", "security": 1, "time": 1},
+                    {"type": "correct", "security": 2, "time": 2},
                     {"type": "partial", "risk": 1},
                     {"type": "wrong", "risk": 2}
                 ]
@@ -228,7 +228,7 @@ district_cards = {
                     {"type": "partial"},
                     {"type": "wrong", "risk": 2},
                     {"type": "partial", "risk": 1},
-                    {"type": "correct", "security": 1, "time": 1}
+                    {"type": "correct", "security": 2, "time": 2}
                 ]
             },
             {
@@ -253,7 +253,7 @@ district_cards = {
             "answers": [
                 {"type": "partial", "risk": 1},
                 {"type": "partial", "risk": 1},
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "wrong", "risk": 2}
             ]
         },
@@ -276,7 +276,7 @@ district_cards = {
             "difficulty": 2,
             "answers": [
                 {"type": "partial", "risk": 1},
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial"},
                 {"type": "wrong", "risk": 2}
             ]
@@ -300,7 +300,7 @@ district_cards = {
             "difficulty": 2,
             "answers": [
                 {"type": "wrong", "risk": 2},
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial"},
                 {"type": "partial", "risk": 1}
             ]
@@ -326,7 +326,7 @@ district_cards = {
                 {"type": "wrong", "risk": 2},
                 {"type": "partial", "risk": 1},
                 {"type": "partial"},
-                {"type": "correct", "security": 1, "time": 1}
+                {"type": "correct", "security": 2, "time": 2}
             ]
         },
         {
@@ -354,7 +354,7 @@ district_cards = {
             "answers": [
                 {"type": "partial", "risk": 1},
                 {"type": "wrong", "risk": 2},
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial", "void": 5}
             ]
         }
@@ -380,7 +380,7 @@ district_cards = {
             "answers": [
                 {"type": "wrong", "risk": 2},
                 {"type": "partial", "risk": 1},
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "wrong", "risk": 2}
             ]
         },
@@ -402,7 +402,7 @@ district_cards = {
             "skill": "malware",
             "difficulty": 2,
             "answers": [
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial", "risk": 1},
                 {"type": "wrong", "risk": 2},
                 {"type": "partial", "risk": 1}
@@ -428,7 +428,7 @@ district_cards = {
             "answers": [
                 {"type": "partial", "risk": 1},
                 {"type": "partial", "risk": 1},
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "wrong", "risk": 2}
             ]
         },
@@ -450,7 +450,7 @@ district_cards = {
             "skill": "malware",
             "difficulty": 2,
             "answers": [
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial", "risk": 1},
                 {"type": "partial"},
                 {"type": "wrong", "risk": 2}
@@ -476,7 +476,7 @@ district_cards = {
             "answers": [
                 {"type": "partial"},
                 {"type": "wrong", "risk": 2},
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "wrong", "risk": 2}
             ]
         },
@@ -498,7 +498,7 @@ district_cards = {
             "skill": "malware",
             "difficulty": 2,
             "answers": [
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial", "risk": 1},
                 {"type": "partial", "risk": 1},
                 {"type": "wrong", "risk": 2}
@@ -525,7 +525,7 @@ district_cards = {
             "difficulty": 2,
             "answers": [
                 {"type": "wrong", "risk": 1},
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial", "risk": 1},
                 {"type": "wrong", "risk": 2}
             ]
@@ -551,7 +551,7 @@ district_cards = {
                 {"type": "wrong", "risk": 2},
                 {"type": "partial", "risk": 1},
                 {"type": "partial", "risk": 1},
-                {"type": "correct", "security": 1, "time": 1}
+                {"type": "correct", "security": 2, "time": 2}
             ]
         },
         {
@@ -572,7 +572,7 @@ district_cards = {
             "skill": "passwords",
             "difficulty": 2,
             "answers": [
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial", "risk": 1},
                 {"type": "partial", "risk": 1},
                 {"type": "wrong", "risk": 2}
@@ -599,7 +599,7 @@ district_cards = {
                 {"type": "wrong", "risk": 2},
                 {"type": "partial", "risk": 1},
                 {"type": "partial", "risk": 1},
-                {"type": "correct", "security": 1, "time": 1}
+                {"type": "correct", "security": 2, "time": 2}
             ]
         }
     ],
@@ -622,7 +622,7 @@ district_cards = {
             "skill": "social_media",
             "difficulty": 2,
             "answers": [
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial", "void": 2},
                 {"type": "partial", "void": 4},
                 {"type": "wrong", "risk": 2}
@@ -649,7 +649,7 @@ district_cards = {
                 {"type": "partial", "risk": 1},
                 {"type": "partial", "risk": 1},
                 {"type": "wrong", "risk": 2},
-                {"type": "correct", "security": 1, "time": 1}
+                {"type": "correct", "security": 2, "time": 2}
             ]
         },
         {
@@ -671,7 +671,7 @@ district_cards = {
             "difficulty": 2,
             "answers": [
                 {"type": "partial", "risk": 1},
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "wrong", "risk": 2},
                 {"type": "partial", "void": 3}
             ]
@@ -697,7 +697,7 @@ district_cards = {
                 {"type": "partial", "risk": 1},
                 {"type": "partial", "void": 2},
                 {"type": "wrong", "risk": 2},
-                {"type": "correct", "security": 1, "time": 1}
+                {"type": "correct", "security": 2, "time": 2}
             ]
         },
         {
@@ -720,7 +720,7 @@ district_cards = {
             "answers": [
                 {"type": "wrong", "risk": 2},
                 {"type": "partial", "risk": 1},
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial", "risk": 1}
             ]
         },
@@ -745,7 +745,7 @@ district_cards = {
                 {"type": "wrong", "risk": 2},
                 {"type": "partial", "risk": 1},
                 {"type": "partial"},
-                {"type": "correct", "security": 1, "time": 1}
+                {"type": "correct", "security": 2, "time": 2}
             ]
         },
         {
@@ -766,7 +766,7 @@ district_cards = {
             "skill": "social_media",
             "difficulty": 2,
             "answers": [
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "wrong", "risk": 2},
                 {"type": "partial", "void": 2},
                 {"type": "partial", "risk": 1}
@@ -792,7 +792,7 @@ district_cards = {
             "answers": [
                 {"type": "partial", "risk": 1},
                 {"type": "partial", "risk": 1},
-                {"type": "correct", "security": 1, "time": 1},
+                {"type": "correct", "security": 2, "time": 2},
                 {"type": "partial", "risk": 1}
             ]
         }

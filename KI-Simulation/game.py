@@ -14,7 +14,15 @@ class Player:
 
 
 class Game:
-    def __init__(self, player_names, strategy=None):
+    def __init__(
+            self,
+            player_names,
+            strategy=None,
+            wall_cost=2,
+            teleport_cost=2,
+            risk_reduce_cost=2,
+            max_turns=30
+    ):
         self.players = []
 
         for player_data in player_names:
@@ -42,6 +50,11 @@ class Game:
         self.security_chips = 0
         self.time_chips = 0
         self.risk = 0
+        self.wall_cost = wall_cost
+        self.teleport_cost = teleport_cost
+        self.risk_reduce_cost = risk_reduce_cost
+        self.turn_count = 0
+        self.max_turns = max_turns
         self.secured_districts = set()
 
         # VOID startet später auf Pause
@@ -100,13 +113,15 @@ class Game:
             self.won = False
             print("Sicherheitsrat! Risiko hat 10 erreicht.")
 
-    def check_void_attack(self):
+    def check_void_attack(self, active_player=None):
         void_field = self.board[self.void_position]
 
-        # Steht VOID in einer Schutzzone?
         if void_field["type"] == "safe_zone":
             print("VOID steht in einer Schutzzone und greift niemanden an.")
             return
+
+        if active_player is None:
+            active_player = self.players[self.current_player_index]
 
         dangerous_positions = [
             self.void_position,
@@ -114,16 +129,31 @@ class Game:
             (self.void_position + 1) % len(self.board)
         ]
 
+        risk_increase = 0
+        attacked_players = []
+
         for player in self.players:
             player_field = self.board[player.position]
-            # Wenn der Spieler auf einer Schutzzone steht, ist er geschützt
+
             if player_field["type"] == "safe_zone":
                 print(f"{player.name} steht in einer Schutzzone und ist geschützt.")
                 continue
 
             if player.position in dangerous_positions:
-                print(f"VOID greift {player.name} an!")
-                self.increase_risk(3)
+                attacked_players.append(player.name)
+
+                if player is active_player:
+                    risk_increase += 3
+                else:
+                    risk_increase += 1
+
+        # Maximal +3 Risiko pro VOID-Angriff
+        risk_increase = min(risk_increase, 3)
+
+        if risk_increase > 0:
+            print("VOID bedroht:", ", ".join(attacked_players))
+            print(f"Risiko steigt durch VOID um +{risk_increase}.")
+            self.increase_risk(risk_increase)
 
     def handle_field_action(self, player):
         field = self.board[player.position]
@@ -139,7 +169,7 @@ class Game:
 
         elif field["type"] == "pause":
             print("Pause-Feld.")
-            self.use_time_chips_to_reduce_risk()
+            self.use_time_chips_to_reduce_risk(player)
 
         elif field["type"] == "safe_zone":
             print("Schutzzone. Du bist hier vor VOID geschützt.")
@@ -151,7 +181,7 @@ class Game:
 
             card = self.draw_event_card()
 
-            self.play_event_card(card)
+            self.play_event_card(card, player)
 
 
         elif field["type"] == "district":
@@ -189,13 +219,13 @@ class Game:
 
         if answer.get("void", 0) > 0:
             self.move_void(answer["void"])
-            self.check_void_attack()
+            self.check_void_attack(player)
 
-    def use_time_chips_to_reduce_risk(self):
-        while self.strategy.should_reduce_risk(self, None):
-            self.time_chips -= 2
+    def use_time_chips_to_reduce_risk(self, player):
+        if self.strategy.should_reduce_risk(self, player):
+            self.time_chips -= self.risk_reduce_cost
             self.risk -= 1
-            print("2 Zeit-Chips ausgegeben: Risiko -1")
+            print(f"{self.risk_reduce_cost} Zeit-Chips ausgegeben: Risiko -1")
 
     def try_build_wall(self, player):
         field = self.board[player.position]
@@ -207,8 +237,8 @@ class Game:
             print("Dieses Feld ist bereits abgesichert.")
             return
 
-        if self.security_chips >= 2:
-            self.security_chips -= 2
+        if self.security_chips >= self.wall_cost:
+            self.security_chips -= self.wall_cost
             field["protected"] = True
             print(f"Schutzmauer gebaut auf {field['name']}.")
             self.check_district_secured(field["district"])
@@ -298,12 +328,12 @@ class Game:
             possible_targets
         )
 
-        self.time_chips -= 2
+        self.time_chips -= self.teleport_cost
         old_position = player.position
         player.position = target
 
         print(f"{player.name} teleportiert sich von {old_position} nach {target}.")
-        print("2 Zeit-Chips ausgegeben.")
+        print(f"{self.teleport_cost} Zeit-Chips ausgegeben.")
 
     def draw_event_card(self):
         if len(self.event_cards) == 0:
@@ -313,14 +343,14 @@ class Game:
 
         return self.event_cards.pop(0)
 
-    def play_event_card(self, card):
+    def play_event_card(self, card, player):
 
         print(f"Allgemeine Ereigniskarte: {card['id']}")
         print(f"VOID bewegt sich bis zum nächsten {card['target_district']}-Feld.")
 
-        self.move_void_to_next_district(card["target_district"])
+        self.move_void_to_next_district(card["target_district"], player)
 
-    def move_void_to_next_district(self, target_district):
+    def move_void_to_next_district(self, target_district, player):
         steps = 0
 
         while True:
@@ -336,11 +366,12 @@ class Game:
                 print(f"VOID steht jetzt auf Feld {self.void_position}: {field['name']}")
                 break
 
-        self.check_void_attack()
+        self.check_void_attack(player)
 
     def play_turn(self):
         if self.game_over:
             return
+        self.turn_count += 1
 
         player = self.players[self.current_player_index]
 
@@ -363,7 +394,7 @@ class Game:
             return
 
         self.move_void(red_dice)
-        self.check_void_attack()
+        self.check_void_attack(player)
 
         if self.game_over:
             return
@@ -374,6 +405,10 @@ class Game:
             return
 
         self.check_win()
+        if self.turn_count >= self.max_turns and not self.game_over:
+            self.game_over = True
+            self.won = False
+            print("Zeit abgelaufen! VOID übernimmt CyberCity.")
 
         print()
         print("Team-Ressourcen:")

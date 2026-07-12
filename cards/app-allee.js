@@ -525,9 +525,9 @@ cards["oeffentliches-wlan"] = {
             consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
         },
         {
-            text: "B) Sich einloggen, wenn ein Schloss-Symbol angezeigt wird.",
+            text: "B) Sich einloggen, wenn ein Schloss-Symbol im Browser angezeigt wird.",
             type: "partial",
-            evaluation: "Teilweise vorsichtig. Das Schloss-Symbol ist wichtig, aber Max sollte trotzdem prüfen, ob die Adresse wirklich stimmt. Für wichtige Konten sind mobile Daten sicherer.",
+            evaluation: "Teilweise vorsichtig. Das Schloss-Symbol im Browser ist wichtig, aber für wichtige Konten sind mobile Daten sicherer.",
             consequence: "Risiko +1."
         },
         {

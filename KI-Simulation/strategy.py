@@ -8,16 +8,16 @@ class RandomStrategy:
         return random.choice(["clockwise", "counterclockwise"])
 
     def should_build_wall(self, game, player):
-        return game.security_chips >= 2 and random.choice([True, False])
+        return game.security_chips >= game.wall_cost and random.choice([True, False])
 
     def should_teleport(self, game, player, possible_targets):
-        return game.time_chips >= 2 and random.choice([True, False])
+        return game.time_chips >= game.teleport_cost and random.choice([True, False])
 
     def choose_teleport_target(self, game, player, possible_targets):
         return random.choice(possible_targets)
 
     def should_reduce_risk(self, game, player):
-        return game.time_chips >= 2 and game.risk > 0 and random.choice([True, False])
+        return game.time_chips >= game.risk_reduce_cost and game.risk > 0 and random.choice([True, False])
 
 difficulty_values = {
     1: 0.25,
@@ -198,7 +198,7 @@ class RuleBasedStrategy:
         district = field["district"]
 
         if district in game.secured_districts:
-            return -3
+            return -4
 
         district_fields = [
             f for f in game.board
@@ -218,8 +218,16 @@ class RuleBasedStrategy:
             if protected_count > 0:
                 score += 3
 
-            if protected_count == len(district_fields) - 1 and game.security_chips >= 2:
-                score += 6
+            if protected_count == len(district_fields) - 1 and game.security_chips >= game.wall_cost:
+                score += 8
+
+            # Bei Zeitdruck: ungeschützte Bezirksfelder werden wichtiger
+            if self.is_time_pressure(game):
+                score += 3
+
+                # Angefangene Bezirke priorisieren
+                if protected_count > 0:
+                    score += 3
 
         else:
             score -= 1
@@ -280,67 +288,62 @@ class RuleBasedStrategy:
         return False
 
     def should_build_wall(self, game, player):
-        # Ohne 2 Sicherheits-Chips kann keine Mauer gebaut werden
-        if game.security_chips < 2:
+        if game.security_chips < game.wall_cost:
             return False
 
         field = game.board[player.position]
 
-        # Mauern können nur auf Bezirksfeldern gebaut werden
         if field["type"] != "district":
             return False
 
-        # Wenn das Feld schon geschützt ist, nicht nochmal bauen
         if field["protected"]:
             return False
 
         district = field["district"]
+
+        if district in game.secured_districts:
+            return False
 
         district_fields = [
             f for f in game.board
             if f.get("district") == district
         ]
 
-        protected_fields = [
-            f for f in district_fields
+        protected_count = sum(
+            1 for f in district_fields
             if f["protected"]
-        ]
+        )
 
-        # Wenn diese Mauer den Bezirk komplett macht: auf jeden Fall bauen
-        if len(protected_fields) == len(district_fields) - 1:
+        # Wenn diese Mauer den Bezirk fertig macht: immer bauen
+        if protected_count == len(district_fields) - 1:
             return True
 
-        # Wenn noch genug Chips übrig bleiben, kann die KI auch vorbereitend bauen
-        if game.security_chips >= 4:
+        # Wenn Zeit knapp wird und im Bezirk schon Fortschritt da ist: bauen
+        if self.is_time_pressure(game) and protected_count > 0:
             return True
 
-        # Wenn keine starke Regel zutrifft:
-        # mit einer kleinen Wahrscheinlichkeit trotzdem bauen
+        # Wenn viele Chips vorhanden sind: bauen
+        if game.security_chips >= game.wall_cost + 2:
+            return True
+
         return random.random() < self.build_probability
 
     def should_reduce_risk(self, game, player):
-        def should_reduce_risk(self, game, player):
-            # Ohne 2 Zeit-Chips kann Risiko nicht reduziert werden
-            if game.time_chips < 2:
-                return False
-
-            # Wenn Risiko schon 0 ist, muss nichts reduziert werden
-            if game.risk <= 0:
-                return False
-
-            # Wenn Risiko hoch ist, auf jeden Fall reduzieren
-            if game.risk >= self.risk_reduce_threshold:
-                return True
-
-            # Wenn Risiko fast kritisch ist, ebenfalls reduzieren
-            if game.risk >= 7:
-                return True
-
-            # Bei niedrigem Risiko Zeit-Chips sparen
+        if game.time_chips < game.risk_reduce_cost:
             return False
 
+        if game.risk <= 0:
+            return False
+
+        # Bei Zeitdruck nur senken, wenn Risiko wirklich gefährlich ist
+        if self.is_time_pressure(game):
+            return game.risk >= 8
+
+        # Normalfall
+        return game.risk >= self.risk_reduce_threshold
+
     def should_teleport(self, game, player, possible_targets):
-        if game.time_chips < 2:
+        if game.time_chips < game.teleport_cost:
             return False
 
         current_score = self.evaluate_teleport_position(
@@ -352,6 +355,9 @@ class RuleBasedStrategy:
             self.evaluate_teleport_position(game, target)
             for target in possible_targets
         )
+
+        if self.is_time_pressure(game):
+            return best_target_score >= current_score + 2
 
         # Nur teleportieren, wenn das beste Ziel deutlich besser ist
         return best_target_score >= current_score + 3
@@ -532,3 +538,10 @@ class RuleBasedStrategy:
             score += 3
 
         return score
+
+    def remaining_turns(self, game):
+        return game.max_turns - game.turn_count
+
+    def is_time_pressure(self, game):
+        return self.remaining_turns(game) <= 10
+

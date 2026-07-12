@@ -22,9 +22,9 @@ cards["login-auf-fremdem-geraet"] = {
             consequence: "Risiko +1."
         },
         {
-            text: "C) Sie meldet sich ab und löscht den Verlauf.",
+            text: "C) Sie meldet sich ab und löscht den Browser-Verlauf.",
             type: "partial",
-            evaluation: "Teilweise sicher. Ausloggen ist wichtig, aber der Verlauf löscht nicht immer gespeicherte Kontodaten.",
+            evaluation: "Teilweise sicher. Das Abmelden ist wichtig. Der Browser-Verlauf speichert jedoch hauptsächlich besuchte Webseiten und Suchanfragen. Cookies, aktive Sitzungsdaten, gespeicherte Passwörter und automatisch ausgefüllte Kontodaten können weiterhin auf dem Gerät bleiben. Besonders auf einem fremden oder öffentlichen Gerät sollte sie deshalb zusätzlich Cookies und Websitedaten löschen und prüfen, ob Zugangsdaten gespeichert wurden.",
             consequence: "VOID bewegt 5 Felder vor."
         },
         {
@@ -119,7 +119,7 @@ cards["passwort-im-klassenchat"] = {
         {
             text: "B) Er testet es nicht, schickt aber einen Screenshot an Freunde.",
             type: "wrong",
-            evaluation: "Riskant und unfair. Dadurch wird das Passwort weiterverbreitet.",
+            evaluation: "Unfair und nicht nett. Dadurch wird das Passwort weiterverbreitet.",
             consequence: "Risiko +2."
         },
         {
