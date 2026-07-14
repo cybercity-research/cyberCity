@@ -70,7 +70,7 @@ cards["zwei-faktor-schutz"] = {
             text: "B) Er aktiviert den Schutz.",
             type: "correct",
             evaluation: "Sehr sicher. Ein zusätzlicher Code schützt den Account besser, falls das Passwort bekannt wird.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
+            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
         },
         {
             text: "C) Er aktiviert den Schutz nur bei Accounts mit Geld oder seltenen Spielgegenständen.",
@@ -185,7 +185,7 @@ cards["account-uebernommen"] = {
             text: "D) Sie ändert das Passwort, meldet alle Geräte ab und warnt Freunde.",
             type: "correct",
             evaluation: "Sehr sicher. So schützt Lea ihren Account, ihre Freunde, Chats und Erinnerungen. Außerdem verhindert sie, dass andere auf die Links klicken.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
+            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
         }
     ],
     helpSources: [
@@ -266,7 +266,7 @@ cards["freund-will-passwort"] = {
             text: "A) Er loggt sich selbst ein und zeigt den Gegenstand auf seinem Gerät.",
             type: "correct",
             evaluation: "Sehr sicher. Jonas gibt sein Passwort nicht weiter und schützt seinen Account, in dem Spielzeit, seltene Gegenstände und Fortschritt stecken.",
-            consequence: "+1 Sicherheits-Chip, +1 Zeit-Chip und möglicher Passwort-Profi Badge."
+            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
         },
         {
             text: "B) Er gibt das Passwort kurz weiter und ändert es danach.",
@@ -381,7 +381,7 @@ cards["passwort-fuer-mehrere-konten"] = {
             text: "D) Er ändert zuerst das E-Mail-Passwort und nutzt danach unterschiedliche Passwörter.",
             type: "correct",
             evaluation: "Sehr sicher. Das E-Mail-Konto ist besonders wichtig, weil man darüber oft andere Konten zurücksetzen kann. So schützt Ben auch Spielstände, Schulzugänge und persönliche Nachrichten.",
-            consequence: "+1 Sicherheits-Chip und +1 Zeit-Chip."
+            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
         }
     ],
     helpSources: [

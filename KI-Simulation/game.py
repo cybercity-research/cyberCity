@@ -222,10 +222,29 @@ class Game:
             self.check_void_attack(player)
 
     def use_time_chips_to_reduce_risk(self, player):
-        if self.strategy.should_reduce_risk(self, player):
+        #if self.strategy.should_reduce_risk(self, player):
+         #   self.time_chips -= self.risk_reduce_cost
+          #  self.risk -= 1
+           # print(f"{self.risk_reduce_cost} Zeit-Chips ausgegeben: Risiko -1")
+
+        reductions = 0
+
+        while (
+                self.risk > 0
+                and self.time_chips >= self.risk_reduce_cost
+                and self.strategy.should_reduce_risk(self, player)
+        ):
             self.time_chips -= self.risk_reduce_cost
             self.risk -= 1
-            print(f"{self.risk_reduce_cost} Zeit-Chips ausgegeben: Risiko -1")
+            reductions += 1
+
+            print(
+                f"{self.risk_reduce_cost} Zeit-Chips ausgegeben: "
+                f"Risiko -1 (aktuelles Risiko: {self.risk})"
+            )
+
+        if reductions == 0:
+            print("Keine Zeit-Chips zur Risikosenkung ausgegeben.")
 
     def try_build_wall(self, player):
         field = self.board[player.position]

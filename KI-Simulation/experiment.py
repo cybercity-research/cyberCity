@@ -29,6 +29,12 @@ FAMILIES = {
         {"name": "Elternteil 1", "role": "parent", "profile": PARENT_PROFILE}
     ],
 
+    "1 Kind + 2 Elternteile": [
+        {"name": "Kind 1", "role": "child", "profile": CHILD_PROFILE},
+        {"name": "Elternteil 1", "role": "parent", "profile": PARENT_PROFILE},
+        {"name": "Elternteil 2", "role": "parent", "profile": PARENT_PROFILE},
+    ],
+
     "2 Kinder + 2 Elternteile": [
         {"name": "Kind 1", "role": "child", "profile": CHILD_PROFILE},
         {"name": "Kind 2", "role": "child", "profile": CHILD_PROFILE},
@@ -48,10 +54,12 @@ def run_one_game(strategy_class, players, seed):
 
     game = Game(
         players,
-        strategy=strategy_class()
+        strategy=strategy_class(),
+        max_turns=MAX_TURNS
     )
 
     turns = 0
+    turn_log = []
 
     # Verhindert, dass bei 1000 Spielen alles ausgegeben wird
     with contextlib.redirect_stdout(io.StringIO()):
@@ -59,8 +67,31 @@ def run_one_game(strategy_class, players, seed):
             if game.game_over:
                 break
 
+            # Wichtig: Vor play_turn() speichern, weil danach bereits
+            # der nächste Spieler aktiv sein kann.
+            active_player = game.players[game.current_player_index]
+
             game.play_turn()
             turns += 1
+
+            # Zustand NACH dem gerade abgeschlossenen Spielerzug speichern.
+            turn_log.append({
+                "turn": game.turn_count,
+                # Eine Teamrunde ist abgeschlossen, wenn alle Spieler
+                # jeweils einmal am Zug waren.
+                "team_round": (
+                    (game.turn_count - 1) // len(game.players)
+                ) + 1,
+                "active_player": active_player.name,
+                "active_role": active_player.role,
+                "risk": game.risk,
+                "security_chips": game.security_chips,
+                "time_chips": game.time_chips,
+                "secured_district_count": len(game.secured_districts),
+                "void_position": game.void_position,
+                "game_over": game.game_over,
+                "won": game.won
+            })
 
     if game.game_over and game.won:
         outcome = "win"
@@ -69,7 +100,7 @@ def run_one_game(strategy_class, players, seed):
     else:
         outcome = "timeout"
 
-    return {
+    final_result = {
         "outcome": outcome,
         "won": game.won,
         "turns": turns,
@@ -77,12 +108,15 @@ def run_one_game(strategy_class, players, seed):
         "security_chips": game.security_chips,
         "time_chips": game.time_chips,
         "secured_district_count": len(game.secured_districts),
-        "secured_districts": "|".join(game.secured_districts)
+        "secured_districts": "|".join(sorted(game.secured_districts))
     }
+
+    return final_result, turn_log
 
 
 def run_experiment():
     rows = []
+    all_turn_rows = []
 
     for family_name, players in FAMILIES.items():
         for strategy_name, strategy_class in STRATEGIES.items():
@@ -90,22 +124,29 @@ def run_experiment():
 
                 seed = run_id
 
-                result = run_one_game(
+                result, game_turn_log = run_one_game(
                     strategy_class,
                     players,
                     seed
                 )
 
-                row = {
+                rows.append({
                     "family": family_name,
                     "strategy": strategy_name,
                     "run_id": run_id,
                     **result
-                }
+                })
 
-                rows.append(row)
+                # Familienname, Strategie und Laufnummer zu jedem Zug ergänzen.
+                for turn_data in game_turn_log:
+                    all_turn_rows.append({
+                        "family": family_name,
+                        "strategy": strategy_name,
+                        "run_id": run_id,
+                        **turn_data
+                    })
 
-    return rows
+    return rows, all_turn_rows
 
 
 def save_results(rows, filename="results.csv"):
@@ -129,6 +170,30 @@ def save_results(rows, filename="results.csv"):
         writer.writerows(rows)
 
 
+def save_turn_log(turn_rows, filename="turn_log.csv"):
+    fieldnames = [
+        "family",
+        "strategy",
+        "run_id",
+        "turn",
+        "team_round",
+        "active_player",
+        "active_role",
+        "risk",
+        "security_chips",
+        "time_chips",
+        "secured_district_count",
+        "void_position",
+        "game_over",
+        "won"
+    ]
+
+    with open(filename, "w", newline="", encoding="utf-8") as file:
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(turn_rows)
+
+
 def print_summary(rows):
     print("\nERGEBNISSE\n")
 
@@ -149,23 +214,35 @@ def print_summary(rows):
 
             win_rate = wins / n
 
-            # 95%-Konfidenzintervall für die Gewinnrate
             standard_error = sqrt(win_rate * (1 - win_rate) / n)
             ci_95 = 1.96 * standard_error
 
             avg_turns = mean(row["turns"] for row in data)
             avg_risk = mean(row["risk"] for row in data)
-            avg_secured = mean(row["secured_district_count"] for row in data)
+            avg_secured = mean(
+                row["secured_district_count"] for row in data
+            )
 
             print(f"\n  Strategie: {strategy_name}")
-            print(f"  Gewinnrate: {win_rate * 100:.1f}% ± {ci_95 * 100:.1f}%")
+            print(
+                f"  Gewinnrate: "
+                f"{win_rate * 100:.1f}% ± {ci_95 * 100:.1f}%"
+            )
             print(f"  Niederlagen: {losses}")
             print(f"  Timeouts: {timeouts}")
-            print(f"  Ø Runden: {avg_turns:.1f}")
+            print(f"  Ø Spielerzüge: {avg_turns:.1f}")
             print(f"  Ø Endrisiko: {avg_risk:.2f}")
             print(f"  Ø abgesicherte Bezirke: {avg_secured:.2f}")
 
 
-rows = run_experiment()
-save_results(rows)
-print_summary(rows)
+if __name__ == "__main__":
+    rows, turn_rows = run_experiment()
+
+    save_results(rows, "results.csv")
+    save_turn_log(turn_rows, "turn_log.csv")
+
+    print_summary(rows)
+
+    print("\nGespeicherte Dateien:")
+    print("- results.csv: Endzustand jedes Spiels")
+    print("- turn_log.csv: Zustand nach jedem Spielerzug")
