@@ -25,7 +25,7 @@ cards["frage-nach-schule"] = {
             text: "C) Sie nennt ihre Schule nicht und beendet den Chat bei weiterem Nachfragen.",
             type: "correct",
             evaluation: "Sehr sicher. Die Schule ist ein privater Ort, an dem Emma regelmäßig ist. Wenn jemand weiter nachfragt, ist das ein Warnzeichen.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "D) Sie nennt einen Ort in der Nähe der Schule.",
@@ -123,7 +123,7 @@ cards["schlechtes-bauchgefuehl"] = {
             text: "B) Er beendet den Chat und erzählt es einem Erwachsenen.",
             type: "correct",
             evaluation: "Sehr sicher. Wenn sich ein Chat komisch oder unangenehm anfühlt, sollte Ben das ernst nehmen.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "C) Er löscht sofort die App.",
@@ -223,7 +223,7 @@ cards["altersluege"] = {
             text: "B) Sie teilt nichts Privates mehr und holt Hilfe wenn es sich unangenehm anfühlt.",
             type: "correct",
             evaluation: "Sehr sicher. Widersprüchliche Angaben beim Alter sind ein Warnzeichen.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "C) Sie blockiert sofort alle neuen Kontakte.",
@@ -331,7 +331,7 @@ cards["geschenk-im-spiel"] = {
             text: "D) Er bedankt sich, gibt aber keine privaten Daten weiter.",
             type: "correct",
             evaluation: "Sehr sicher. Ein Geschenk verpflichtet nicht dazu, private Daten zu teilen. Amir schützt damit seinen Account, seine Spielzeit und seine Privatsphäre.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         }
     ],
     helpSources: [
@@ -426,7 +426,7 @@ cards["unbekannte-freundschaftsanfrage"] = {
             text: "C) Er fragt die Person persönlich oder über einen anderen Weg.",
             type: "correct",
             evaluation: "Sehr sicher. Tom prüft die Identität nicht nur über Profilfoto und gemeinsame Kontakte.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "D) Er stellt im Chat eine Frage zur Schule.",

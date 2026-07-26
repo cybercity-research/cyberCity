@@ -19,7 +19,7 @@ cards["peinliches-klassenfoto"] = {
             text: "B) Er leitet das Foto nicht weiter, widerspricht fair und holt Hilfe, wenn es weitergeht.",
             type: "correct",
             evaluation: "Sehr sicher und fair. Das Foto wird nicht weiterverbreitet und Tim wird unterstützt. So schützt Leon auch Tims Würde und seinen Ruf in der Klasse.",
-            consequence: "+2 Sicherheits-Chip, +2 Zeit-Chip und möglicher Fair-online Badge."
+            consequence: "+2 Sicherheits-Chip, +1 Zeit-Chip und möglicher Fair-online Badge."
         },
         {
             text: "C) Er macht einen Screenshot und schickt ihn an Freunde.",
@@ -69,7 +69,7 @@ cards["geruecht-im-chat"] = {
             text: "A) Sie leitet es nicht weiter und schreibt: „Das ist privat.“",
             type: "correct",
             evaluation: "Sehr sicher und fair. Josie schützt Cindys Privatsphäre und stoppt das Gerücht.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "B) Sie löscht die Nachricht und macht nicht mit.",
@@ -187,7 +187,7 @@ cards["bilder-fuer-praesentation"] = {
             text: "D) Sie suchen frei nutzbare Bilder und geben die Quelle korrekt an.",
             type: "correct",
             evaluation: "Sehr sicher. So nutzen sie Bilder, die erlaubt sind, und geben trotzdem an, woher sie kommen.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         }
     ],
     helpSources: [
@@ -280,7 +280,7 @@ cards["foto-soll-weg"] = {
             text: "B) Sie bittet um Löschung und nutzt die Meldefunktion, wenn es nicht entfernt wird.",
             type: "correct",
             evaluation: "Sehr sicher. Romy schützt ihre Privatsphäre und sorgt dafür, dass ein unangenehmes Foto nicht weiter zu ihrer Online-Geschichte gehört.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "C) Sie speichert das Foto und schickt es Freunden als Beweis.",
@@ -387,7 +387,7 @@ cards["unglaubliches-skateboard-video"] = {
             text: "D) Er prüft, woher das Video kommt, sucht das Original und vergleicht mit verlässlichen Quellen.",
             type: "correct",
             evaluation: "Sehr sicher. Bob prüft das Video, bevor er es glaubt oder teilt.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         }
     ],
     helpSources: [
@@ -485,7 +485,7 @@ cards["einseitige-webseite"] = {
             text: "C) Sie prüft den Autor und vergleicht andere Quellen.",
             type: "correct",
             evaluation: "Sehr sicher. Nina erkennt mögliche Einseitigkeit und prüft die Informationen genauer.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "D) Sie übernimmt nur die stärksten Sätze.",
@@ -591,7 +591,7 @@ cards["oeffentliches-profil"] = {
             text: "D) Sie prüft, wer ihr Profil sehen kann, und entfernt Schule, Wohnort und andere private Infos.",
             type: "correct",
             evaluation: "Sehr sicher. Lea schützt nicht nur ihre Daten, sondern auch ihren Alltag, ihre Fotos und ihren eigenen Online-Ruf.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         }
     ],
     helpSources: [
@@ -682,7 +682,7 @@ cards["fake-account"] = {
             text: "A) Er folgt nicht, informiert die Person und meldet den Account.",
             type: "correct",
             evaluation: "Sehr sicher und fair. Der Fake-Account wird nicht unterstützt. So schützt Emil den Namen, den Ruf und die Privatsphäre der betroffenen Person.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "B) Er folgt, weil es lustig ist.",
@@ -794,7 +794,7 @@ cards["urlaubsstandort"] = {
             text: "C) Sie postet später, ohne genauen Standort, und fragt ihre Familie vorher.",
             type: "correct",
             evaluation: "Sehr sicher. Maja schützt ihren aktuellen Aufenthaltsort und die Privatsphäre ihrer Familie.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "D) Sie postet mit Standort nur für enge Freunde.",

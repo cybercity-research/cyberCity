@@ -70,21 +70,36 @@ class Game:
 
     def move_player(self, player, steps, direction="clockwise"):
         old_position = player.position
+        reward_received = False
 
-        for _ in range(steps):
+        for step_number in range(steps):
+            previous_position = player.position
+
             if direction == "clockwise":
                 player.position = (player.position + 1) % len(self.board)
+
+                # Im Uhrzeigersinn wurde Start erreicht oder überquert
+                if player.position == 0:
+                    reward_received = True
+
             else:
                 player.position = (player.position - 1) % len(self.board)
 
-            # Prüfen: ist die Figur auf Start gelandet oder darübergelaufen?
-            if player.position == 0:
-                self.security_chips += 1
-                self.time_chips += 1
+                # Gegen den Uhrzeigersinn gibt es die Belohnung nur,
+                # wenn die Bewegung genau auf Start endet
+                if (
+                        player.position == 0
+                        and step_number == steps - 1
+                ):
+                    reward_received = True
 
-                print(">>> Start erreicht!")
-                print("+1 Sicherheits-Chip")
-                print("+1 Zeit-Chip")
+        if reward_received:
+            self.security_chips += 1
+            self.time_chips += 1
+
+            print(">>> Start erreicht!")
+            print("+1 Sicherheits-Chip")
+            print("+1 Zeit-Chip")
 
         field = self.board[player.position]
 
@@ -284,6 +299,14 @@ class Game:
             print("🏆 Ihr habt CyberCity gewonnen!")
 
     def draw_district_card(self, district):
+
+        if district in self.secured_districts:
+            print(
+                f"Bezirk '{district}' ist bereits abgesichert. "
+                "Es wird keine Bezirkskarte gezogen."
+            )
+            return None
+
         deck = self.district_cards[district]
 
         if len(deck) == 0:

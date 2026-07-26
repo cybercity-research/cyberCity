@@ -40,7 +40,22 @@ FAMILIES = {
         {"name": "Kind 2", "role": "child", "profile": CHILD_PROFILE},
         {"name": "Elternteil 1", "role": "parent", "profile": PARENT_PROFILE},
         {"name": "Elternteil 2", "role": "parent", "profile": PARENT_PROFILE}
-    ]
+    ],
+
+    "3 Kinder + 1 Elternteil": [
+        {"name": "Kind 1", "role": "child", "profile": CHILD_PROFILE},
+        {"name": "Kind 2", "role": "child", "profile": CHILD_PROFILE},
+        {"name": "Kind 3", "role": "child", "profile": CHILD_PROFILE},
+        {"name": "Elternteil 1", "role": "parent", "profile": PARENT_PROFILE},
+    ],
+
+    "1 Kind + 3 Elternteile": [
+        {"name": "Kind 1", "role": "child", "profile": CHILD_PROFILE},
+        {"name": "Elternteil 1", "role": "parent", "profile": PARENT_PROFILE},
+        {"name": "Elternteil 2", "role": "parent", "profile": PARENT_PROFILE},
+        {"name": "Elternteil 3", "role": "parent", "profile": PARENT_PROFILE},
+    ],
+
 }
 
 

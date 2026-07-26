@@ -26,7 +26,7 @@ cards["taschenlampen-app"] = {
             text: "C) Eingebaute Taschenlampe nutzen oder App mit weniger Zugriffen wählen.",
             type: "correct",
             evaluation: "Sehr sicher. Eine Taschenlampe braucht normalerweise keinen Zugriff auf Kontakte, Standort oder Mikrofon.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "D) App installieren, aber unnötige Zugriffe ablehnen.",
@@ -118,7 +118,7 @@ cards["in-app-kauf"] = {
             text: "A) Warten, überlegen und nach den Familienregeln fragen.",
             type: "correct",
             evaluation: "Sehr sicher. Emma kauft nicht spontan, lässt sich nicht vom Zeitdruck stressen, beachtet die Familienregeln und entscheidet nicht heimlich.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "B) Kaufen, weil 4,99 € wenig sind.",
@@ -214,7 +214,7 @@ cards["mikrofonzugriff"] = {
             text: "A) Mikrofon ablehnen und prüfen, ob die App trotzdem funktioniert.",
             type: "correct",
             evaluation: "Sehr sicher. Eine Mal-App braucht normalerweise kein Mikrofon. Wenn sie ohne Mikrofon nicht funktioniert, sollte Lina lieber eine andere App wählen.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "B) Mikrofon kurz erlauben und später ausschalten.",
@@ -320,7 +320,7 @@ cards["peinliche-werbung"] = {
             text: "C) Lea nicht bloßstellen und gemeinsam Verlauf, Cookies oder Werbeeinstellungen prüfen.",
             type: "correct",
             evaluation: "Sehr sicher. Daniel stellt Lea nicht bloß und beide können die Privatsphäre-Einstellungen verbessern.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "D) Lea soll ab jetzt privat surfen und nichts sagen.",
@@ -429,7 +429,7 @@ cards["bildschirmzeit-check"] = {
             text: "D) Den Freunden sagen, dass jetzt Pause ist und später weiterspielen.",
             type: "correct",
             evaluation: "Sehr sicher. Noah nimmt seine Müdigkeit ernst und bleibt trotzdem freundlich.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         }
     ],
     helpSources: [
@@ -522,7 +522,7 @@ cards["oeffentliches-wlan"] = {
             text: "A) Für E-Mails mobile Daten nutzen oder bis zuhause warten.",
             type: "correct",
             evaluation: "Sehr sicher. Für wichtige Logins ist ein offenes WLAN ohne Passwort riskanter.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "B) Sich einloggen, wenn ein Schloss-Symbol im Browser angezeigt wird.",

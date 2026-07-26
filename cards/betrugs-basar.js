@@ -70,7 +70,7 @@ cards["falscher-paketdienst"] = {
             text: "B) Die Sendung in der offiziellen Paketdienst-App oder Webseite prüfen.",
             type: "correct",
             evaluation: "Sehr sicher. Tom folgt nicht dem SMS-Link und gibt keine Zahlungsdaten auf einer unbekannten Seite ein.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "C) Den Link öffnen und Logo sowie Adresse prüfen.",
@@ -182,7 +182,7 @@ cards["fake-shop"] = {
             text: "D) Sie kauft nicht direkt und prüft den Anbieter zuerst woanders.",
             type: "correct",
             evaluation: "Sehr sicher. Fehlendes Impressum, kaum Anbieterinfos und ein extrem niedriger Preis sind Warnzeichen.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         }
     ],
     helpSources: [
@@ -273,7 +273,7 @@ cards["verdaechtiger-qr-code"] = {
             text: "B) Sie benutzt einen QR-Code-Scanner, der zunächst den Link anzeigt, und überprüft diesen.",
             type: "correct",
             evaluation: "Sehr sicher. Lea behandelt den QR-Code wie einen unbekannten Link.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         },
         {
             text: "C) Sie scannt den QR-Code und gibt nur ihren Namen und ihre E-Mail-Adresse ein.",
@@ -387,7 +387,7 @@ cards["influencer-code"] = {
             text: "D) Sie prüft die Aktion direkt im Spiel.",
             type: "correct",
             evaluation: "Sehr sicher. Mia gibt keine Login-Daten auf einer fremden Seite ein und schützt so ihren Account, ihre Spielwährung und ihren Fortschritt.",
-            consequence: "+2 Sicherheits-Chips und +2 Zeit-Chips."
+            consequence: "+2 Sicherheits-Chips und +1 Zeit-Chips."
         }
     ],
     helpSources: [
