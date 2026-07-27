@@ -1,5 +1,6 @@
 import random
 
+
 class RandomStrategy:
     def choose_card_answer(self, card, game, player):
         return random.choice(card["answers"])
@@ -8,22 +9,45 @@ class RandomStrategy:
         return random.choice(["clockwise", "counterclockwise"])
 
     def should_build_wall(self, game, player):
-        return game.security_chips >= game.wall_cost and random.choice([True, False])
+        if game.security_chips < game.wall_cost:
+            return False
+
+        field = game.board[player.position]
+
+        if field["type"] != "district":
+            return False
+
+        if field["protected"]:
+            return False
+
+        if field["district"] in game.secured_districts:
+            return False
+
+        return random.choice([True, False])
 
     def should_teleport(self, game, player, possible_targets):
-        return game.time_chips >= game.teleport_cost and random.choice([True, False])
+        return (
+            game.time_chips >= game.teleport_cost
+            and random.choice([True, False])
+        )
 
     def choose_teleport_target(self, game, player, possible_targets):
         return random.choice(possible_targets)
 
     def should_reduce_risk(self, game, player):
-        return game.time_chips >= game.risk_reduce_cost and game.risk > 0 and random.choice([True, False])
+        return (
+            game.time_chips >= game.risk_reduce_cost
+            and game.risk > 0
+            and random.choice([True, False])
+        )
+
 
 difficulty_values = {
     1: 0.25,
     2: 0.55,
     3: 0.80
 }
+
 
 CHILD_PROFILE = {
     "apps": 0.7,
@@ -51,6 +75,7 @@ def probability_correct(skill, difficulty):
 
     return max(0.10, min(0.95, p))
 
+
 class RuleBasedStrategy:
     def __init__(
         self,
@@ -61,8 +86,7 @@ class RuleBasedStrategy:
         scams=0.7,
         social_media=0.7,
         build_probability=0.4,
-        risk_reduce_threshold = 3
-
+        risk_reduce_threshold=3
     ):
         self.skills = {
             "apps": apps,
@@ -79,7 +103,10 @@ class RuleBasedStrategy:
         skill_name = card["skill"]
 
         if player is not None and player.profile is not None:
-            skill = player.profile.get(skill_name, self.skills.get(skill_name, 0.7))
+            skill = player.profile.get(
+                skill_name,
+                self.skills.get(skill_name, 0.7)
+            )
         else:
             skill = self.skills.get(skill_name, 0.7)
 
@@ -122,22 +149,33 @@ class RuleBasedStrategy:
             "counterclockwise"
         )
 
-        clockwise_passes_start = self.passes_start(
+        clockwise_gets_start_reward = self.gets_start_reward(
             game,
             player.position,
             white_dice,
             "clockwise"
         )
 
-        counterclockwise_passes_start = self.passes_start(
+        counterclockwise_gets_start_reward = self.gets_start_reward(
             game,
             player.position,
             white_dice,
             "counterclockwise"
         )
 
-        clockwise_score = self.evaluate_position(game, clockwise_position, red_dice, clockwise_passes_start)
-        counterclockwise_score = self.evaluate_position(game, counterclockwise_position, red_dice, counterclockwise_passes_start)
+        clockwise_score = self.evaluate_position(
+            game,
+            clockwise_position,
+            red_dice,
+            clockwise_gets_start_reward
+        )
+
+        counterclockwise_score = self.evaluate_position(
+            game,
+            counterclockwise_position,
+            red_dice,
+            counterclockwise_gets_start_reward
+        )
 
         if clockwise_score > counterclockwise_score:
             return "clockwise"
@@ -145,7 +183,7 @@ class RuleBasedStrategy:
         if counterclockwise_score > clockwise_score:
             return "counterclockwise"
 
-        # Wenn beide gleich gut sind, zufällig entscheiden
+        # Wenn beide Richtungen gleich gut sind, zufällig entscheiden.
         return random.choice(["clockwise", "counterclockwise"])
 
     def get_target_position(self, game, start_position, steps, direction):
@@ -159,7 +197,47 @@ class RuleBasedStrategy:
 
         return position
 
-    def evaluate_position(self, game, position, red_dice, passed_start):
+    def gets_start_reward(
+        self,
+        game,
+        start_position,
+        steps,
+        direction
+    ):
+        """
+        Prüft, ob die Bewegung eine Startbelohnung auslöst.
+
+        Regeln:
+        - Im Uhrzeigersinn: Belohnung beim Erreichen oder Überqueren von Start.
+        - Gegen den Uhrzeigersinn: Belohnung nur bei exakter Landung auf Start.
+        """
+        if direction == "clockwise":
+            position = start_position
+
+            for _ in range(steps):
+                position = (position + 1) % len(game.board)
+
+                if position == 0:
+                    return True
+
+            return False
+
+        target_position = self.get_target_position(
+            game,
+            start_position,
+            steps,
+            direction
+        )
+
+        return target_position == 0
+
+    def evaluate_position(
+        self,
+        game,
+        position,
+        red_dice,
+        gets_start_reward
+    ):
         field = game.board[position]
 
         score = 0
@@ -171,27 +249,45 @@ class RuleBasedStrategy:
             score += 4
 
         elif field["type"] == "pause":
-            if game.risk >= self.risk_reduce_threshold and game.time_chips >= 2:
+            if (
+                game.risk >= self.risk_reduce_threshold
+                and game.time_chips >= game.risk_reduce_cost
+            ):
                 score += 5
             else:
                 score += 1
 
         elif field["type"] == "district":
-            score += 2
-            score += self.evaluate_district_progress(game, field)
+            district = field["district"]
+
+            if district in game.secured_districts:
+                # In abgesicherten Bezirken wird keine Karte mehr gezogen
+                # und es muss keine Schutzmauer mehr gebaut werden.
+                score -= 4
+            else:
+                score += 2
+                score += self.evaluate_district_progress(game, field)
 
         elif field["type"] == "event":
             score -= 1
 
         elif field["type"] == "start":
+            # Start besitzt keinen weiteren Feldeffekt.
+            # Die Belohnung wird weiter unten bewertet.
+            score += 0
+
+        void_score = self.evaluate_void_safety(
+            game,
+            position,
+            red_dice
+        )
+        score += void_score
+
+        # Startbelohnung: +1 Sicherheits-Chip und +1 Zeit-Chip.
+        # Bei direkter VOID-Gefahr wird sie nicht überbewertet.
+        if gets_start_reward and void_score > -10:
             score += 3
 
-        void_score = self.evaluate_void_safety(game, position, red_dice)
-        score += void_score
-        # Start-Bonus nur klein bewerten
-        # und nur dann, wenn die Position nicht direkt gefährlich ist
-        if passed_start and void_score > -10:
-            score += 2
         return score
 
     def evaluate_district_progress(self, game, field):
@@ -201,13 +297,13 @@ class RuleBasedStrategy:
             return -4
 
         district_fields = [
-            f for f in game.board
-            if f.get("district") == district
+            board_field for board_field in game.board
+            if board_field.get("district") == district
         ]
 
         protected_count = sum(
-            1 for f in district_fields
-            if f["protected"]
+            1 for board_field in district_fields
+            if board_field["protected"]
         )
 
         score = 0
@@ -218,14 +314,17 @@ class RuleBasedStrategy:
             if protected_count > 0:
                 score += 3
 
-            if protected_count == len(district_fields) - 1 and game.security_chips >= game.wall_cost:
+            if (
+                protected_count == len(district_fields) - 1
+                and game.security_chips >= game.wall_cost
+            ):
                 score += 8
 
-            # Bei Zeitdruck: ungeschützte Bezirksfelder werden wichtiger
+            # Bei Zeitdruck werden ungeschützte Bezirksfelder wichtiger.
             if self.is_time_pressure(game):
                 score += 3
 
-                # Angefangene Bezirke priorisieren
+                # Angefangene Bezirke priorisieren.
                 if protected_count > 0:
                     score += 3
 
@@ -240,7 +339,10 @@ class RuleBasedStrategy:
         if field["type"] == "safe_zone":
             return 4
 
-        future_void_position = (game.void_position + red_dice) % len(game.board)
+        future_void_position = (
+            game.void_position + red_dice
+        ) % len(game.board)
+
         future_void_field = game.board[future_void_position]
 
         if future_void_field["type"] == "safe_zone":
@@ -273,20 +375,6 @@ class RuleBasedStrategy:
 
         return 0
 
-    def passes_start(self, game, start_position, steps, direction):
-        position = start_position
-
-        for _ in range(steps):
-            if direction == "clockwise":
-                position = (position + 1) % len(game.board)
-            else:
-                position = (position - 1) % len(game.board)
-
-            if position == 0:
-                return True
-
-        return False
-
     def should_build_wall(self, game, player):
         if game.security_chips < game.wall_cost:
             return False
@@ -305,24 +393,24 @@ class RuleBasedStrategy:
             return False
 
         district_fields = [
-            f for f in game.board
-            if f.get("district") == district
+            board_field for board_field in game.board
+            if board_field.get("district") == district
         ]
 
         protected_count = sum(
-            1 for f in district_fields
-            if f["protected"]
+            1 for board_field in district_fields
+            if board_field["protected"]
         )
 
-        # Wenn diese Mauer den Bezirk fertig macht: immer bauen
+        # Wenn diese Mauer den Bezirk fertigstellt: immer bauen.
         if protected_count == len(district_fields) - 1:
             return True
 
-        # Wenn Zeit knapp wird und im Bezirk schon Fortschritt da ist: bauen
+        # Wenn Zeit knapp wird und schon Fortschritt da ist: bauen.
         if self.is_time_pressure(game) and protected_count > 0:
             return True
 
-        # Wenn viele Chips vorhanden sind: bauen
+        # Wenn viele Chips vorhanden sind: bauen.
         if game.security_chips >= game.wall_cost + 2:
             return True
 
@@ -335,11 +423,10 @@ class RuleBasedStrategy:
         if game.risk <= 0:
             return False
 
-        # Bei Zeitdruck nur senken, wenn Risiko wirklich gefährlich ist
+        # Bei Zeitdruck nur senken, wenn das Risiko wirklich gefährlich ist.
         if self.is_time_pressure(game):
             return game.risk >= 8
 
-        # Normalfall
         return game.risk >= self.risk_reduce_threshold
 
     def should_teleport(self, game, player, possible_targets):
@@ -359,10 +446,15 @@ class RuleBasedStrategy:
         if self.is_time_pressure(game):
             return best_target_score >= current_score + 2
 
-        # Nur teleportieren, wenn das beste Ziel deutlich besser ist
+        # Nur teleportieren, wenn das beste Ziel deutlich besser ist.
         return best_target_score >= current_score + 3
 
-    def choose_teleport_target(self, game, player, possible_targets):
+    def choose_teleport_target(
+        self,
+        game,
+        player,
+        possible_targets
+    ):
         best_target = possible_targets[0]
         best_score = self.evaluate_teleport_position(
             game,
@@ -384,9 +476,8 @@ class RuleBasedStrategy:
     def evaluate_teleport_position(self, game, position):
         total_score = 0
 
-        # Die KI weiß beim Teleportieren noch nicht,
-        # welche Zahl sie würfelt.
-        # Deshalb schauen wir alle möglichen Würfe von 1 bis 6 an.
+        # Beim Teleportieren ist die nächste Würfelzahl noch unbekannt.
+        # Deshalb werden alle möglichen Würfe von 1 bis 6 betrachtet.
         for dice in range(1, 7):
             clockwise_position = self.get_target_position(
                 game,
@@ -402,14 +493,14 @@ class RuleBasedStrategy:
                 "counterclockwise"
             )
 
-            clockwise_passes_start = self.passes_start(
+            clockwise_gets_start_reward = self.gets_start_reward(
                 game,
                 position,
                 dice,
                 "clockwise"
             )
 
-            counterclockwise_passes_start = self.passes_start(
+            counterclockwise_gets_start_reward = self.gets_start_reward(
                 game,
                 position,
                 dice,
@@ -419,17 +510,18 @@ class RuleBasedStrategy:
             clockwise_score = self.evaluate_teleport_landing_field(
                 game,
                 clockwise_position,
-                clockwise_passes_start
+                clockwise_gets_start_reward
             )
 
-            counterclockwise_score = self.evaluate_teleport_landing_field(
-                game,
-                counterclockwise_position,
-                counterclockwise_passes_start
+            counterclockwise_score = (
+                self.evaluate_teleport_landing_field(
+                    game,
+                    counterclockwise_position,
+                    counterclockwise_gets_start_reward
+                )
             )
 
             # Nach dem Würfeln darf die KI die Richtung wählen.
-            # Deshalb nehmen wir für jeden Würfelwurf die bessere Richtung.
             best_score_for_this_dice = max(
                 clockwise_score,
                 counterclockwise_score
@@ -437,12 +529,14 @@ class RuleBasedStrategy:
 
             total_score += best_score_for_this_dice
 
-        # Durchschnitt über alle möglichen Würfelwürfe
-        average_score = total_score / 6
+        return total_score / 6
 
-        return average_score
-
-    def evaluate_teleport_landing_field(self, game, position, passed_start):
+    def evaluate_teleport_landing_field(
+        self,
+        game,
+        position,
+        gets_start_reward
+    ):
         field = game.board[position]
 
         score = 0
@@ -454,7 +548,10 @@ class RuleBasedStrategy:
             score += 3
 
         elif field["type"] == "pause":
-            if game.risk >= self.risk_reduce_threshold and game.time_chips >= 2:
+            if (
+                game.risk >= self.risk_reduce_threshold
+                and game.time_chips >= game.risk_reduce_cost
+            ):
                 score += 5
             else:
                 score += 2
@@ -463,15 +560,22 @@ class RuleBasedStrategy:
             score -= 3
 
         elif field["type"] == "start":
-            score += 2
+            # Start besitzt keinen zusätzlichen Feldeffekt.
+            score += 0
 
         elif field["type"] == "district":
-            score += self.evaluate_landing_district_field(game, field)
+            score += self.evaluate_landing_district_field(
+                game,
+                field
+            )
 
-        if passed_start:
-            score += 2
+        if gets_start_reward:
+            score += 3
 
-        score += self.evaluate_landing_void_risk(game, position)
+        score += self.evaluate_landing_void_risk(
+            game,
+            position
+        )
 
         return score
 
@@ -482,13 +586,13 @@ class RuleBasedStrategy:
             return -4
 
         district_fields = [
-            f for f in game.board
-            if f.get("district") == district
+            board_field for board_field in game.board
+            if board_field.get("district") == district
         ]
 
         protected_count = sum(
-            1 for f in district_fields
-            if f["protected"]
+            1 for board_field in district_fields
+            if board_field["protected"]
         )
 
         if field["protected"]:
@@ -496,13 +600,15 @@ class RuleBasedStrategy:
 
         score = 3
 
-        # Je mehr Felder in diesem Bezirk schon abgesichert sind,
-        # desto wertvoller ist es, auf ein weiteres ungeschütztes Feld zu kommen.
+        # Je mehr Felder schon abgesichert sind, desto wertvoller
+        # wird ein weiteres ungeschütztes Feld dieses Bezirks.
         score += protected_count * 2
 
-        # Wenn dieses Feld den Bezirk abschließen könnte,
-        # ist es besonders wertvoll.
-        if protected_count == len(district_fields) - 1 and game.security_chips >= 2:
+        # Besonders wertvoll, wenn dieses Feld den Bezirk abschließen könnte.
+        if (
+            protected_count == len(district_fields) - 1
+            and game.security_chips >= game.wall_cost
+        ):
             score += 6
 
         return score
@@ -510,30 +616,30 @@ class RuleBasedStrategy:
     def evaluate_landing_void_risk(self, game, position):
         field = game.board[position]
 
-        # Auf einer Schutzzone ist man geschützt
         if field["type"] == "safe_zone":
             return 4
 
         score = 0
 
-        # Abstand: Wie viele Felder ist die Position vor VOID?
-        # Beispiel: VOID steht auf 10, Position ist 14 → Abstand 4
-        distance_ahead_of_void = (position - game.void_position) % len(game.board)
+        # Abstand der Zielposition vor VOID.
+        distance_ahead_of_void = (
+            position - game.void_position
+        ) % len(game.board)
 
-        # Wenn man 2 bis 7 Felder vor VOID landet,
-        # kann VOID einen mit dem roten Würfel sehr wahrscheinlich erreichen
+        # VOID kann diese Position mit dem roten Würfel wahrscheinlich erreichen.
         if 0 <= distance_ahead_of_void <= 7:
             score -= 10
 
-        # Wenn man etwas weiter vor VOID ist, ist es noch leicht riskant
         elif 8 <= distance_ahead_of_void <= 10:
             score -= 3
 
-        # Abstand: Wie viele Felder ist die Position hinter VOID?
-        distance_behind_void = (game.void_position - position) % len(game.board)
+        # Abstand der Zielposition hinter VOID.
+        distance_behind_void = (
+            game.void_position - position
+        ) % len(game.board)
 
         # Hinter VOID zu landen ist eher sicher,
-        # weil VOID nur im Uhrzeigersinn läuft
+        # weil VOID nur im Uhrzeigersinn läuft.
         if 2 <= distance_behind_void <= 6:
             score += 3
 
@@ -544,4 +650,3 @@ class RuleBasedStrategy:
 
     def is_time_pressure(self, game):
         return self.remaining_turns(game) <= 10
-
