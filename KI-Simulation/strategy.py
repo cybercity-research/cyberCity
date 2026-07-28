@@ -231,6 +231,21 @@ class RuleBasedStrategy:
 
         return target_position == 0
 
+    def evaluate_start_reward_value(self, game):
+        """
+        Bewertet die Startbelohnung nur für Chiparten,
+        bei denen noch Platz auf der Hand vorhanden ist.
+        """
+        score = 0
+
+        if game.security_chips < game.max_security_chips:
+            score += 1.5
+
+        if game.time_chips < game.max_time_chips:
+            score += 1.5
+
+        return score
+
     def evaluate_position(
         self,
         game,
@@ -286,7 +301,7 @@ class RuleBasedStrategy:
         # Startbelohnung: +1 Sicherheits-Chip und +1 Zeit-Chip.
         # Bei direkter VOID-Gefahr wird sie nicht überbewertet.
         if gets_start_reward and void_score > -10:
-            score += 3
+            score += self.evaluate_start_reward_value(game)
 
         return score
 
@@ -570,7 +585,7 @@ class RuleBasedStrategy:
             )
 
         if gets_start_reward:
-            score += 3
+            score += self.evaluate_start_reward_value(game)
 
         score += self.evaluate_landing_void_risk(
             game,
@@ -650,3 +665,4 @@ class RuleBasedStrategy:
 
     def is_time_pressure(self, game):
         return self.remaining_turns(game) <= 10
+

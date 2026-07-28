@@ -5,6 +5,7 @@ from district_card import district_cards
 from strategy import RandomStrategy
 from event_card import event_cards
 
+
 class Player:
     def __init__(self, name, role="child", profile=None):
         self.name = name
@@ -15,13 +16,15 @@ class Player:
 
 class Game:
     def __init__(
-            self,
-            player_names,
-            strategy=None,
-            wall_cost=2,
-            teleport_cost=2,
-            risk_reduce_cost=2,
-            max_turns=30
+        self,
+        player_names,
+        strategy=None,
+        wall_cost=2,
+        teleport_cost=2,
+        risk_reduce_cost=2,
+        max_security_chips=16,
+        max_time_chips=16,
+        max_turns=30
     ):
         self.players = []
 
@@ -36,6 +39,10 @@ class Game:
                         profile=player_data.get("profile")
                     )
                 )
+
+        if max_security_chips < 0 or max_time_chips < 0:
+            raise ValueError("Die maximale Chipanzahl darf nicht negativ sein.")
+
         self.district_cards = copy.deepcopy(district_cards)
         self.strategy = strategy or RandomStrategy()
 
@@ -45,40 +52,119 @@ class Game:
         self.event_cards = event_cards.copy()
         random.shuffle(self.event_cards)
 
-        # gemeinsame Ressourcen
+        # Gemeinsame Ressourcen
         self.board = copy.deepcopy(board)
         self.security_chips = 0
         self.time_chips = 0
+        self.max_security_chips = max_security_chips
+        self.max_time_chips = max_time_chips
         self.risk = 0
+
+        # Kosten und Spielzeit
         self.wall_cost = wall_cost
         self.teleport_cost = teleport_cost
         self.risk_reduce_cost = risk_reduce_cost
         self.turn_count = 0
         self.max_turns = max_turns
-        self.secured_districts = set()
 
-        # VOID startet später auf Pause
+        # VOID startet auf dem Pause-Feld
         self.void_position = 14
         self.current_player_index = 0
 
-        # abgesicherte Bezirke
+        # Abgesicherte Bezirke
         self.secured_districts = set()
 
         # Spielstatus
         self.game_over = False
         self.won = False
 
+    def add_security_chips(self, amount):
+        """
+        Gibt Sicherheits-Chips aus, jedoch höchstens bis zum festgelegten Maximum.
+
+        Bereits ausgegebene Chips verfallen nicht dauerhaft:
+        Werden Chips später für Schutzmauern ausgegeben, entsteht wieder Platz
+        für neue Sicherheits-Chips.
+        """
+        if amount <= 0:
+            return 0
+
+        free_slots = self.max_security_chips - self.security_chips
+        awarded = min(amount, free_slots)
+
+        if awarded > 0:
+            self.security_chips += awarded
+            print(
+                f"+{awarded} Sicherheits-Chip"
+                f"{'' if awarded == 1 else 's'} "
+                f"({self.security_chips}/{self.max_security_chips})"
+            )
+
+        if awarded < amount:
+            missing = amount - awarded
+
+            if awarded == 0:
+                print(
+                    "Keine weiteren Sicherheits-Chips ausgegeben: "
+                    f"Maximum von {self.max_security_chips} erreicht."
+                )
+            else:
+                print(
+                    f"{missing} weiterer Sicherheits-Chip"
+                    f"{'' if missing == 1 else 's'} nicht ausgegeben: "
+                    f"Maximum von {self.max_security_chips} erreicht."
+                )
+
+        return awarded
+
+    def add_time_chips(self, amount):
+        """
+        Gibt Zeit-Chips aus, jedoch höchstens bis zum festgelegten Maximum.
+
+        Werden Zeit-Chips später ausgegeben, entsteht wieder Platz für neue
+        Zeit-Chips.
+        """
+        if amount <= 0:
+            return 0
+
+        free_slots = self.max_time_chips - self.time_chips
+        awarded = min(amount, free_slots)
+
+        if awarded > 0:
+            self.time_chips += awarded
+            print(
+                f"+{awarded} Zeit-Chip"
+                f"{'' if awarded == 1 else 's'} "
+                f"({self.time_chips}/{self.max_time_chips})"
+            )
+
+        if awarded < amount:
+            missing = amount - awarded
+
+            if awarded == 0:
+                print(
+                    "Keine weiteren Zeit-Chips ausgegeben: "
+                    f"Maximum von {self.max_time_chips} erreicht."
+                )
+            else:
+                print(
+                    f"{missing} weiterer Zeit-Chip"
+                    f"{'' if missing == 1 else 's'} nicht ausgegeben: "
+                    f"Maximum von {self.max_time_chips} erreicht."
+                )
+
+        return awarded
+
     def move_player(self, player, steps, direction="clockwise"):
         old_position = player.position
         reward_received = False
 
         for step_number in range(steps):
-            previous_position = player.position
-
             if direction == "clockwise":
                 player.position = (player.position + 1) % len(self.board)
 
-                # Im Uhrzeigersinn wurde Start erreicht oder überquert
+                # Im Uhrzeigersinn gibt es die Belohnung beim Erreichen
+                # oder Überqueren von Start.
                 if player.position == 0:
                     reward_received = True
 
@@ -86,20 +172,17 @@ class Game:
                 player.position = (player.position - 1) % len(self.board)
 
                 # Gegen den Uhrzeigersinn gibt es die Belohnung nur,
-                # wenn die Bewegung genau auf Start endet
+                # wenn die Figur exakt auf Start landet.
                 if (
-                        player.position == 0
-                        and step_number == steps - 1
+                    player.position == 0
+                    and step_number == steps - 1
                 ):
                     reward_received = True
 
         if reward_received:
-            self.security_chips += 1
-            self.time_chips += 1
-
             print(">>> Start erreicht!")
-            print("+1 Sicherheits-Chip")
-            print("+1 Zeit-Chip")
+            self.add_security_chips(1)
+            self.add_time_chips(1)
 
         field = self.board[player.position]
 
@@ -189,65 +272,80 @@ class Game:
         elif field["type"] == "safe_zone":
             print("Schutzzone. Du bist hier vor VOID geschützt.")
 
-
         elif field["type"] == "event":
-
             print("Allgemeines Ereignisfeld.")
 
             card = self.draw_event_card()
-
             self.play_event_card(card, player)
 
-
         elif field["type"] == "district":
+            district = field["district"]
 
-            print(f"Bezirksfeld: {field['district']}")
+            print(f"Bezirksfeld: {district}")
 
-            card = self.draw_district_card(field["district"])
+            # Für bereits abgesicherte Bezirke werden keine Karten
+            # mehr gezogen und keine Schutzmauern mehr gebaut.
+            if district in self.secured_districts:
+                print(
+                    f"Bezirk '{district}' ist bereits abgesichert. "
+                    "Keine Bezirkskarte und keine Schutzmauer erforderlich."
+                )
+                return
+
+            card = self.draw_district_card(district)
 
             if card is not None:
                 self.play_card(card, player)
 
+            # Die letzte gezogene Karte kann den Bezirk abgesichert haben.
+            if district in self.secured_districts:
+                print(
+                    f"Bezirk '{district}' ist jetzt abgesichert. "
+                    "Keine Schutzmauer mehr erforderlich."
+                )
+                return
+
             if self.strategy.should_build_wall(self, player):
-
                 self.try_build_wall(player)
-
             else:
-
                 print("Keine Schutzmauer gebaut.")
 
-    def play_card(self, card,player):
+    def play_card(self, card, player):
         answer = self.strategy.choose_card_answer(card, self, player)
 
         print(f"Karte: {card['id']}")
         print(f"Antworttyp: {answer['type']}")
 
-        self.security_chips += answer.get("security", 0)
-        self.time_chips += answer.get("time", 0)
+        security_reward = answer.get("security", 0)
+        time_reward = answer.get("time", 0)
+
+        if security_reward > 0:
+            self.add_security_chips(security_reward)
+
+        if time_reward > 0:
+            self.add_time_chips(time_reward)
 
         if answer.get("risk", 0) > 0:
             self.increase_risk(answer["risk"])
 
         if answer.get("risk_reduce", 0) > 0:
-            self.risk = max(0, self.risk - answer["risk_reduce"])
-            print(f"Risiko sinkt um {answer['risk_reduce']}.")
+            risk_reduction = answer["risk_reduce"]
+            old_risk = self.risk
+            self.risk = max(0, self.risk - risk_reduction)
+            actual_reduction = old_risk - self.risk
+            print(f"Risiko sinkt um {actual_reduction}.")
 
         if answer.get("void", 0) > 0:
             self.move_void(answer["void"])
             self.check_void_attack(player)
 
     def use_time_chips_to_reduce_risk(self, player):
-        #if self.strategy.should_reduce_risk(self, player):
-         #   self.time_chips -= self.risk_reduce_cost
-          #  self.risk -= 1
-           # print(f"{self.risk_reduce_cost} Zeit-Chips ausgegeben: Risiko -1")
-
         reductions = 0
 
         while (
-                self.risk > 0
-                and self.time_chips >= self.risk_reduce_cost
-                and self.strategy.should_reduce_risk(self, player)
+            self.risk > 0
+            and self.time_chips >= self.risk_reduce_cost
+            and self.strategy.should_reduce_risk(self, player)
         ):
             self.time_chips -= self.risk_reduce_cost
             self.risk -= 1
@@ -267,6 +365,12 @@ class Game:
         if field["type"] != "district":
             return
 
+        district = field["district"]
+
+        if district in self.secured_districts:
+            print(f"Bezirk '{district}' ist bereits abgesichert.")
+            return
+
         if field["protected"]:
             print("Dieses Feld ist bereits abgesichert.")
             return
@@ -275,7 +379,11 @@ class Game:
             self.security_chips -= self.wall_cost
             field["protected"] = True
             print(f"Schutzmauer gebaut auf {field['name']}.")
-            self.check_district_secured(field["district"])
+            print(
+                f"{self.wall_cost} Sicherheits-Chips ausgegeben "
+                f"({self.security_chips}/{self.max_security_chips})."
+            )
+            self.check_district_secured(district)
         else:
             print("Nicht genug Sicherheits-Chips für eine Schutzmauer.")
 
@@ -285,7 +393,6 @@ class Game:
             if field.get("district") == district_name
         ]
 
-        # Sind alle Felder geschützt?
         if all(field["protected"] for field in district_fields):
             if district_name not in self.secured_districts:
                 self.secured_districts.add(district_name)
@@ -299,7 +406,8 @@ class Game:
             print("🏆 Ihr habt CyberCity gewonnen!")
 
     def draw_district_card(self, district):
-
+        # Zusätzliche Sicherheitsprüfung:
+        # Aus abgesicherten Bezirken wird nie wieder eine Karte gezogen.
         if district in self.secured_districts:
             print(
                 f"Bezirk '{district}' ist bereits abgesichert. "
@@ -316,7 +424,7 @@ class Game:
 
         card = deck.pop(0)
 
-        # Nach dem Ziehen prüfen, ob das die letzte Karte war
+        # Nach dem Ziehen prüfen, ob dies die letzte Karte war.
         if len(deck) == 0:
             print(f"{district} hat jetzt keine Karten mehr.")
             self.secure_district_by_empty_deck(district)
@@ -326,7 +434,10 @@ class Game:
     def secure_district_by_empty_deck(self, district):
         if district not in self.secured_districts:
             self.secured_districts.add(district)
-            print(f"🎉 Bezirk '{district}' wurde durch leeren Kartenstapel abgesichert!")
+            print(
+                f"🎉 Bezirk '{district}' wurde durch leeren "
+                "Kartenstapel abgesichert!"
+            )
             self.check_win()
 
     def get_teleport_targets(self, player):
@@ -350,7 +461,10 @@ class Game:
         return [
             field["id"]
             for field in self.board
-            if field.get("district") == district and field["id"] != player.position
+            if (
+                field.get("district") == district
+                and field["id"] != player.position
+            )
         ]
 
     def try_teleport(self, player):
@@ -375,7 +489,10 @@ class Game:
         player.position = target
 
         print(f"{player.name} teleportiert sich von {old_position} nach {target}.")
-        print(f"{self.teleport_cost} Zeit-Chips ausgegeben.")
+        print(
+            f"{self.teleport_cost} Zeit-Chips ausgegeben "
+            f"({self.time_chips}/{self.max_time_chips})."
+        )
 
     def draw_event_card(self):
         if len(self.event_cards) == 0:
@@ -386,26 +503,37 @@ class Game:
         return self.event_cards.pop(0)
 
     def play_event_card(self, card, player):
-
         print(f"Allgemeine Ereigniskarte: {card['id']}")
-        print(f"VOID bewegt sich bis zum nächsten {card['target_district']}-Feld.")
+        print(
+            f"VOID bewegt sich bis zum nächsten "
+            f"{card['target_district']}-Feld."
+        )
 
-        self.move_void_to_next_district(card["target_district"], player)
+        self.move_void_to_next_district(
+            card["target_district"],
+            player
+        )
 
     def move_void_to_next_district(self, target_district, player):
         steps = 0
 
         while True:
-            self.void_position = (self.void_position + 1) % len(self.board)
+            self.void_position = (
+                self.void_position + 1
+            ) % len(self.board)
             steps += 1
 
             field = self.board[self.void_position]
 
             if field.get("district") == target_district:
                 print(
-                    f"VOID bewegt sich {steps} Felder bis zum nächsten {target_district}-Feld."
+                    f"VOID bewegt sich {steps} Felder bis zum nächsten "
+                    f"{target_district}-Feld."
                 )
-                print(f"VOID steht jetzt auf Feld {self.void_position}: {field['name']}")
+                print(
+                    f"VOID steht jetzt auf Feld {self.void_position}: "
+                    f"{field['name']}"
+                )
                 break
 
         self.check_void_attack(player)
@@ -413,8 +541,8 @@ class Game:
     def play_turn(self):
         if self.game_over:
             return
-        self.turn_count += 1
 
+        self.turn_count += 1
         player = self.players[self.current_player_index]
 
         white_dice = random.randint(1, 6)
@@ -427,10 +555,19 @@ class Game:
         print(f"Weißer Würfel: {white_dice}")
         print(f"Roter Würfel: {red_dice}")
 
-        direction = self.strategy.choose_direction(self, player, white_dice, red_dice)
+        direction = self.strategy.choose_direction(
+            self,
+            player,
+            white_dice,
+            red_dice
+        )
         print(f"Richtung: {direction}")
 
-        self.move_player(player, white_dice, direction=direction)
+        self.move_player(
+            player,
+            white_dice,
+            direction=direction
+        )
 
         if self.game_over:
             return
@@ -447,6 +584,7 @@ class Game:
             return
 
         self.check_win()
+
         if self.turn_count >= self.max_turns and not self.game_over:
             self.game_over = True
             self.won = False
@@ -454,8 +592,16 @@ class Game:
 
         print()
         print("Team-Ressourcen:")
-        print("Sicherheits-Chips:", self.security_chips)
-        print("Zeit-Chips:", self.time_chips)
+        print(
+            "Sicherheits-Chips:",
+            f"{self.security_chips}/{self.max_security_chips}"
+        )
+        print(
+            "Zeit-Chips:",
+            f"{self.time_chips}/{self.max_time_chips}"
+        )
         print("Risiko:", self.risk)
 
-        self.current_player_index = (self.current_player_index + 1) % len(self.players)
+        self.current_player_index = (
+            self.current_player_index + 1
+        ) % len(self.players)
